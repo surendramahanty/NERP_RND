@@ -1,0 +1,77 @@
+<div class="input-group input-group-sm" style="padding-bottom:20px">
+   <div class="input-group-btn">
+      <button type="button" class="btn btn-warning dropdown-toggle search-dropdown" data-toggle="dropdown" aria-expanded="false">
+         {{selectedField.label}}
+         <span class="fa fa-caret-down"></span>
+      </button>
+      <ul class="dropdown-menu">
+         <ng-container *ngIf='searchFields && searchFields.length > 0'>
+            <li *ngFor='let searchField of searchFields'>
+               <a [routerLink]="" (click)=setSearchField(searchField)>{{searchField.label}}</a>
+            </li>
+         </ng-container>
+         <li class="divider"></li>
+         <li><a [routerLink]="" data-toggle="modal" data-target="#advancedSearch">Advanced Search</a></li>
+
+      </ul>
+   </div>
+   <input [type]=selectedField.dataType class="form-control" name="dateSearch" [(ngModel)]="searchText" autocomplete="off">
+   <span class="input-group-btn">
+      <button type="button" class="btn btn-info btn-flat" (click)="search()"><i class="fas fa-search"></i></button>
+   </span>
+</div>
+<ng-container *ngIf="searchFilter && searchFilter.filters.length > 0">
+   <div style="padding-bottom: 8px; border-bottom: 1px solid #ddd; margin-bottom: 10px;">
+      <label>Search Filters:</label>
+      <div class="row">
+         <ng-container *ngFor='let filter of filterPills; let rowIndex = index;'>
+            <span class="search-param">{{filter.propertyName}} = {{filter.value}} <a (click)="removeFilter(rowIndex)" style="cursor:pointer"><i class="fa fa-times" title="Remove" style="color: Red; padding-left: 10px;"></i></a></span>
+         </ng-container>
+      </div>
+   </div>
+</ng-container>
+
+<div id="advancedSearch" class="modal fade" role="dialog">
+   <div class="modal-dialog">
+      <div class="modal-content" style="border-radius:3px">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Advanced Search</h4>
+         </div>
+         <div class="modal-body">
+            <div class="pull-right">
+               <span style="padding-right:5px; vertical-align: top;">Condition</span>
+               <label class="switch">
+                  <input type="checkbox" [checked]="conditionOption" [(ngModel)]="conditionOption">
+                  <span class="slider round"></span>
+               </label>
+            </div>
+            <table class="table table-bordered">
+               <thead>
+                  <tr>
+                     <th style="width: 200px;">Field</th>
+                     <th>Value</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <ng-container *ngIf='searchFields && searchFields.length > 0'>
+                     <tr *ngFor='let searchField of searchFields'>
+                        <td>{{searchField.label}}</td>
+                        <td><input [type]=searchField.dataType class="form-control input-sm" [ngModelOptions]="{standalone: true}" [(ngModel)]="searchField.value"></td>
+                     </tr>
+                  </ng-container>
+                  <tr *ngIf='searchFields == null || searchFields.length == 0'>
+                     <td colspan="2" style="text-align: center;">
+                        No search fields defined
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div class="modal-footer">
+            <button class="btn btn-info" data-dismiss="modal" type="button" (click)="advancedSearch()">Search</button>
+            <button class="btn btn-default pull-left" data-dismiss="modal" type="button" (click)="clearSearch()">Clear</button>
+         </div>
+      </div>
+   </div>
+</div>

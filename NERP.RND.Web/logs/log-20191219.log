@@ -1,0 +1,270 @@
+2019-12-19 11:14:19.811 +05:30 [Error] Error fetching designs.
+System.FormatException: Element 'Status' does not match any field or property of class NERP.Designs.Models.Design.
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetPaginatedAsync(Expression`1 filter, String sortProperty, SortOrder sortOrder, Int32 page, Int32 pageSize) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 184
+   at NERP.Designs.DesignService.GetDesigns(SearchFilter searchFilter, String orderBy, SortOrder sortOrder, Nullable`1 page, Nullable`1 pageSize) in D:\SK\NERP_RND\Solution2\NERP.Design\DesignService.cs:line 45
+   at NERP.RND.Web.Controllers.DesignsController.GetDesigns(PaginationRequest paginationRequest) in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Controllers\DesignsController.cs:line 68
+2019-12-19 11:14:22.710 +05:30 [Error] Error fetching clusters.
+System.FormatException: Element 'isSelected' does not match any field or property of class NERP.Homepasses.Model.Cluster.
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetPaginatedAsync(Expression`1 filter, String sortProperty, SortOrder sortOrder, Int32 page, Int32 pageSize) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 184
+   at NERP.Homepasses.ClusterService.GetClusters(SearchFilter searchFilter, String orderBy, SortOrder sortOrder, Nullable`1 page, Nullable`1 pageSize) in D:\SK\NERP_RND\Solution2\NERP.Homepasses\ClusterService.cs:line 45
+   at NERP.RND.Web.Controllers.ClustersController.GetClusters(PaginationRequest paginationRequest) in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Controllers\ClustersController.cs:line 58
+2019-12-19 11:14:27.026 +05:30 [Error] Error fetching clusters.
+System.FormatException: Element 'isSelected' does not match any field or property of class NERP.Homepasses.Model.Cluster.
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetPaginatedAsync(Expression`1 filter, String sortProperty, SortOrder sortOrder, Int32 page, Int32 pageSize) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 184
+   at NERP.Homepasses.ClusterService.GetClusters(SearchFilter searchFilter, String orderBy, SortOrder sortOrder, Nullable`1 page, Nullable`1 pageSize) in D:\SK\NERP_RND\Solution2\NERP.Homepasses\ClusterService.cs:line 45
+   at NERP.RND.Web.Controllers.ClustersController.GetClusters(PaginationRequest paginationRequest) in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Controllers\ClustersController.cs:line 58
+2019-12-19 11:14:34.400 +05:30 [Error] Error fetching clusters.
+System.FormatException: Element 'isSelected' does not match any field or property of class NERP.Homepasses.Model.Cluster.
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetPaginatedAsync(Expression`1 filter, String sortProperty, SortOrder sortOrder, Int32 page, Int32 pageSize) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 184
+   at NERP.Homepasses.ClusterService.GetClusters(SearchFilter searchFilter, String orderBy, SortOrder sortOrder, Nullable`1 page, Nullable`1 pageSize) in D:\SK\NERP_RND\Solution2\NERP.Homepasses\ClusterService.cs:line 45
+   at NERP.RND.Web.Controllers.ClustersController.GetClusters(PaginationRequest paginationRequest) in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Controllers\ClustersController.cs:line 58
+2019-12-19 11:14:46.881 +05:30 [Error] Error fetching clusters.
+System.FormatException: Element 'isSelected' does not match any field or property of class NERP.Homepasses.Model.Cluster.
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetPaginatedAsync(Expression`1 filter, String sortProperty, SortOrder sortOrder, Int32 page, Int32 pageSize) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 184
+   at NERP.Homepasses.ClusterService.GetClusters(SearchFilter searchFilter, String orderBy, SortOrder sortOrder, Nullable`1 page, Nullable`1 pageSize) in D:\SK\NERP_RND\Solution2\NERP.Homepasses\ClusterService.cs:line 45
+   at NERP.RND.Web.Controllers.ClustersController.GetClusters(PaginationRequest paginationRequest) in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Controllers\ClustersController.cs:line 58
+2019-12-19 11:14:53.695 +05:30 [Error] Error fetching designs.
+System.FormatException: Element 'Status' does not match any field or property of class NERP.Designs.Models.Design.
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetPaginatedAsync(Expression`1 filter, String sortProperty, SortOrder sortOrder, Int32 page, Int32 pageSize) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 184
+   at NERP.Designs.DesignService.GetDesigns(SearchFilter searchFilter, String orderBy, SortOrder sortOrder, Nullable`1 page, Nullable`1 pageSize) in D:\SK\NERP_RND\Solution2\NERP.Design\DesignService.cs:line 45
+   at NERP.RND.Web.Controllers.DesignsController.GetDesigns(PaginationRequest paginationRequest) in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Controllers\DesignsController.cs:line 68
+2019-12-19 11:14:56.612 +05:30 [Error] Error fetching clusters.
+System.FormatException: Element 'isSelected' does not match any field or property of class NERP.Homepasses.Model.Cluster.
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetPaginatedAsync(Expression`1 filter, String sortProperty, SortOrder sortOrder, Int32 page, Int32 pageSize) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 184
+   at NERP.Homepasses.ClusterService.GetClusters(SearchFilter searchFilter, String orderBy, SortOrder sortOrder, Nullable`1 page, Nullable`1 pageSize) in D:\SK\NERP_RND\Solution2\NERP.Homepasses\ClusterService.cs:line 45
+   at NERP.RND.Web.Controllers.ClustersController.GetClusters(PaginationRequest paginationRequest) in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Controllers\ClustersController.cs:line 58
+2019-12-19 11:15:02.687 +05:30 [Error] Error fetching clusters.
+System.FormatException: Element 'isSelected' does not match any field or property of class NERP.Homepasses.Model.Cluster.
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetPaginatedAsync(Expression`1 filter, String sortProperty, SortOrder sortOrder, Int32 page, Int32 pageSize) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 184
+   at NERP.Homepasses.ClusterService.GetClusters(SearchFilter searchFilter, String orderBy, SortOrder sortOrder, Nullable`1 page, Nullable`1 pageSize) in D:\SK\NERP_RND\Solution2\NERP.Homepasses\ClusterService.cs:line 45
+   at NERP.RND.Web.Controllers.ClustersController.GetClusters(PaginationRequest paginationRequest) in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Controllers\ClustersController.cs:line 58
+2019-12-19 11:15:06.436 +05:30 [Error] Error fetching designs.
+System.FormatException: Element 'Status' does not match any field or property of class NERP.Designs.Models.Design.
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetPaginatedAsync(Expression`1 filter, String sortProperty, SortOrder sortOrder, Int32 page, Int32 pageSize) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 184
+   at NERP.Designs.DesignService.GetDesigns(SearchFilter searchFilter, String orderBy, SortOrder sortOrder, Nullable`1 page, Nullable`1 pageSize) in D:\SK\NERP_RND\Solution2\NERP.Design\DesignService.cs:line 45
+   at NERP.RND.Web.Controllers.DesignsController.GetDesigns(PaginationRequest paginationRequest) in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Controllers\DesignsController.cs:line 68
+2019-12-19 11:15:09.760 +05:30 [Error] Error fetching clusters.
+System.FormatException: Element 'isSelected' does not match any field or property of class NERP.Homepasses.Model.Cluster.
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetPaginatedAsync(Expression`1 filter, String sortProperty, SortOrder sortOrder, Int32 page, Int32 pageSize) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 184
+   at NERP.Homepasses.ClusterService.GetClusters(SearchFilter searchFilter, String orderBy, SortOrder sortOrder, Nullable`1 page, Nullable`1 pageSize) in D:\SK\NERP_RND\Solution2\NERP.Homepasses\ClusterService.cs:line 45
+   at NERP.RND.Web.Controllers.ClustersController.GetClusters(PaginationRequest paginationRequest) in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Controllers\ClustersController.cs:line 58
+2019-12-19 11:15:21.235 +05:30 [Error] Error fetching clusters.
+System.FormatException: Element 'isSelected' does not match any field or property of class NERP.Homepasses.Model.Cluster.
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetPaginatedAsync(Expression`1 filter, String sortProperty, SortOrder sortOrder, Int32 page, Int32 pageSize) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 184
+   at NERP.Homepasses.ClusterService.GetClusters(SearchFilter searchFilter, String orderBy, SortOrder sortOrder, Nullable`1 page, Nullable`1 pageSize) in D:\SK\NERP_RND\Solution2\NERP.Homepasses\ClusterService.cs:line 45
+   at NERP.RND.Web.Controllers.ClustersController.GetClusters(PaginationRequest paginationRequest) in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Controllers\ClustersController.cs:line 58
+2019-12-19 11:15:26.266 +05:30 [Error] Error fetching designs.
+System.FormatException: Element 'Status' does not match any field or property of class NERP.Designs.Models.Design.
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetPaginatedAsync(Expression`1 filter, String sortProperty, SortOrder sortOrder, Int32 page, Int32 pageSize) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 184
+   at NERP.Designs.DesignService.GetDesigns(SearchFilter searchFilter, String orderBy, SortOrder sortOrder, Nullable`1 page, Nullable`1 pageSize) in D:\SK\NERP_RND\Solution2\NERP.Design\DesignService.cs:line 45
+   at NERP.RND.Web.Controllers.DesignsController.GetDesigns(PaginationRequest paginationRequest) in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Controllers\DesignsController.cs:line 68
+2019-12-19 11:15:30.376 +05:30 [Error] Error fetching clusters.
+System.FormatException: Element 'isSelected' does not match any field or property of class NERP.Homepasses.Model.Cluster.
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetPaginatedAsync(Expression`1 filter, String sortProperty, SortOrder sortOrder, Int32 page, Int32 pageSize) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 184
+   at NERP.Homepasses.ClusterService.GetClusters(SearchFilter searchFilter, String orderBy, SortOrder sortOrder, Nullable`1 page, Nullable`1 pageSize) in D:\SK\NERP_RND\Solution2\NERP.Homepasses\ClusterService.cs:line 45
+   at NERP.RND.Web.Controllers.ClustersController.GetClusters(PaginationRequest paginationRequest) in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Controllers\ClustersController.cs:line 58
+2019-12-19 11:15:38.472 +05:30 [Error] Error fetching clusters.
+System.FormatException: Element 'isSelected' does not match any field or property of class NERP.Homepasses.Model.Cluster.
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetPaginatedAsync(Expression`1 filter, String sortProperty, SortOrder sortOrder, Int32 page, Int32 pageSize) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 184
+   at NERP.Homepasses.ClusterService.GetClusters(SearchFilter searchFilter, String orderBy, SortOrder sortOrder, Nullable`1 page, Nullable`1 pageSize) in D:\SK\NERP_RND\Solution2\NERP.Homepasses\ClusterService.cs:line 45
+   at NERP.RND.Web.Controllers.ClustersController.GetClusters(PaginationRequest paginationRequest) in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Controllers\ClustersController.cs:line 58
+2019-12-19 11:17:01.732 +05:30 [Error] Error fetching designs.
+System.FormatException: Element 'Status' does not match any field or property of class NERP.Designs.Models.Design.
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetPaginatedAsync(Expression`1 filter, String sortProperty, SortOrder sortOrder, Int32 page, Int32 pageSize) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 184
+   at NERP.Designs.DesignService.GetDesigns(SearchFilter searchFilter, String orderBy, SortOrder sortOrder, Nullable`1 page, Nullable`1 pageSize) in D:\SK\NERP_RND\Solution2\NERP.Design\DesignService.cs:line 45
+   at NERP.RND.Web.Controllers.DesignsController.GetDesigns(PaginationRequest paginationRequest) in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Controllers\DesignsController.cs:line 68

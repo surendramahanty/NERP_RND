@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <!--<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>-->
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.ResponseCaching" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.ResponseCompression" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
+    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+    <PackageReference Include="NetTopologySuite.IO.ShapeFile" Version="2.0.0" />
+    <Folder Include="logs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Common.ActivityLogs\Common.ActivityLogs.csproj" />
+    <ProjectReference Include="..\..\..\Common\Common.Authentication\Common.Authentication.csproj" />
+    <ProjectReference Include="..\..\..\Common\Common.Config\Common.Config.csproj" />
+    <ProjectReference Include="..\..\..\Common\Common.Groups\Common.Groups.csproj" />
+    <ProjectReference Include="..\..\..\Common\Common.Modules\Common.Modules.csproj" />
+    <ProjectReference Include="..\..\..\Common\Common.Roles\Common.Roles.csproj" />
+    <ProjectReference Include="..\..\..\Common\Common.Users\Common.Users.csproj" />
+    <ProjectReference Include="..\..\..\Common\Common.Web\Common.Web.csproj" />
+    <ProjectReference Include="..\NERP.Common\NERP.Common.csproj" />
+    <ProjectReference Include="..\NERP.GeneralSettings\NERP.GeneralSettings.csproj" />
+    <ProjectReference Include="..\NERP.NetworkEntities\NERP.NetworkEntities.csproj" />
+  </ItemGroup>
+ 
+</Project>

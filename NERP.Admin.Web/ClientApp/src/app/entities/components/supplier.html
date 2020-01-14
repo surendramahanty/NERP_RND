@@ -1,0 +1,53 @@
+<div class="form-group">
+   <table class="table table-bordered table-striped">
+      <thead>
+         <tr>
+            <th></th>
+            <th>Supplier</th>
+            <th>SKU</th>
+            <th>Stock Qty</th>
+            <th>Price</th>
+            <th>Currency</th>
+            <th>Valid From</th>
+            <th>Valid To</th>
+            <th style="text-align: center;padding: 2px 0px;width: 50px;">
+               <a (click)="addNewSupplier()" style="cursor:pointer">
+                  <i class="fas fa-plus-circle" title="Add" style="font-size: 20px; color: #3e53a4;margin: 5px;"></i>
+               </a>
+            </th>
+         </tr>
+      </thead>
+      <tbody>
+         <ng-container *ngIf='supplierList && supplierList.length > 0'>
+            <tr *ngFor='let supplier of supplierList; let rowIndex = index;'>
+               <td>             
+                  <mat-radio-group  [(ngModel)]="supplier.default">                   
+                     <mat-radio-button class="example-radio-group default" [checked]="rowIndex=='0'" value="true">
+                        {{rowIndex}}
+                     </mat-radio-button>
+                  </mat-radio-group>
+
+               </td>
+               <!--<td><input type="radio" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.default" value="{{rowIndex}}"></td>-->
+               <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.name"></td>
+               <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.sku"></td>
+               <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.stockQty"></td>
+               <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.price"></td>
+               <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.currency"></td>
+               <td><input type="date" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [ngModel]="supplier.validFrom | date:'yyyy-MM-dd'" (ngModelChange)="supplier.validFrom = $event"></td>
+               <td><input type="date" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [ngModel]="supplier.validTo | date:'yyyy-MM-dd'" (ngModelChange)="supplier.validTo = $event"></td>
+               <td style="text-align:center;padding-top: 14px;">
+                  <a (click)="deleteSupplier(rowIndex)" style="cursor:pointer">
+                     <i class="fas fa-trash-alt" title="Delete" style="font-size: 15px; color: Red;"></i>
+                  </a>
+               </td>
+            </tr>
+         </ng-container>
+         <tr *ngIf='supplierList == null || supplierList.length == 0'>
+            <td colspan="8" class="check-mail" style="text-align: center;">
+               Supplier not defined
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div>

@@ -1,0 +1,33 @@
+D:\SK\NERP_RND\Solution2\NERP.Common\bin\Debug\netstandard2.0\NERP.Common.deps.json
+D:\SK\NERP_RND\Solution2\NERP.Common\bin\Debug\netstandard2.0\NERP.Common.dll
+D:\SK\NERP_RND\Solution2\NERP.Common\bin\Debug\netstandard2.0\NERP.Common.pdb
+D:\SK\NERP_RND\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.csprojAssemblyReference.cache
+D:\SK\NERP_RND\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.csproj.CoreCompileInputs.cache
+D:\SK\NERP_RND\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.AssemblyInfoInputs.cache
+D:\SK\NERP_RND\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.AssemblyInfo.cs
+D:\SK\NERP_RND\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.dll
+D:\SK\NERP_RND\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.pdb
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Common\bin\Debug\netstandard2.0\NERP.Common.deps.json
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Common\bin\Debug\netstandard2.0\NERP.Common.dll
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Common\bin\Debug\netstandard2.0\NERP.Common.pdb
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.csprojAssemblyReference.cache
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.AssemblyInfoInputs.cache
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.AssemblyInfo.cs
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.dll
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.pdb
+E:\rnd_module\previous_RND CODE_latestcode\Solution2\NERP.Common\bin\Debug\netstandard2.0\NERP.Common.deps.json
+E:\rnd_module\previous_RND CODE_latestcode\Solution2\NERP.Common\bin\Debug\netstandard2.0\NERP.Common.dll
+E:\rnd_module\previous_RND CODE_latestcode\Solution2\NERP.Common\bin\Debug\netstandard2.0\NERP.Common.pdb
+E:\rnd_module\previous_RND CODE_latestcode\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.csprojAssemblyReference.cache
+E:\rnd_module\previous_RND CODE_latestcode\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.AssemblyInfoInputs.cache
+E:\rnd_module\previous_RND CODE_latestcode\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.AssemblyInfo.cs
+E:\rnd_module\previous_RND CODE_latestcode\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.dll
+E:\rnd_module\previous_RND CODE_latestcode\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.pdb
+F:\RND\RNDApp\Solution2\NERP.Common\bin\Debug\netstandard2.0\NERP.Common.deps.json
+F:\RND\RNDApp\Solution2\NERP.Common\bin\Debug\netstandard2.0\NERP.Common.dll
+F:\RND\RNDApp\Solution2\NERP.Common\bin\Debug\netstandard2.0\NERP.Common.pdb
+F:\RND\RNDApp\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.csprojAssemblyReference.cache
+F:\RND\RNDApp\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.AssemblyInfoInputs.cache
+F:\RND\RNDApp\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.AssemblyInfo.cs
+F:\RND\RNDApp\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.dll
+F:\RND\RNDApp\Solution2\NERP.Common\obj\Debug\netstandard2.0\NERP.Common.pdb

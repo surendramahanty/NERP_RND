@@ -1,0 +1,59 @@
+<section class="content-header">
+   <h1>Activity Logs</h1>
+   <ol class="breadcrumb">
+      <li><a [routerLink]="['/home']"><i class="fas fa-home"></i> Home</a></li>
+   </ol>
+</section>
+
+<section class="content">
+   <div class="row">
+      <div class="col-xs-12">
+         <div class="box">
+            <div class="box-header with-border">
+               <h3 class="box-title">Activity Logs</h3>
+            </div>
+            <div class="box-body">
+
+               <dt-search [searchFields]="searchFields" (onSearch)="search($event)"></dt-search>
+               <dt-pagination [totalPages]="totalPages" (onPageSizeChange)="onPageSizeChange($event)" (onPageChange)="onPageChange($event)"></dt-pagination>
+
+               <table id="groups" class="table table-bordered table-striped">
+                  <thead>
+                     <tr (click)="onColumnClick($event.target)">
+                        <th data-column="ActivityOn" class="table-sorter" style="width: 200px;">Activity Date</th>
+                        <th data-column="LoginId" class="table-sorter">Accessed By</th>
+                        <th data-column="SourceIP" class="table-sorter" style="width: 130px;">Source IP</th>
+                        <th data-column="Application" class="table-sorter">Application</th>
+                        <th data-column="Module" class="table-sorter">Module</th>
+                        <th data-column="Action" class="table-sorter">Action</th>
+                        <th style="width:42px"></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <ng-container *ngIf='activityLogs && activityLogs.length > 0'>
+                        <tr *ngFor='let activityLog of activityLogs'>
+                           <td>{{activityLog.createdDate | date:'dd-MM-yyyy'}} {{ activityLog.createdDate | date:'HH:mm:ss a'}}</td>
+                           <td>{{activityLog.loginId}}</td>
+                           <td>{{activityLog.sourceIP}}</td>
+                           <td class="text-overflow-ellipsis">{{activityLog.application}}</td>
+                           <td class="text-overflow-ellipsis">{{activityLog.module}}</td>
+                           <td class="text-overflow-ellipsis">{{activityLog.action}}</td>
+                           <td>
+                              <a>
+                                 <i class="fa fa-edit" [routerLink]="['details', activityLog.id]" title="View" style="font-size: 14px; cursor:pointer"></i>
+                              </a>
+                           </td>
+                        </tr>
+                     </ng-container>
+                     <tr *ngIf='activityLogs == null || activityLogs.length == 0'>
+                        <td colspan="7" style="text-align: center;">
+                           {{statusMessage}}
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

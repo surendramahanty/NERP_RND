@@ -1,0 +1,115 @@
+<div class="col-sm-6">
+   <div class="form-group">
+      <label class="control-label" for="cableType">Cable Type<span style="color:red;">*</span></label>
+      <mat-select name="cableType" [(ngModel)]="cableSettings.cableType" (ngModelChange)="onCableTypeChange($event)">
+         <mat-option>Select Type</mat-option>
+         <mat-option value="overhead">Overhead</mat-option>
+         <mat-option value="underground">Underground</mat-option>
+      </mat-select>
+   </div>
+</div>
+
+<div class="form-group col-sm-6">
+   <label for="cable" class="control-label">Core Configuration</label>
+   <div class="input-group input-group-sm">
+      <mat-select name="cable" [(ngModel)]="selectedCable">
+         <mat-option>Select Cable</mat-option>
+         <mat-option *ngFor="let cable of cablesMaster" [value]="cable">
+            {{cable.name}}
+         </mat-option>
+      </mat-select>
+      <span class="input-group-btn"><button class="btn btn-info btn-flat" type="button" (click)="addCable()"><i class="fas fa-plus"></i></button></span>
+   </div>
+</div>
+
+<div class="form-group col-sm-12">
+   <table class="table table-bordered table-striped">
+      <thead>
+         <tr>
+            <th>Name</th>
+            <th style="width:40px"></th>
+         </tr>
+      </thead>
+      <tbody>
+         <ng-container *ngIf='cableSettings.cables && cableSettings.cables.length > 0'>
+            <tr *ngFor='let cable of cableSettings.cables;let rowIndex = index;'>
+               <td>{{cable.name}}</td>
+               <td>
+                  <a>
+                     <i class="fas fa-trash-alt" style="font-size: 15px; color: Red; cursor:pointer" (click)="removeCable(rowIndex)" title="Remove"></i>
+                  </a>
+               </td>
+            </tr>
+         </ng-container>
+         <tr *ngIf='cableSettings.cables == null || cableSettings.cables.length == 0'>
+            <td colspan="2" style="text-align: center;">
+               {{statusMessage}}
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+<div class="form-group col-sm-6" *ngIf="cableSettings.cableType == 'overhead'">
+   <label for="pole" class="control-label">Pole Type</label>
+   <mat-select name="pole" [(ngModel)]="cableSettings.pole.id" (ngModelChange)="onPoleChange($event)">
+      <mat-option>Select Pole</mat-option>
+      <mat-option *ngFor="let pole of polesMaster" [value]="pole.id">
+         {{pole.name}}
+      </mat-option>
+   </mat-select>
+</div>
+
+<div class="form-group col-sm-6" *ngIf="cableSettings.cableType == 'underground'">
+   <label for="chamber" class="control-label">Chamber Type</label>
+   <mat-select name="chamber" [(ngModel)]="cableSettings.chamber.id"  (ngModelChange)="onChamberChange($event)">
+      <mat-option>Select Chamber</mat-option>
+      <mat-option *ngFor="let chamber of chambersMaster" [value]="chamber.id">
+         {{chamber.name}}
+      </mat-option>
+   </mat-select>
+</div>
+
+<div class="col-sm-6">
+   <div class="form-group">
+      <label class="control-label" for="interval" *ngIf="cableSettings.cableType == 'underground'">Chamber Interval</label>
+      <label class="control-label" for="interval" *ngIf="cableSettings.cableType != 'underground'">Pole Interval</label>
+      <input class="form-control input-sm" name="interval" type="number" [(ngModel)]="cableSettings.chamberInterval">
+   </div>
+</div>
+<!--<div class="col-sm-6">
+   <div class="form-group">
+      <label class="control-label" for=""></label>
+   </div>
+</div>-->
+
+<!--<div>
+   <div class="row" style="padding: 5px;font-size: smaller;">
+      <span style="font-size: 12px;color: #3c8dbc;font-weight: 700;">Loop Management</span>
+      <hr style="margin-top: 2px;">
+   </div>
+   <div class="col-sm-6">
+      <div class="form-group">
+         <label for="cableLoop" class="control-label">Cable loop (Meters)</label>
+         <input class="form-control" name="cableLoop" [(ngModel)]="cableSettings.cableLoop" type="number">
+      </div>
+   </div>
+   <div class="col-sm-6">
+      <div class="form-group">
+         <label for="forEvery" class="control-label">For Every (Meters)</label>
+         <input class="form-control" name="forEvery" [(ngModel)]="cableSettings.loopInterval" type="number">
+      </div>
+   </div>
+   <div class="col-sm-6">
+      <div class="form-group">
+         <label for="loopAtClosure" class="control-label">Loop at Closure (Meters)</label>
+         <input class="form-control" name="loopAtClosure" [(ngModel)]="cableSettings.loopAtClosure" type="number">
+      </div>
+   </div>
+   <div class="col-sm-6">
+      <div class="form-group">
+         <label for="loopAtClosure" class="control-label">Connect %</label>
+         <input class="form-control" name="loopAtClosure" [(ngModel)]="cableSettings.connectionPercent" type="number">
+      </div>
+   </div>
+</div>-->

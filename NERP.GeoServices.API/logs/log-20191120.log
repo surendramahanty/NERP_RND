@@ -1,0 +1,602 @@
+2019-11-20 05:09:48.372 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-11-20 05:09:48.428 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-11-20 05:09:48.443 +05:30 [Information] MST Service Started
+2019-11-20 05:09:48.446 +05:30 [Information] No. of nodes: 18
+2019-11-20 05:09:48.448 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-11-20 05:09:48.453 +05:30 [Information] No. of nodes: 12
+2019-11-20 05:09:48.747 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:09:48.748 +05:30 [Information] No. of nodes: 11
+2019-11-20 05:09:48.774 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:09:48.776 +05:30 [Information] No. of nodes: 6
+2019-11-20 05:09:48.811 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:09:48.816 +05:30 [Information] No. of nodes: 13
+2019-11-20 05:09:48.873 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:09:48.877 +05:30 [Information] No. of nodes: 5
+2019-11-20 05:09:48.931 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:09:48.936 +05:30 [Information] No. of nodes: 12
+2019-11-20 05:09:48.993 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:09:48.999 +05:30 [Information] No. of nodes: 12
+2019-11-20 05:09:49.059 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:09:49.064 +05:30 [Information] No. of nodes: 12
+2019-11-20 05:09:49.118 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:09:49.123 +05:30 [Information] No. of nodes: 5
+2019-11-20 05:09:49.188 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:09:49.194 +05:30 [Information] No. of nodes: 15
+2019-11-20 05:09:49.255 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:09:49.260 +05:30 [Information] No. of nodes: 3
+2019-11-20 05:09:49.327 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:09:49.332 +05:30 [Information] No. of nodes: 3
+2019-11-20 05:09:49.456 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:09:49.458 +05:30 [Information] No. of nodes: 8
+2019-11-20 05:09:49.498 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:09:49.500 +05:30 [Information] No. of nodes: 11
+2019-11-20 05:09:49.543 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:09:49.547 +05:30 [Information] No. of nodes: 2
+2019-11-20 05:09:49.734 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:09:49.738 +05:30 [Information] No. of nodes: 7
+2019-11-20 05:09:49.792 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:10:45.688 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-11-20 05:10:45.731 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-11-20 05:10:45.746 +05:30 [Information] MST Service Started
+2019-11-20 05:10:45.750 +05:30 [Information] No. of nodes: 18
+2019-11-20 05:10:45.755 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-11-20 05:10:45.758 +05:30 [Information] No. of nodes: 12
+2019-11-20 05:10:45.815 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:10:45.820 +05:30 [Information] No. of nodes: 11
+2019-11-20 05:10:45.877 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:10:45.882 +05:30 [Information] No. of nodes: 6
+2019-11-20 05:10:45.937 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:10:45.942 +05:30 [Information] No. of nodes: 13
+2019-11-20 05:10:45.999 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:10:46.004 +05:30 [Information] No. of nodes: 5
+2019-11-20 05:10:46.061 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:10:46.065 +05:30 [Information] No. of nodes: 12
+2019-11-20 05:10:46.118 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:10:46.122 +05:30 [Information] No. of nodes: 12
+2019-11-20 05:10:46.174 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:10:46.179 +05:30 [Information] No. of nodes: 12
+2019-11-20 05:10:46.236 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:10:46.241 +05:30 [Information] No. of nodes: 5
+2019-11-20 05:10:46.294 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:10:46.297 +05:30 [Information] No. of nodes: 15
+2019-11-20 05:10:46.349 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:10:46.354 +05:30 [Information] No. of nodes: 3
+2019-11-20 05:10:46.409 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:10:46.413 +05:30 [Information] No. of nodes: 3
+2019-11-20 05:10:46.467 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:10:46.472 +05:30 [Information] No. of nodes: 8
+2019-11-20 05:10:46.528 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:10:46.533 +05:30 [Information] No. of nodes: 11
+2019-11-20 05:10:46.588 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:10:46.593 +05:30 [Information] No. of nodes: 2
+2019-11-20 05:10:46.648 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-11-20 05:10:46.653 +05:30 [Information] No. of nodes: 7
+2019-11-20 05:10:46.709 +05:30 [Error] Error processing nodes.
+System.Exception: The test license has expired
+   at RouteWare.Network.__Global.()
+   at RouteWare.Network.TNetwork.Open(Boolean attributes, Boolean Coord3Cache, Boolean spatialindex, Int32 externalid)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 256
+2019-04-01 05:11:18.292 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 05:11:18.348 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 05:11:18.364 +05:30 [Information] MST Service Started
+2019-04-01 05:11:18.368 +05:30 [Information] No. of nodes: 18
+2019-04-01 05:11:18.372 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-01 05:11:18.376 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:11:19.010 +05:30 [Information] No. of nodes: 11
+2019-04-01 05:11:19.465 +05:30 [Information] No. of nodes: 6
+2019-04-01 05:11:19.931 +05:30 [Information] No. of nodes: 13
+2019-04-01 05:11:20.329 +05:30 [Information] No. of nodes: 5
+2019-04-01 05:11:20.720 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:11:21.125 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:11:21.468 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:11:21.835 +05:30 [Information] No. of nodes: 5
+2019-04-01 05:11:22.369 +05:30 [Information] No. of nodes: 15
+2019-04-01 05:11:22.846 +05:30 [Information] No. of nodes: 3
+2019-04-01 05:11:23.340 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-01 05:11:23.343 +05:30 [Information] No. of nodes: 3
+2019-04-01 05:11:23.803 +05:30 [Information] No. of nodes: 8
+2019-04-01 05:11:24.254 +05:30 [Information] No. of nodes: 11
+2019-04-01 05:11:24.728 +05:30 [Information] No. of nodes: 2
+2019-04-01 05:11:25.278 +05:30 [Information] No. of nodes: 7
+2019-04-01 05:13:29.178 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 05:13:29.236 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 05:13:29.252 +05:30 [Information] MST Service Started
+2019-04-01 05:13:29.256 +05:30 [Information] No. of nodes: 18
+2019-04-01 05:13:29.260 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-01 05:13:29.264 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:13:29.850 +05:30 [Information] No. of nodes: 11
+2019-04-01 05:13:30.461 +05:30 [Information] No. of nodes: 6
+2019-04-01 05:13:31.002 +05:30 [Information] No. of nodes: 13
+2019-04-01 05:13:31.567 +05:30 [Information] No. of nodes: 5
+2019-04-01 05:13:31.971 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:13:32.304 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:13:32.699 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:13:33.070 +05:30 [Information] No. of nodes: 5
+2019-04-01 05:13:33.487 +05:30 [Information] No. of nodes: 15
+2019-04-01 05:13:33.866 +05:30 [Information] No. of nodes: 3
+2019-04-01 05:13:34.315 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-01 05:13:34.356 +05:30 [Information] No. of nodes: 3
+2019-04-01 05:13:34.677 +05:30 [Information] No. of nodes: 8
+2019-04-01 05:13:35.061 +05:30 [Information] No. of nodes: 11
+2019-04-01 05:13:35.589 +05:30 [Information] No. of nodes: 2
+2019-04-01 05:13:35.900 +05:30 [Information] No. of nodes: 7
+2019-04-01 05:52:39.580 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 05:52:39.614 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 05:52:39.623 +05:30 [Information] MST Service Started
+2019-04-01 05:52:39.626 +05:30 [Information] No. of nodes: 18
+2019-04-01 05:52:39.628 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-01 05:52:39.631 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:52:40.043 +05:30 [Information] No. of nodes: 11
+2019-04-01 05:52:40.366 +05:30 [Information] No. of nodes: 6
+2019-04-01 05:52:40.688 +05:30 [Information] No. of nodes: 13
+2019-04-01 05:52:41.076 +05:30 [Information] No. of nodes: 5
+2019-04-01 05:52:41.510 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:52:41.899 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:52:42.264 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:52:42.646 +05:30 [Information] No. of nodes: 5
+2019-04-01 05:52:43.002 +05:30 [Information] No. of nodes: 15
+2019-04-01 05:52:43.353 +05:30 [Information] No. of nodes: 3
+2019-04-01 05:52:43.692 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-01 05:52:43.695 +05:30 [Information] No. of nodes: 3
+2019-04-01 05:52:44.004 +05:30 [Information] No. of nodes: 8
+2019-04-01 05:52:44.318 +05:30 [Information] No. of nodes: 11
+2019-04-01 05:52:44.674 +05:30 [Information] No. of nodes: 2
+2019-04-01 05:52:44.987 +05:30 [Information] No. of nodes: 7
+2019-04-01 05:56:03.930 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 05:56:03.968 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 05:56:03.977 +05:30 [Information] MST Service Started
+2019-04-01 05:56:03.980 +05:30 [Information] No. of nodes: 18
+2019-04-01 05:56:03.983 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-01 05:56:03.985 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:56:04.324 +05:30 [Information] No. of nodes: 11
+2019-04-01 05:56:04.690 +05:30 [Information] No. of nodes: 6
+2019-04-01 05:56:05.014 +05:30 [Information] No. of nodes: 13
+2019-04-01 05:56:05.365 +05:30 [Information] No. of nodes: 5
+2019-04-01 05:56:05.712 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:56:06.077 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:56:06.444 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:56:06.766 +05:30 [Information] No. of nodes: 5
+2019-04-01 05:56:07.109 +05:30 [Information] No. of nodes: 15
+2019-04-01 05:56:07.485 +05:30 [Information] No. of nodes: 3
+2019-04-01 05:56:07.849 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-01 05:56:07.852 +05:30 [Information] No. of nodes: 3
+2019-04-01 05:56:08.184 +05:30 [Information] No. of nodes: 8
+2019-04-01 05:56:08.525 +05:30 [Information] No. of nodes: 11
+2019-04-01 05:56:08.882 +05:30 [Information] No. of nodes: 2
+2019-04-01 05:56:09.221 +05:30 [Information] No. of nodes: 7
+2019-04-01 05:57:11.075 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 05:57:11.111 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 05:57:11.121 +05:30 [Information] MST Service Started
+2019-04-01 05:57:11.124 +05:30 [Information] No. of nodes: 18
+2019-04-01 05:57:11.126 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-01 05:57:11.129 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:57:11.477 +05:30 [Information] No. of nodes: 11
+2019-04-01 05:57:11.841 +05:30 [Information] No. of nodes: 6
+2019-04-01 05:57:12.186 +05:30 [Information] No. of nodes: 13
+2019-04-01 05:57:12.547 +05:30 [Information] No. of nodes: 5
+2019-04-01 05:57:12.898 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:57:13.268 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:57:13.624 +05:30 [Information] No. of nodes: 12
+2019-04-01 05:57:14.009 +05:30 [Information] No. of nodes: 5
+2019-04-01 05:57:14.321 +05:30 [Information] No. of nodes: 15
+2019-04-01 05:57:14.689 +05:30 [Information] No. of nodes: 3
+2019-04-01 05:57:15.065 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-01 05:57:15.068 +05:30 [Information] No. of nodes: 3
+2019-04-01 05:57:15.425 +05:30 [Information] No. of nodes: 8
+2019-04-01 05:57:15.789 +05:30 [Information] No. of nodes: 11
+2019-04-01 05:57:16.117 +05:30 [Information] No. of nodes: 2
+2019-04-01 05:57:16.473 +05:30 [Information] No. of nodes: 7
+2019-04-01 06:04:39.748 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 06:04:39.790 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 06:04:39.799 +05:30 [Information] MST Service Started
+2019-04-01 06:04:39.802 +05:30 [Information] No. of nodes: 18
+2019-04-01 06:04:39.805 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-01 06:04:39.807 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:04:40.163 +05:30 [Information] No. of nodes: 11
+2019-04-01 06:04:40.499 +05:30 [Information] No. of nodes: 6
+2019-04-01 06:04:40.834 +05:30 [Information] No. of nodes: 13
+2019-04-01 06:04:41.149 +05:30 [Information] No. of nodes: 5
+2019-04-01 06:04:41.445 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:04:41.775 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:04:42.112 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:04:42.449 +05:30 [Information] No. of nodes: 5
+2019-04-01 06:04:42.766 +05:30 [Information] No. of nodes: 15
+2019-04-01 06:04:43.085 +05:30 [Information] No. of nodes: 3
+2019-04-01 06:04:43.433 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-01 06:04:43.436 +05:30 [Information] No. of nodes: 3
+2019-04-01 06:04:43.733 +05:30 [Information] No. of nodes: 8
+2019-04-01 06:04:44.075 +05:30 [Information] No. of nodes: 11
+2019-04-01 06:04:44.379 +05:30 [Information] No. of nodes: 2
+2019-04-01 06:04:44.673 +05:30 [Information] No. of nodes: 7
+2019-04-01 06:06:27.026 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 06:06:27.060 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 06:06:27.068 +05:30 [Information] MST Service Started
+2019-04-01 06:06:27.071 +05:30 [Information] No. of nodes: 18
+2019-04-01 06:06:27.073 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-01 06:06:27.076 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:06:27.418 +05:30 [Information] No. of nodes: 11
+2019-04-01 06:06:27.742 +05:30 [Information] No. of nodes: 6
+2019-04-01 06:06:28.031 +05:30 [Information] No. of nodes: 13
+2019-04-01 06:06:28.394 +05:30 [Information] No. of nodes: 5
+2019-04-01 06:06:28.744 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:06:29.066 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:06:29.422 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:06:29.741 +05:30 [Information] No. of nodes: 5
+2019-04-01 06:06:30.089 +05:30 [Information] No. of nodes: 15
+2019-04-01 06:06:30.417 +05:30 [Information] No. of nodes: 3
+2019-04-01 06:06:30.744 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-01 06:06:30.747 +05:30 [Information] No. of nodes: 3
+2019-04-01 06:06:31.051 +05:30 [Information] No. of nodes: 8
+2019-04-01 06:06:31.325 +05:30 [Information] No. of nodes: 11
+2019-04-01 06:06:31.644 +05:30 [Information] No. of nodes: 2
+2019-04-01 06:06:31.958 +05:30 [Information] No. of nodes: 7
+2019-04-01 06:11:11.026 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 06:11:11.061 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 06:11:11.069 +05:30 [Information] MST Service Started
+2019-04-01 06:11:11.071 +05:30 [Information] No. of nodes: 18
+2019-04-01 06:11:11.074 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-01 06:11:11.076 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:11:11.422 +05:30 [Information] No. of nodes: 11
+2019-04-01 06:11:11.758 +05:30 [Information] No. of nodes: 6
+2019-04-01 06:11:12.048 +05:30 [Information] No. of nodes: 13
+2019-04-01 06:11:12.389 +05:30 [Information] No. of nodes: 5
+2019-04-01 06:11:12.693 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:11:13.005 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:11:13.327 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:11:13.662 +05:30 [Information] No. of nodes: 5
+2019-04-01 06:11:13.951 +05:30 [Information] No. of nodes: 15
+2019-04-01 06:11:14.290 +05:30 [Information] No. of nodes: 3
+2019-04-01 06:11:14.623 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-01 06:11:14.625 +05:30 [Information] No. of nodes: 3
+2019-04-01 06:11:14.921 +05:30 [Information] No. of nodes: 8
+2019-04-01 06:11:15.224 +05:30 [Information] No. of nodes: 11
+2019-04-01 06:11:15.539 +05:30 [Information] No. of nodes: 2
+2019-04-01 06:11:15.841 +05:30 [Information] No. of nodes: 7
+2019-04-01 06:15:01.161 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 06:15:01.191 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 06:15:01.199 +05:30 [Information] MST Service Started
+2019-04-01 06:15:01.202 +05:30 [Information] No. of nodes: 18
+2019-04-01 06:15:01.204 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-01 06:15:01.207 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:15:01.522 +05:30 [Information] No. of nodes: 11
+2019-04-01 06:15:01.830 +05:30 [Information] No. of nodes: 6
+2019-04-01 06:15:02.116 +05:30 [Information] No. of nodes: 13
+2019-04-01 06:15:02.489 +05:30 [Information] No. of nodes: 5
+2019-04-01 06:15:02.783 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:15:03.117 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:15:03.414 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:15:03.706 +05:30 [Information] No. of nodes: 5
+2019-04-01 06:15:04.009 +05:30 [Information] No. of nodes: 15
+2019-04-01 06:15:04.315 +05:30 [Information] No. of nodes: 3
+2019-04-01 06:15:04.631 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-01 06:15:04.634 +05:30 [Information] No. of nodes: 3
+2019-04-01 06:15:04.917 +05:30 [Information] No. of nodes: 8
+2019-04-01 06:15:05.237 +05:30 [Information] No. of nodes: 11
+2019-04-01 06:15:05.535 +05:30 [Information] No. of nodes: 2
+2019-04-01 06:15:05.829 +05:30 [Information] No. of nodes: 7
+2019-04-01 06:38:27.307 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 06:38:27.353 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 06:38:27.362 +05:30 [Information] MST Service Started
+2019-04-01 06:38:27.364 +05:30 [Information] No. of nodes: 18
+2019-04-01 06:38:27.366 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-01 06:38:27.369 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:38:27.707 +05:30 [Information] No. of nodes: 11
+2019-04-01 06:38:28.024 +05:30 [Information] No. of nodes: 6
+2019-04-01 06:38:28.348 +05:30 [Information] No. of nodes: 13
+2019-04-01 06:38:28.696 +05:30 [Information] No. of nodes: 5
+2019-04-01 06:38:28.978 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:38:29.294 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:38:29.602 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:38:29.902 +05:30 [Information] No. of nodes: 5
+2019-04-01 06:38:30.190 +05:30 [Information] No. of nodes: 15
+2019-04-01 06:38:30.504 +05:30 [Information] No. of nodes: 3
+2019-04-01 06:38:30.773 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-01 06:38:30.775 +05:30 [Information] No. of nodes: 3
+2019-04-01 06:38:31.082 +05:30 [Information] No. of nodes: 8
+2019-04-01 06:38:31.380 +05:30 [Information] No. of nodes: 11
+2019-04-01 06:38:31.687 +05:30 [Information] No. of nodes: 2
+2019-04-01 06:38:31.966 +05:30 [Information] No. of nodes: 7
+2019-04-01 06:44:00.904 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 06:44:00.938 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 06:44:00.948 +05:30 [Information] MST Service Started
+2019-04-01 06:44:00.951 +05:30 [Information] No. of nodes: 18
+2019-04-01 06:44:00.953 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-01 06:44:00.956 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:44:01.303 +05:30 [Information] No. of nodes: 11
+2019-04-01 06:44:01.629 +05:30 [Information] No. of nodes: 6
+2019-04-01 06:44:01.945 +05:30 [Information] No. of nodes: 13
+2019-04-01 06:44:02.293 +05:30 [Information] No. of nodes: 5
+2019-04-01 06:44:02.614 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:44:02.954 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:44:03.313 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:44:03.639 +05:30 [Information] No. of nodes: 5
+2019-04-01 06:44:03.919 +05:30 [Information] No. of nodes: 15
+2019-04-01 06:44:04.273 +05:30 [Information] No. of nodes: 3
+2019-04-01 06:44:04.624 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-01 06:44:04.627 +05:30 [Information] No. of nodes: 3
+2019-04-01 06:44:04.966 +05:30 [Information] No. of nodes: 8
+2019-04-01 06:44:05.311 +05:30 [Information] No. of nodes: 11
+2019-04-01 06:44:05.644 +05:30 [Information] No. of nodes: 2
+2019-04-01 06:44:05.963 +05:30 [Information] No. of nodes: 7
+2019-04-01 06:46:21.157 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 06:46:21.204 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 06:46:21.214 +05:30 [Information] MST Service Started
+2019-04-01 06:46:21.217 +05:30 [Information] No. of nodes: 18
+2019-04-01 06:46:21.220 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-01 06:46:21.222 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:46:21.574 +05:30 [Information] No. of nodes: 11
+2019-04-01 06:46:21.870 +05:30 [Information] No. of nodes: 6
+2019-04-01 06:46:22.195 +05:30 [Information] No. of nodes: 13
+2019-04-01 06:46:22.529 +05:30 [Information] No. of nodes: 5
+2019-04-01 06:46:22.832 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:46:23.148 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:46:23.468 +05:30 [Information] No. of nodes: 12
+2019-04-01 06:46:23.778 +05:30 [Information] No. of nodes: 5
+2019-04-01 06:46:24.084 +05:30 [Information] No. of nodes: 15
+2019-04-01 06:46:24.449 +05:30 [Information] No. of nodes: 3
+2019-04-01 06:46:24.807 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-01 06:46:24.810 +05:30 [Information] No. of nodes: 3
+2019-04-01 06:46:25.132 +05:30 [Information] No. of nodes: 8
+2019-04-01 06:46:25.474 +05:30 [Information] No. of nodes: 11
+2019-04-01 06:46:25.798 +05:30 [Information] No. of nodes: 2
+2019-04-01 06:46:26.128 +05:30 [Information] No. of nodes: 7
+2019-04-01 07:19:06.005 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 07:19:06.044 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 07:19:06.054 +05:30 [Information] MST Service Started
+2019-04-01 07:19:06.057 +05:30 [Information] No. of nodes: 18
+2019-04-01 07:19:06.060 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-01 07:19:06.062 +05:30 [Information] No. of nodes: 12
+2019-04-01 07:19:06.386 +05:30 [Information] No. of nodes: 11
+2019-04-01 07:19:06.691 +05:30 [Information] No. of nodes: 6
+2019-04-01 07:19:06.998 +05:30 [Information] No. of nodes: 13
+2019-04-01 07:19:07.319 +05:30 [Information] No. of nodes: 5
+2019-04-01 07:19:07.626 +05:30 [Information] No. of nodes: 12
+2019-04-01 07:19:07.927 +05:30 [Information] No. of nodes: 12
+2019-04-01 07:19:08.263 +05:30 [Information] No. of nodes: 12
+2019-04-01 07:19:08.561 +05:30 [Information] No. of nodes: 5
+2019-04-01 07:19:08.871 +05:30 [Information] No. of nodes: 15
+2019-04-01 07:19:09.188 +05:30 [Information] No. of nodes: 3
+2019-04-01 07:19:09.521 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-01 07:19:09.523 +05:30 [Information] No. of nodes: 3
+2019-04-01 07:19:09.829 +05:30 [Information] No. of nodes: 8
+2019-04-01 07:19:10.113 +05:30 [Information] No. of nodes: 11
+2019-04-01 07:19:10.406 +05:30 [Information] No. of nodes: 2
+2019-04-01 07:19:10.728 +05:30 [Information] No. of nodes: 7
+2019-04-01 07:25:27.823 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 07:25:27.857 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 07:25:27.866 +05:30 [Information] MST Service Started
+2019-04-01 07:25:27.868 +05:30 [Information] No. of nodes: 18
+2019-04-01 07:25:27.871 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-01 07:25:27.874 +05:30 [Information] No. of nodes: 12
+2019-04-01 07:25:28.198 +05:30 [Information] No. of nodes: 11
+2019-04-01 07:25:28.541 +05:30 [Information] No. of nodes: 6
+2019-04-01 07:25:28.857 +05:30 [Information] No. of nodes: 13
+2019-04-01 07:25:29.186 +05:30 [Information] No. of nodes: 5
+2019-04-01 07:25:29.515 +05:30 [Information] No. of nodes: 12
+2019-04-01 07:25:29.833 +05:30 [Information] No. of nodes: 12
+2019-04-01 07:25:30.204 +05:30 [Information] No. of nodes: 12
+2019-04-01 07:25:30.527 +05:30 [Information] No. of nodes: 5
+2019-04-01 07:25:30.839 +05:30 [Information] No. of nodes: 15
+2019-04-01 07:25:31.178 +05:30 [Information] No. of nodes: 3
+2019-04-01 07:25:31.501 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-01 07:25:31.504 +05:30 [Information] No. of nodes: 3
+2019-04-01 07:25:31.815 +05:30 [Information] No. of nodes: 8
+2019-04-01 07:25:32.116 +05:30 [Information] No. of nodes: 11
+2019-04-01 07:25:32.452 +05:30 [Information] No. of nodes: 2
+2019-04-01 07:25:32.770 +05:30 [Information] No. of nodes: 7
+2019-04-01 07:36:18.720 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 07:36:18.752 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 07:36:18.762 +05:30 [Information] MST Service Started
+2019-04-01 07:36:18.764 +05:30 [Information] No. of nodes: 18
+2019-04-01 07:36:18.767 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-01 07:36:18.769 +05:30 [Information] No. of nodes: 12
+2019-04-01 07:36:19.119 +05:30 [Information] No. of nodes: 11
+2019-04-01 07:36:19.456 +05:30 [Information] No. of nodes: 6
+2019-04-01 07:36:19.791 +05:30 [Information] No. of nodes: 13
+2019-04-01 07:36:20.113 +05:30 [Information] No. of nodes: 5
+2019-04-01 07:36:20.446 +05:30 [Information] No. of nodes: 12
+2019-04-01 07:36:20.788 +05:30 [Information] No. of nodes: 12
+2019-04-01 07:36:21.136 +05:30 [Information] No. of nodes: 12
+2019-04-01 07:36:21.480 +05:30 [Information] No. of nodes: 5
+2019-04-01 07:36:21.804 +05:30 [Information] No. of nodes: 15
+2019-04-01 07:36:22.130 +05:30 [Information] No. of nodes: 3
+2019-04-01 07:36:22.468 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-01 07:36:22.470 +05:30 [Information] No. of nodes: 3
+2019-04-01 07:36:22.791 +05:30 [Information] No. of nodes: 8
+2019-04-01 07:36:23.079 +05:30 [Information] No. of nodes: 11
+2019-04-01 07:36:23.408 +05:30 [Information] No. of nodes: 2
+2019-04-01 07:36:23.733 +05:30 [Information] No. of nodes: 7
+2019-04-01 07:45:47.282 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 07:45:47.316 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-01 07:45:47.326 +05:30 [Information] MST Service Started
+2019-04-01 07:45:47.329 +05:30 [Information] No. of nodes: 18
+2019-04-01 07:45:47.331 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-01 07:45:47.334 +05:30 [Information] No. of nodes: 12
+2019-04-01 07:45:47.683 +05:30 [Information] No. of nodes: 11
+2019-04-01 07:45:48.052 +05:30 [Information] No. of nodes: 6
+2019-04-01 07:45:48.379 +05:30 [Information] No. of nodes: 13
+2019-04-01 07:45:48.730 +05:30 [Information] No. of nodes: 5
+2019-04-01 07:45:49.086 +05:30 [Information] No. of nodes: 12
+2019-04-01 07:45:49.443 +05:30 [Information] No. of nodes: 12
+2019-04-01 07:45:49.788 +05:30 [Information] No. of nodes: 12
+2019-04-01 07:45:50.126 +05:30 [Information] No. of nodes: 5
+2019-04-01 07:45:50.435 +05:30 [Information] No. of nodes: 15
+2019-04-01 07:45:50.771 +05:30 [Information] No. of nodes: 3
+2019-04-01 07:45:51.126 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-01 07:45:51.129 +05:30 [Information] No. of nodes: 3
+2019-04-01 07:45:51.414 +05:30 [Information] No. of nodes: 8
+2019-04-01 07:45:51.748 +05:30 [Information] No. of nodes: 11
+2019-04-01 07:45:52.076 +05:30 [Information] No. of nodes: 2
+2019-04-01 07:45:52.394 +05:30 [Information] No. of nodes: 7

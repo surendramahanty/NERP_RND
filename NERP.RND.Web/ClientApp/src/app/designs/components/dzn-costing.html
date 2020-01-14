@@ -1,0 +1,211 @@
+<div class="col-md-12">
+   <div class="form-group">
+      <label for="category" class="control-label">Entity </label>
+      <mat-select name="entityType" [(ngModel)]="entityType">
+         <mat-option>Select Entity Type</mat-option>
+         <mat-option value="All">All Entities</mat-option>
+         <mat-option value="Cable">Cables</mat-option>
+         <mat-option value="Chamber">Chambers</mat-option>
+         <mat-option value="Duct">Ducts</mat-option>
+         <mat-option value="ODF">ODFs</mat-option>
+         <mat-option value="Pole">Poles</mat-option>
+         <mat-option value="SpliceClosure">Splice Closures</mat-option>
+         <mat-option value="Splitter">Splitters</mat-option>
+         <mat-option value="Accessory">Accessories</mat-option>
+         <mat-option value="Civilwork">Civilworks</mat-option>
+      </mat-select>
+   </div>
+   <div class="form-group">
+      <table class="table table-bordered table-striped">
+         <thead>
+            <tr>
+               <th style="width: 30px;"></th>
+               <th>Supplier</th>
+               <th style="width:150px;">Material Cost</th>
+               <th style="width:150px">Service Cost</th>
+            </tr>
+         </thead>
+         <tbody>
+            <ng-container *ngIf="(entityType == 'All' || entityType == 'Cable') && cables && cables.length > 0">
+               <ng-container *ngFor='let cable of cables; let rowIndex = index;'>
+                  <tr>
+                     <td colspan="4" style="background-color: #f4f4f4">{{cable.name}}</td>
+                  </tr>
+                  <ng-container *ngFor='let supplier of cable.suppliers; let sIndex = index;'>
+                     <tr *ngIf="checkPriceValidity(supplier.validFrom, supplier.validTo)">
+                        <td style="text-align: center; vertical-align: middle;">
+                           <mat-radio-group [name]="cable.name" [(ngModel)]="supplier.isPrefered">
+                              <mat-radio-button [value]=true></mat-radio-button>
+                           </mat-radio-group>
+                        </td>
+                        <td style="vertical-align: middle;">{{supplier.name}}</td>
+                        <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.price"></td>
+                        <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.serviceCost"></td>
+                     </tr>
+                  </ng-container>
+               </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="(entityType == 'All' || entityType == 'Chamber') && chambers && chambers.length > 0">
+               <ng-container *ngFor='let chamber of chambers; let rowIndex = index;'>
+                  <tr>
+                     <td colspan="4" style="background-color: #f4f4f4">{{chamber.name}}</td>
+                  </tr>
+                  <ng-container *ngFor='let supplier of chamber.suppliers; let sIndex = index;'>
+                     <tr *ngIf="checkPriceValidity(supplier.validFrom, supplier.validTo)">
+                        <td style="text-align: center; vertical-align: middle;">
+                           <mat-radio-group [name]="chamber.name" [(ngModel)]="supplier.isPrefered">
+                              <mat-radio-button [value]=true></mat-radio-button>
+                           </mat-radio-group>
+                        </td>
+                        <td style="vertical-align: middle;">{{supplier.name}}</td>
+                        <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.price"></td>
+                        <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.serviceCost"></td>
+                     </tr>
+                  </ng-container>
+               </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="(entityType == 'All' || entityType == 'Duct') && ducts && ducts.length > 0">
+               <ng-container *ngFor='let duct of ducts; let rowIndex = index;'>
+                  <tr>
+                     <td colspan="4" style="background-color: #f4f4f4">{{duct.name}}</td>
+                  </tr>
+                  <ng-container *ngFor='let supplier of duct.suppliers; let sIndex = index;'>
+                     <tr *ngIf="checkPriceValidity(supplier.validFrom, supplier.validTo)">
+                        <td style="text-align: center; vertical-align: middle;">
+                           <mat-radio-group [name]="duct.name" [(ngModel)]="supplier.isPrefered">
+                              <mat-radio-button [value]=true></mat-radio-button>
+                           </mat-radio-group>
+                        </td>
+                        <td style="vertical-align: middle;">{{supplier.name}}</td>
+                        <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.price"></td>
+                        <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.serviceCost"></td>
+                     </tr>
+                  </ng-container>
+               </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="(entityType == 'All' || entityType == 'ODF') && odfs && odfs.length > 0">
+               <ng-container *ngFor='let odf of odfs; let rowIndex = index;'>
+                  <tr>
+                     <td colspan="4" style="background-color: #f4f4f4">{{odf.name}}</td>
+                  </tr>
+                  <ng-container *ngFor='let supplier of odf.suppliers; let sIndex = index;'>
+                     <tr *ngIf="checkPriceValidity(supplier.validFrom, supplier.validTo)">
+                        <td style="text-align: center; vertical-align: middle;">
+                           <mat-radio-group [name]="odf.name" [(ngModel)]="supplier.isPrefered">
+                              <mat-radio-button [value]=true></mat-radio-button>
+                           </mat-radio-group>
+                        </td>
+                        <td style="vertical-align: middle;">{{supplier.name}}</td>
+                        <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.price"></td>
+                        <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.serviceCost"></td>
+                     </tr>
+                  </ng-container>
+               </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="(entityType == 'All' || entityType == 'Pole') && poles && poles.length > 0">
+               <ng-container *ngFor='let pole of poles; let rowIndex = index;'>
+                  <tr>
+                     <td colspan="4" style="background-color: #f4f4f4">{{pole.name}}</td>
+                  </tr>
+                  <ng-container *ngFor='let supplier of pole.suppliers; let sIndex = index;'>
+                     <tr *ngIf="checkPriceValidity(supplier.validFrom, supplier.validTo)">
+                        <td style="text-align: center; vertical-align: middle;">
+                           <mat-radio-group [name]="pole.name" [(ngModel)]="supplier.isPrefered">
+                              <mat-radio-button [value]=true></mat-radio-button>
+                           </mat-radio-group>
+                        </td>
+                        <td style="vertical-align: middle;">{{supplier.name}}</td>
+                        <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.price"></td>
+                        <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.serviceCost"></td>
+                     </tr>
+                  </ng-container>
+               </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="(entityType == 'All' || entityType == 'Splitter') && splitters && splitters.length > 0">
+               <ng-container *ngFor='let splitter of splitters; let rowIndex = index;'>
+                  <tr>
+                     <td colspan="4" style="background-color: #f4f4f4">{{splitter.name}}</td>
+                  </tr>
+                  <ng-container *ngFor='let supplier of splitter.suppliers; let sIndex = index;'>
+                     <tr *ngIf="checkPriceValidity(supplier.validFrom, supplier.validTo)">
+                        <td style="text-align: center; vertical-align: middle;">
+                           <mat-radio-group [name]="splitter.name" [(ngModel)]="supplier.isPrefered">
+                              <mat-radio-button [value]=true></mat-radio-button>
+                           </mat-radio-group>
+                        </td>
+                        <td style="vertical-align: middle;">{{supplier.name}}</td>
+                        <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.price"></td>
+                        <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.serviceCost"></td>
+                     </tr>
+                  </ng-container>
+               </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="(entityType == 'All' || entityType == 'SpliceClosure') && spliceClosures && spliceClosures.length > 0">
+               <ng-container *ngFor='let spliceClosure of spliceClosures; let rowIndex = index;'>
+                  <tr>
+                     <td colspan="4" style="background-color: #f4f4f4">{{spliceClosure.name}}</td>
+                  </tr>
+                  <ng-container *ngFor='let supplier of spliceClosure.suppliers; let sIndex = index;'>
+                     <tr *ngIf="checkPriceValidity(supplier.validFrom, supplier.validTo)">
+                        <td style="text-align: center; vertical-align: middle;">
+                           <mat-radio-group [name]="spliceClosure.name" [(ngModel)]="supplier.isPrefered">
+                              <mat-radio-button [value]=true></mat-radio-button>
+                           </mat-radio-group>
+                        </td>
+                        <td style="vertical-align: middle;">{{supplier.name}}</td>
+                        <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.price"></td>
+                        <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.serviceCost"></td>
+                     </tr>
+                  </ng-container>
+               </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="(entityType == 'All' || entityType == 'Accessory') && accessories && accessories.length > 0">
+               <ng-container *ngFor='let accessory of accessories; let rowIndex = index;'>
+                  <tr>
+                     <td colspan="4" style="background-color: #f4f4f4">{{accessory.name}}</td>
+                  </tr>
+                  <ng-container *ngFor='let supplier of accessory.suppliers; let sIndex = index;'>
+                     <tr *ngIf="checkPriceValidity(supplier.validFrom, supplier.validTo)">
+                        <td style="text-align: center; vertical-align: middle;">
+                           <mat-radio-group [name]="accessory.name" [(ngModel)]="supplier.isPrefered">
+                              <mat-radio-button [value]=true></mat-radio-button>
+                           </mat-radio-group>
+                        </td>
+                        <td style="vertical-align: middle;">{{supplier.name}}</td>
+                        <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.price"></td>
+                        <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.serviceCost"></td>
+                     </tr>
+                  </ng-container>
+               </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="(entityType == 'All' || entityType == 'Civilwork') && civilworks && civilworks.length > 0">
+               <ng-container *ngFor='let civilwork of civilworks; let rowIndex = index;'>
+                  <tr>
+                     <td colspan="4" style="background-color: #f4f4f4">{{civilwork.name}}</td>
+                  </tr>
+                  <ng-container *ngFor='let supplier of civilwork.suppliers; let sIndex = index;'>
+                     <tr *ngIf="checkPriceValidity(supplier.validFrom, supplier.validTo)">
+                        <td style="text-align: center; vertical-align: middle;">
+                           <mat-radio-group [name]="civilwork.name" [(ngModel)]="supplier.isPrefered">
+                              <mat-radio-button [value]=true></mat-radio-button>
+                           </mat-radio-group>
+                        </td>
+                        <td style="vertical-align: middle;">{{supplier.name}}</td>
+                        <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.price"></td>
+                        <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.serviceCost"></td>
+                     </tr>
+                  </ng-container>
+               </ng-container>
+            </ng-container>
+         </tbody>
+      </table>
+   </div>
+</div>

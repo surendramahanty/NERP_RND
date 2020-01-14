@@ -1,0 +1,150 @@
+<section class="content-header">
+   <h1>Manage Roles <small> {{title}} </small></h1>
+   <ol class="breadcrumb">
+      <li><a [routerLink]="['/home']"><i class="fa fa-home"></i> Home</a></li>
+      <li><a [routerLink]="['/roles']"> Roles</a></li>
+   </ol>
+</section>
+
+<section class="content">
+   <div class="row">
+      <div class="col-xs-12">
+         <div class="box">
+            <div class="box-header with-border">
+               <h3 class="box-title">Role Details</h3>
+               <div class="box-tools pull-right">
+                  <button class="btn btn-social-icon btn-xs btn-danger" (click)="goBack()">
+                     <i class="fas fa-times" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-social-icon btn-xs btn-success" type="submit" style="margin-left: 5px;" (click)="save()" [disabled]="form.invalid">
+                     <i class="far fa-save"></i>
+                  </button>
+               </div>
+            </div>
+            <form name="form" action="javascript:{}" #form="ngForm" novalidate autocomplete="off">
+               <div class="box-body">
+
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <h4 class="panel-title">Role Info</h4>
+                     </div>
+                     <div class="panel-collapse collapse in">
+                        <div class="panel-body">
+                           <div class="col-sm-12">
+                              <div class="form-group">
+                                 <label for="name" class="control-label">Name <span style="color:red;">*</span></label>
+                                 <input type="text" class="form-control input-sm" name="name" pattern="[a-zA-Z][a-zA-Z-' ]+" minlength="3" maxlength="50" #name="ngModel" required [(ngModel)]="role.name">
+                                 <div *ngIf="name.errors && (name.dirty || name.touched)">
+                                    <div [hidden]="!name.errors.required">
+                                       <span style="color: red;">Name required</span>
+                                    </div>
+                                    <div [hidden]="!name.errors.minlength">
+                                       <span style="color:red;">Name should be in 3 to 50 characters</span>
+                                    </div>
+                                    <div [hidden]="!name.errors.pattern">
+                                       <span style="color: red;">Invalid characters! </span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label for="description" class="control-label">Description </label>
+                                 <input type="text" class="form-control input-sm" name="description" [(ngModel)]="role.description">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="panel-group" id="accordion">
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#accessPermissions">Access Permissions</a>
+                           </h4>
+                        </div>
+                        <div id="accessPermissions" class="panel-collapse collapse in">
+                           <div class="panel-body">
+                              <div class="col-sm-12">
+                                 <div class="form-group">
+                                    <p-treeTable [value]="treeModules" selectionMode="checkbox" [(selection)]="selectedModules">
+                                       <ng-template pTemplate="header" let-columns>
+                                          <tr>
+                                             <th style="padding-left: 15px;"><p-treeTableHeaderCheckbox></p-treeTableHeaderCheckbox> <span style="padding-left: 8px;">Modules/Permissions</span></th>
+                                          </tr>
+                                       </ng-template>
+                                       <ng-template pTemplate="body" let-rowNode let-rowData="rowData" let-columns="columns">
+                                          <tr>
+                                             <td>
+                                                <p-treeTableToggler [rowNode]="rowNode"></p-treeTableToggler>
+                                                <p-treeTableCheckbox [value]="rowNode"></p-treeTableCheckbox>
+                                                {{rowData.name}}
+                                             </td>
+                                          </tr>
+                                       </ng-template>
+                                    </p-treeTable>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--<div class="panel panel-default">
+                        <div class="panel-heading">
+                           <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#remarks">Remarks</a>
+                           </h4>
+                        </div>
+                        <div id="remarks" class="panel-collapse collapse">
+                           <div class="panel-body">
+                              <div class="col-sm-12">
+                                 <div class="form-group">
+                                    <label for="remarks" class="control-label">Comments</label>
+                                    <textarea class="form-control" rows="3" name="remarks" tabindex="8" [(ngModel)]="group.remarks"></textarea>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#otherInfo">Other Info</a>
+                           </h4>
+                        </div>
+                        <div id="otherInfo" class="panel-collapse collapse">
+                           <div class="panel-body">
+                              <div class="col-sm-12">
+                                 <div class="form-group">
+                                    <label for="createdDate" class="control-label">Created Date</label>
+                                    <input type="text" class="form-control input-sm" name="createdDate" tabindex="9" [ngModel]="group.createdDate | date:'dd/MM/yyyy'" disabled>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="createdBy" class="control-label">Created By</label>
+                                    <input type="text" class="form-control input-sm" name="createdBy" tabindex="10" [(ngModel)]="group.createdBy" disabled>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="lastUpdatedDate" class="control-label">Last Updated Date</label>
+                                    <input type="text" class="form-control input-sm" name="lastUpdatedDate" tabindex="11" [ngModel]="group.updatedDate | date:'dd/MM/yyyy'" disabled>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="updatedBy" class="control-label">Updated By</label>
+                                    <input type="text" class="form-control input-sm" name="updatedBy" tabindex="12" [(ngModel)]="group.updatedBy" disabled>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>-->
+                  </div>
+               </div>
+               <div class="box-footer">
+                  <div class="pull-right">
+                     <div>
+                        <button type="submit" class="btn btn-danger" tabindex="13" (click)="goBack()">Close</button>
+                        <button type="submit" class="btn btn-success" tabindex="14" style="margin-left:10px" (click)="save()" [disabled]="form.invalid">Save</button>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</section>

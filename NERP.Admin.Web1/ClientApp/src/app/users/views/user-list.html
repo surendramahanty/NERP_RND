@@ -1,0 +1,64 @@
+<section class="content-header">
+   <h1>Manage Users</h1>
+   <ol class="breadcrumb">
+      <li><a [routerLink]="['/home']"><i class="fa fa-home"></i> Home</a></li>
+   </ol>
+</section>
+
+<section class="content">
+   <div class="row">
+      <div class="col-xs-12">
+         <div class="box">
+            <div class="box-header with-border">
+               <h3 class="box-title">User List</h3>
+               <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                  <div class="btn-group" data-toggle="btn-toggle">
+                     <button id="AddNewUser" [routerLink]="['details']" class="btn btn-block btn-xs btn-primary"> New User</button>
+                  </div>
+               </div>
+            </div>
+            <div class="box-body">
+               <dt-search [searchFields]="searchFields" (onSearch)="search($event)"></dt-search>
+               <dt-pagination [totalPages]="totalPages" (onPageSizeChange)="onPageSizeChange($event)" (onPageChange)="onPageChange($event)"></dt-pagination>
+
+               <table id="users" class="table table-bordered table-striped">
+                  <thead>
+                     <tr (click)="onColumnClick($event.target)">
+                        <th data-column="LoginId" class="table-sorter">Login Id</th>
+                        <th data-column="FirstName" class="table-sorter">Name</th>
+                        <th data-column="EmailId" class="table-sorter" style="width:250px">Email Id</th>
+                        <th data-column="Role" class="table-sorter">Role</th>
+                        <th data-column="Status" class="table-sorter" style="width:80px">Status</th>
+                        <th style="width:72px"></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <ng-container *ngIf='users && users.length > 0'>
+                        <tr *ngFor='let user of users'>
+                           <td>{{user.loginId}}</td>
+                           <td>{{user.firstName}} {{user.lastName}}</td>
+                           <td>{{user.emailId}}</td>
+                           <td>{{getRoleDescription(user.roleId)}}</td>
+                           <td>{{user.isActive == true ? 'Active' : 'Block'}}</td>
+                           <td>
+                              <a>
+                                 <i class="fa fa-edit" [routerLink]="['details', user.id]" title="Edit" style="font-size: 14px; cursor:pointer"></i>
+                              </a>&nbsp;
+                              <a>
+                                 <i class="fa fa-trash" (click)="delete(user)" title="Remove" style="font-size: 14px; cursor:pointer; color:red"></i>
+                              </a>
+                           </td>
+                        </tr>
+                     </ng-container>
+                     <tr *ngIf='users == null || users.length == 0'>
+                        <td colspan="6" class="check-mail" style="text-align: center;">
+                           {{statusMessage}}
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

@@ -1,0 +1,81 @@
+<section class="content-header">
+   <h1>Manage Designs <small> {{title}} </small></h1>
+   <ol class="breadcrumb">
+      <li><a [routerLink]="['/home']"><i class="fa fa-home"></i> Home</a></li>
+      <li><a [routerLink]="['/designs']"> Designs</a></li>
+   </ol>
+</section>
+
+<section class="content">
+   <div class="row">
+      <div class="col-xs-12">
+         <div class="box">
+            <div class="box-header with-border ui-sortable-handle">
+               <ul class="nav nav-tabs form-menu">
+                  <li class="active"><a href="#tab_designInfo" data-toggle="tab"> <span style="font-size:1.2em">Design Info</span></a></li>
+                  <li><a href="#tab_documents" data-toggle="tab"> <span style="font-size:1.2em">Documents</span></a></li>
+                  <!--<li *ngIf="design.designType == 'FTTx'"><a href="#tab_clusters" data-toggle="tab"> <span style="font-size:1.2em">Clusters</span></a></li>-->
+                  <li><a href="#tab_clusters" data-toggle="tab"> <span style="font-size:1.2em">Clusters</span></a></li>
+                  <li><a href="#tab_bookingIds" data-toggle="tab"> <span style="font-size:1.2em">Booking Ids</span></a></li>
+                  <li><a href="#tab_networkSettings" data-toggle="tab"> <span style="font-size:1.2em">Settings</span></a></li>
+                  <li><a href="#tab_costing" data-toggle="tab"><span style="font-size:1.2em">Costing</span></a></li>
+                  <li><a href="#tab_map" data-toggle="tab"><span style="font-size:1.2em">Map</span></a></li>
+                  <li><a href="#tab_boq" data-toggle="tab"><span style="font-size:1.2em">BOM</span></a></li>
+                  <li><a href="#tab_log" data-toggle="tab"><span style="font-size:1.2em">Logs</span></a></li>
+               </ul>
+               <div class="box-tools pull-right">
+                  <button class="btn btn-social-icon btn-xs btn-danger" (click)="goBack()">
+                     <i class="fas fa-times" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-social-icon btn-xs btn-success" type="submit" style="margin-left: 5px;" (click)="save()" [disabled]="form.invalid">
+                     <i class="far fa-save"></i>
+                  </button>
+               </div>
+            </div>
+            <div class="box-body">
+               <form name="form" action="javascript:{}" #form="ngForm" autocomplete="off" novalidate>
+                  <div class="tab-content">
+                     <div id="tab_designInfo" class="tab-pane active">
+                        <dzn-info [design]="design" [designs]="designs" (onVersionChange)="onVersionChange($event)"></dzn-info>
+                     </div>
+                     <div id="tab_documents" class="tab-pane">
+                        <dzn-documents [design]="design"></dzn-documents>
+                     </div>
+                     <div id="tab_clusters" class="tab-pane">
+                        <dzn-clusters [design]="design"></dzn-clusters>
+                     </div>
+                     <div id="tab_bookingIds" class="tab-pane">
+                        <dzn-bookingIds [design]="design"></dzn-bookingIds>
+                     </div>
+                     <div id="tab_networkSettings" class="tab-pane">
+                        <dzn-networkSettings [design]="design" [allDesigns]="allDesigns"></dzn-networkSettings>
+                     </div>
+                     <div id="tab_costing" class="tab-pane">
+                        <dzn-costing [networkSettings]="design.networkSettings"></dzn-costing>
+                     </div>
+                     <div id="tab_map" class="tab-pane">
+                        <dzn-map [design]="design"></dzn-map>
+                     </div>
+                     <div id="tab_boq" class="tab-pane">
+                        <dzn-bom [boq]="design"></dzn-bom>
+                     </div>
+                     <div id="tab_log" class="tab-pane">
+                        <div class="col-md-12 form-group">
+                           <textarea class="form-control" rows="15" name="processLog" [ngModel]="design.log" readonly></textarea>
+                        </div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <div class="box-footer">
+               <button type="submit" class="btn btn-default pull-left" (click)="saveNewVersion()">Save as New Version</button>
+               <div class="pull-right">
+                  <button type="submit" class="btn btn-primary" (click)="generateDesign()" style="margin-right: 10px;">Generate Design</button>
+                  <button type="submit" class="btn btn-danger" (click)="goBack()">Close</button>
+                  <button type="submit" class="btn btn-success" style="margin-left:10px" (click)="save()" [disabled]="form.invalid">Save</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

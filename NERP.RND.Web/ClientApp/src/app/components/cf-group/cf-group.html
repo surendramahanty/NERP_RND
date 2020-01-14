@@ -1,0 +1,21 @@
+   <ng-container *ngIf='customFields && customFields.length > 0'>
+      <ng-container *ngFor='let groups of customFieldGroups;let rowIndex = index;'>
+         <ng-container *ngFor='let item of groups'>
+            <div class="panel panel-borderless">
+               <div class="panel-heading">
+                  <h4 class="panel-title">
+                     <a class="accordion-toggle" data-toggle="collapse" [attr.data-parent]="'#'+accordionId" [href]="'#cf_'+rowIndex">{{item.category}}</a>
+                  </h4>
+               </div>
+               <div [id]="'cf_'+rowIndex" class="panel-collapse collapse">
+                  <div class="panel-body">
+                     <div class="form-group">
+                        <label for="category" class="control-label">{{item.label}}</label>
+                        <input [type]=item.dataType class="form-control" [name]="item.name" [(ngModel)]="item.userValue" autocomplete="off">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </ng-container>
+      </ng-container>
+   </ng-container>

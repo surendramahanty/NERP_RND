@@ -1,0 +1,54 @@
+<div>
+   <div class="col-sm-12">
+      <div class="pull-right">
+         <div class="form-group">
+            <label for="version" class="control-label" style="float:left; padding: 5px 5px;">Ver.</label>
+            <mat-select name="version" [(ngModel)]="selectedVersion" (ngModelChange)="versionChange($event)" style="width:75px">
+               <mat-option>Version</mat-option>
+               <mat-option *ngFor="let design of designs" [value]="design.version">
+                  {{design.version}}
+               </mat-option>
+            </mat-select>
+         </div>
+      </div>
+   </div>
+   <div class="col-sm-6">
+      <div class="form-group">
+         <label for="name" class="control-label">Name <span style="color:red;">*</span></label>
+         <input type="text" class="form-control" name="name" required [(ngModel)]="design.name">
+      </div>
+   </div>
+   <div class="col-sm-6">
+      <div class="form-group">
+         <label for="code" class="control-label">Code </label>
+         <input type="text" class="form-control" name="code" [(ngModel)]="design.code">
+      </div>
+   </div>
+   <div class="col-sm-6">
+      <div class="form-group">
+         <label for="designType" class="control-label">Design Type</label>
+         <mat-select name="designType" [(ngModel)]="design.designType" (ngModelChange)="clearNetworkSettings()">
+            <mat-option>Select Design Type</mat-option>
+            <mat-option value='FTTx'>FTTx</mat-option>
+           <!-- <mat-option value='Backbone'>Backbone</mat-option>-->
+         </mat-select>
+      </div>
+   </div>
+   <div class="col-sm-6">
+      <div class="form-group">
+         <label for="assignedTo" class="control-label">Assigned To</label>
+         <mat-select name="assignedTo" [(ngModel)]="design.assignedTo">
+            <mat-option>Select user</mat-option>
+            <mat-option *ngFor="let user of users" [value]="user.id">
+               {{user.firstName}} {{user.lastName}}
+            </mat-option>
+         </mat-select>
+      </div>
+   </div>
+   <div class="col-sm-12">
+      <div class="form-group">
+         <label for="description" class="control-label">Description </label>
+         <textarea class="form-control" rows="2" name="description" [(ngModel)]="design.description"></textarea>
+      </div>
+   </div>
+</div>

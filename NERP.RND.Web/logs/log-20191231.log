@@ -1,0 +1,15 @@
+2019-12-31 18:26:47.098 +05:30 [Error] Error export design.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at NERP.RND.Web.Controllers.DesignsController.ExportDesign(String designId) in E:\rnd_module\previous_RND CODE\Solution2\NERP.RND.Web\Controllers\DesignsController.cs:line 257
+2019-12-31 18:26:53.594 +05:30 [Error] Error export design.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at NERP.RND.Web.Controllers.DesignsController.ExportDesign(String designId) in E:\rnd_module\previous_RND CODE\Solution2\NERP.RND.Web\Controllers\DesignsController.cs:line 257
+2019-12-31 18:29:20.597 +05:30 [Error] Error export design.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at NERP.RND.Web.Controllers.DesignsController.ExportDesign(String designId) in E:\rnd_module\previous_RND CODE\Solution2\NERP.RND.Web\Controllers\DesignsController.cs:line 257
+2019-12-31 18:29:25.907 +05:30 [Error] Error export design.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at NERP.RND.Web.Controllers.DesignsController.ExportDesign(String designId) in E:\rnd_module\previous_RND CODE\Solution2\NERP.RND.Web\Controllers\DesignsController.cs:line 257
+2019-12-31 18:29:28.404 +05:30 [Error] Error export design.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at NERP.RND.Web.Controllers.DesignsController.ExportDesign(String designId) in E:\rnd_module\previous_RND CODE\Solution2\NERP.RND.Web\Controllers\DesignsController.cs:line 257

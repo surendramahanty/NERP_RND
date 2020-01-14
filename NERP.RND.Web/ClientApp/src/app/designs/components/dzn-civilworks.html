@@ -1,0 +1,42 @@
+<div class="form-group col-md-12">
+   <label for="equipment" class="control-label">Select Civilwork</label>
+   <div class="input-group input-group-sm">
+      <mat-select name="civilwork" [(ngModel)]="selectedCivilwork">
+         <mat-option>Select Civilwork</mat-option>
+         <ng-container *ngIf="civilworksMaster && civilworksMaster.length > 0">
+            <mat-option *ngFor="let civilwork of civilworksMaster" [value]="civilwork">
+               {{civilwork.name}}
+            </mat-option>
+         </ng-container>
+      </mat-select>
+      <span class="input-group-btn"><button class="btn btn-info btn-flat" type="button" (click)="addCivilwork()"><i class="fas fa-plus"></i></button></span>
+   </div>
+</div>
+
+<div class="form-group col-md-12">
+   <table class="table table-bordered table-striped">
+      <thead>
+         <tr>
+            <th>Name</th>
+            <th style="width:40px"></th>
+         </tr>
+      </thead>
+      <tbody>
+         <ng-container *ngIf='civilworkSettings.civilworks && civilworkSettings.civilworks.length > 0'>
+            <tr *ngFor='let civilwork of civilworkSettings.civilworks;let rowIndex = index;'>
+               <td>{{civilwork.name}}</td>
+               <td>
+                  <a>
+                     <i class="fas fa-trash-alt" style="font-size: 15px; color: Red; cursor:pointer" (click)="removeCivilwork(rowIndex)" title="Remove"></i>
+                  </a>
+               </td>
+            </tr>
+         </ng-container>
+         <tr *ngIf='civilworkSettings.civilworks == null || civilworkSettings.civilworks.length == 0'>
+            <td colspan="2" style="text-align: center;">
+               {{statusMessage}}
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div>

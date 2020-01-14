@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Common.Config\Common.Config.csproj" />
+    <ProjectReference Include="..\..\..\Common\Common.DataAccess.Mongo\Common.DataAccess.Mongo.csproj" />
+    <ProjectReference Include="..\NERP.Common\NERP.Common.csproj" />
+  </ItemGroup>
+
+</Project>

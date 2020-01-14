@@ -1,0 +1,124 @@
+<section class="content-header">
+   <h1>Manage Civil Works <small> {{title}} </small></h1>
+   <ol class="breadcrumb">
+      <li><a [routerLink]="['/']"><i class="fa fa-home"></i> Home</a></li>
+      <li><a [routerLink]="['/civilworks']"> Civilworks</a></li>
+   </ol>
+</section>
+<section class="content">
+   <div class="row">
+      <div class="col-xs-12">
+         <div class="box">
+            <div class="box-header with-border ui-sortable-handle">
+               <h3 class="box-title">Civil Work Details</h3>
+               <div class="box-tools pull-right" data-original-title="Status" data-toggle="tooltip" title="">
+                  <button class="btn btn-social-icon btn-xs btn-danger" (click)="goBack()">
+                     <i class="fa fa-times" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-social-icon btn-xs btn-success" type="submit" style="margin-left: 5px;" (click)="save()" [disabled]="form.invalid">
+                     <i class="far fa-save"></i>
+                  </button>
+               </div>
+            </div>
+            <form name="form" action="javascript:{}" #form="ngForm" novalidate autocomplete="off">
+               <div class="box-body">
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <h4 class="panel-title">
+                           General Information
+                        </h4>
+                     </div>
+                     <div class="panel-collapse collapse in">
+                        <div class="panel-body">
+                           <div class="form-group col-md-6">
+                              <label for="name" class="control-label">Name <span style="color:red;">*</span></label>
+                              <input type="text" name="name" class="form-control input-sm" [(ngModel)]="civilwork.name" required  />
+                           </div>
+                           <div class="form-group col-md-6">
+                              <label for="parentType" class="control-label">Parent Type</label>
+                              <mat-select name="parentType" [(ngModel)]="civilwork.parentEntityType">
+                                 <mat-option>Select Parent Entity Type</mat-option>
+                                 <mat-option value="Cable">Cable</mat-option>
+                                 <mat-option value="Chamber">Chamber</mat-option>
+                                 <mat-option value="PoP">PoP</mat-option>
+                                 <mat-option value="ODF">ODF</mat-option>
+                                 <mat-option value="Pole">Pole</mat-option>
+                                 <mat-option value="Duct">Duct</mat-option>
+                                 <mat-option value="SpliceClosure">Splice Closure</mat-option>
+                                 <mat-option value="Splitter">Splitter</mat-option>
+                                 <mat-option value="Customer">Customer</mat-option>
+                                 <mat-option value="Microduct">Microduct</mat-option>
+                                 <mat-option value="Site">Site</mat-option>
+                                 <mat-option value="Homepass">Homepass</mat-option>
+                              </mat-select>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="panel-group" id="accordion">
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#pricing">Pricing</a>
+                           </h4>
+                        </div>
+                        <div id="pricing" class="panel-collapse collapse">
+                           <div class="panel-body">
+                              <div class="col-sm-12">
+                                 <div class="form-group">
+                                    <table class="table table-bordered table-striped">
+                                       <thead>
+                                          <tr>
+                                             <th style="width:200px">Contractor</th>
+                                             <th style="width:200px">Service Cost</th>
+                                             <th style="width: 140px;">Valid From</th>
+                                             <th style="width: 140px;">Valid To</th>
+                                             <th style="text-align: center;padding: 2px 0px;width: 50px;">
+                                                <a (click)="addNewSupplier()" style="cursor:pointer">
+                                                   <i class="fas fa-plus-circle" title="Add" style="font-size: 20px; color: #3e53a4;margin: 5px;"></i>
+                                                </a>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <ng-container *ngIf='civilwork.suppliers && civilwork.suppliers.length > 0'>
+                                             <tr *ngFor='let supplier of civilwork.suppliers; let rowIndex = index;'>
+                                                <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.name"></td>
+                                                <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="supplier.price"></td>
+                                                <td><input type="date" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [ngModel]="supplier.validFrom | date:'yyyy-MM-dd'" (ngModelChange)="supplier.validFrom = $event"></td>
+                                                <td><input type="date" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [ngModel]="supplier.validTo | date:'yyyy-MM-dd'" (ngModelChange)="supplier.validTo = $event"></td>
+                                                <td style="text-align:center;padding-top: 14px;">
+                                                   <a (click)="deleteSupplier(rowIndex)" style="cursor:pointer">
+                                                      <i class="fas fa-trash-alt" title="Delete" style="font-size: 15px; color: Red;"></i>
+                                                   </a>
+                                                </td>
+                                             </tr>
+                                          </ng-container>
+                                          <tr *ngIf='civilwork.suppliers == null || civilwork.suppliers.length == 0'>
+                                             <td colspan="5" class="check-mail" style="text-align: center;">
+                                                Contractor not added
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+
+               </div>
+               <div class="box-footer">
+                  <div class="pull-right">
+                     <button type="button" class="btn btn-danger" (click)="goBack()">Close</button>
+                     <button type="submit" class="btn btn-success" style="margin-left:10px" (click)="save()" [disabled]="form.invalid">Save</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</section>

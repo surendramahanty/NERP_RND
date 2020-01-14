@@ -1,0 +1,541 @@
+<ul class="nav nav-tabs" id="myNavTabs1">
+   <li class="active"><a href="#divSummary" data-toggle="tab" aria-expanded="true">Summary</a></li>
+   <li><a href="#divDetails" data-toggle="tab" aria-expanded="false">Details</a></li>
+   <li class="btn-group pull-right open" style="padding-left: 0px;">
+      <button type="button" (click)="ExportTOKml()" class="btn btn-social-icon btn-md btn-default">
+         <img src="images/file-ext/kml.svg" style="width: 23px;margin-top: 5px;margin-left: 5px;">
+      </button>
+   </li>
+   <li class="btn-group pull-right open" style="padding-left: 10px;">
+      <button type="button" (click)="ExportTOExcel()" class="btn btn-social-icon btn-md btn-default">
+         <img src="images/file-ext/xlsx.svg" style="width: 23px;margin-top: 5px;margin-left: 5px;">
+      </button>
+   </li>
+</ul>
+<div class="panel-body">
+   <div class="tab-content">
+      <div id="divSummary" class="tab-pane active" #TABLE #table>
+         <table class="table table-bordered table-striped">
+            <thead>
+               <tr>
+                  <th scope="col" colspan="2" style="text-align:center;"><b>Total Cost Summary</b></th>
+               </tr>
+            <tbody>
+               <tr>
+                  <td><b>Total Material Cost</b></td>
+                  <td style="text-align:right">{{totalMaterialCost | number : '1.2-2'}}</td>
+               </tr>
+               <tr>
+                  <td><b>Total Service Cost</b></td>
+                  <td style="text-align:right">{{totalServiceCost | number : '1.2-2'}}</td>
+               </tr>
+            </tbody>
+            <tfoot>
+               <tr>
+                  <td><b>Total Cost</b></td>
+                  <td style="text-align:right">{{totalCost | number : '1.2-2'}}</td>
+               </tr>
+            </tfoot>
+         </table>
+
+         <table class="table table-bordered table-striped">
+            <thead>
+               <tr>
+                  <th scope="col" colspan="7" style="text-align:center;"><b>Category Wise Cost Cummary</b></th>
+               </tr>
+               <tr>
+                  <th style="width: 60px;text-align: center;">No.</th>
+                  <th>Description</th>
+                  <th style="width: 120px;text-align: center;">Unit</th>
+                  <th style="width: 120px;text-align: center;">Quantity</th>
+                  <th style="width: 120px;text-align: center;">Material Cost</th>
+                  <th style="width: 120px;text-align: center;">Service Cost</th>
+                  <th style="width: 120px;text-align: center;">Total Cost</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td style="text-align:center">1</td>
+                  <td>Cables</td>
+                  <td style="text-align:center">{{cableSummary.units}}</td>
+                  <td style="text-align:right">{{cableSummary.quantity | number : '1.2-2'}}</td>
+                  <td style="text-align:right">{{cableSummary.materialCost | number : '1.2-2'}}</td>
+                  <td style="text-align:right">{{cableSummary.serviceCost | number : '1.2-2'}}</td>
+                  <td style="text-align:right"><b>{{(cableSummary.materialCost + cableSummary.serviceCost) | number : '1.2-2'}}</b></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center">2</td>
+                  <td>Chambers</td>
+                  <td style="text-align:center">{{chamberSummary.units}}</td>
+                  <td style="text-align:right">{{chamberSummary.quantity | number : '1.2-2'}}</td>
+                  <td style="text-align:right">{{chamberSummary.materialCost | number : '1.2-2'}}</td>
+                  <td style="text-align:right">{{chamberSummary.serviceCost | number : '1.2-2'}}</td>
+                  <td style="text-align:right"><b>{{(chamberSummary.materialCost + chamberSummary.serviceCost) | number : '1.2-2'}}</b></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center">3</td>
+                  <td>Ducts</td>
+                  <td style="text-align:center">{{ductSummary.units}}</td>
+                  <td style="text-align:right">{{ductSummary.quantity | number : '1.2-2'}}</td>
+                  <td style="text-align:right">{{ductSummary.materialCost | number : '1.2-2'}}</td>
+                  <td style="text-align:right">{{ductSummary.serviceCost | number : '1.2-2'}}</td>
+                  <td style="text-align:right"><b>{{(ductSummary.materialCost + ductSummary.serviceCost) | number : '1.2-2'}}</b></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center">4</td>
+                  <td>ODFs</td>
+                  <td style="text-align:center">{{odfSummary.units}}</td>
+                  <td style="text-align:right">{{odfSummary.quantity | number : '1.2-2'}}</td>
+                  <td style="text-align:right">{{odfSummary.materialCost | number : '1.2-2'}}</td>
+                  <td style="text-align:right">{{odfSummary.serviceCost | number : '1.2-2'}}</td>
+                  <td style="text-align:right"><b>{{(odfSummary.materialCost + odfSummary.serviceCost) | number : '1.2-2'}}</b></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center">5</td>
+                  <td>Poles</td>
+                  <td style="text-align:center">{{poleSummary.units}}</td>
+                  <td style="text-align:right">{{poleSummary.quantity | number : '1.2-2'}}</td>
+                  <td style="text-align:right">{{poleSummary.materialCost | number : '1.2-2'}}</td>
+                  <td style="text-align:right">{{poleSummary.serviceCost | number : '1.2-2'}}</td>
+                  <td style="text-align:right"><b>{{(poleSummary.materialCost + poleSummary.serviceCost) | number : '1.2-2'}}</b></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center">6</td>
+                  <td>Splitters</td>
+                  <td style="text-align:center">{{splitterSummary.units}}</td>
+                  <td style="text-align:right">{{splitterSummary.quantity | number : '1.2-2'}}</td>
+                  <td style="text-align:right">{{splitterSummary.materialCost | number : '1.2-2'}}</td>
+                  <td style="text-align:right">{{splitterSummary.serviceCost | number : '1.2-2'}}</td>
+                  <td style="text-align:right"><b>{{(splitterSummary.materialCost + splitterSummary.serviceCost) | number : '1.2-2'}}</b></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center">7</td>
+                  <td>Splice Closures</td>
+                  <td style="text-align:center">{{spliceClosureSummary.units}}</td>
+                  <td style="text-align:right">{{spliceClosureSummary.quantity | number : '1.2-2'}}</td>
+                  <td style="text-align:right">{{spliceClosureSummary.materialCost | number : '1.2-2'}}</td>
+                  <td style="text-align:right">{{spliceClosureSummary.serviceCost | number : '1.2-2'}}</td>
+                  <td style="text-align:right"><b>{{(spliceClosureSummary.materialCost + spliceClosureSummary.serviceCost) | number : '1.2-2'}}</b></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center">8</td>
+                  <td>Accessories</td>
+                  <td style="text-align:center">{{accessorySummary.units}}</td>
+                  <td style="text-align:right">{{accessorySummary.quantity | number : '1.2-2'}}</td>
+                  <td style="text-align:right">{{accessorySummary.materialCost | number : '1.2-2'}}</td>
+                  <td style="text-align:right">{{accessorySummary.serviceCost | number : '1.2-2'}}</td>
+                  <td style="text-align:right"><b>{{(accessorySummary.materialCost + accessorySummary.serviceCost) | number : '1.2-2'}}</b></td>
+               </tr>
+               <tr>
+                  <td style="text-align:center">9</td>
+                  <td>Civilworks</td>
+                  <td style="text-align:center">{{civilworkSummary.units}}</td>
+                  <td style="text-align:right">{{civilworkSummary.quantity | number : '1.2-2'}}</td>
+                  <td style="text-align:right">{{civilworkSummary.materialCost | number : '1.2-2'}}</td>
+                  <td style="text-align:right">{{civilworkSummary.serviceCost | number : '1.2-2'}}</td>
+                  <td style="text-align:right"><b>{{(civilworkSummary.materialCost + civilworkSummary.serviceCost) | number : '1.2-2'}}</b></td>
+               </tr>
+            </tbody>
+         </table>
+
+      </div>
+      <div id="divDetails" class="tab-pane" #TABLE1 #table>
+         <table class="table table-bordered table-striped" style="font-size:smaller">
+            <thead>
+               <tr>
+                  <th scope="col" colspan="10" style="text-align:center;"><b>Cable</b></th>
+               </tr>
+               <tr>
+                  <th style="width: 60px;text-align: center;">No.</th>
+                  <th>Description</th>
+                  <th style="width: 120px;text-align: center;">Unit</th>
+                  <th style="width: 120px;text-align: center;">Quantity</th>
+                  <th style="width: 120px;text-align: center;">Currency</th>
+                  <th style="width: 120px;text-align: center;">Material <br />Cost/Unit</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Material Cost</th>
+                  <th style="width: 120px;text-align: center;">Service <br />Cost/Unit</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Service Cost</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Cost</th>
+               </tr>
+            </thead>
+            <tbody>
+               <ng-container *ngIf='cableGroups && cableGroups.length > 0'>
+                  <ng-container *ngFor='let items of cableGroups;'>
+                     <tr>
+                        <td colspan="10"><b>{{items[0].levelName}}</b></td>
+                     </tr>
+                     <tr *ngFor='let item of items; let rowIndex = index'>
+                        <td style="text-align:center">{{rowIndex}}</td>
+                        <td>{{item.description}}</td>
+                        <td style="text-align:center">{{item.units}}</td>
+                        <td style="text-align:right">{{item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:center; width:80px">{{item.currency}}</td>
+                        <td style="text-align:right">{{item.materialCost | number : '1.2-2'}}</td>
+                        <td style="text-align:right">{{item.materialCost * item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:right">{{item.serviceCost}}</td>
+                        <td style="text-align:right">{{item.serviceCost * item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:right"><b>{{(item.materialCost * item.quantity) + (item.serviceCost * item.quantity) | number : '1.2-2'}}</b></td>
+                     </tr>
+                  </ng-container>
+               </ng-container>
+               <tr *ngIf='cableGroups == null || cableGroups.length == 0'>
+                  <td colspan="10" style="text-align: center;">&nbsp;</td>
+               </tr>
+            </tbody>
+         </table>
+
+         <table class="table table-bordered table-striped" style="font-size:smaller">
+            <thead>
+               <tr>
+                  <th scope="col" colspan="10" style="text-align:center;"><b>Chambers</b></th>
+               </tr>
+               <tr>
+                  <th style="width: 60px;text-align: center;">No.</th>
+                  <th>Description</th>
+                  <th style="width: 120px;text-align: center;">Unit</th>
+                  <th style="width: 120px;text-align: center;">Quantity</th>
+                  <th style="width: 120px;text-align: center;">Currency</th>
+                  <th style="width: 120px;text-align: center;">Material <br />Cost/Unit</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Material Cost</th>
+                  <th style="width: 120px;text-align: center;">Service <br />Cost/Unit</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Service Cost</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Cost</th>
+               </tr>
+            </thead>
+            <tbody>
+               <ng-container *ngIf='chamberGroups && chamberGroups.length > 0'>
+                  <ng-container *ngFor='let items of chamberGroups;'>
+                     <tr>
+                        <td colspan="10"><b>{{items[0].levelName}}</b></td>
+                     </tr>
+                     <tr *ngFor='let item of items; let rowIndex = index'>
+                        <td style="text-align:center">{{rowIndex}}</td>
+                        <td>{{item.description}}</td>
+                        <td style="text-align:center">{{item.units}}</td>
+                        <td style="text-align:right">{{item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:center; width:80px">{{item.currency}}</td>
+                        <td style="text-align:right">{{item.materialCost | number : '1.2-2'}}</td>
+                        <td style="text-align:right">{{item.materialCost * item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:right">{{item.serviceCost}}</td>
+                        <td style="text-align:right">{{item.serviceCost * item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:right"><b>{{(item.materialCost * item.quantity) + (item.serviceCost * item.quantity) | number : '1.2-2'}}</b></td>
+                     </tr>
+                  </ng-container>
+               </ng-container>
+               <tr *ngIf='chamberGroups == null || chamberGroups.length == 0'>
+                  <td colspan="10" style="text-align: center;">&nbsp;</td>
+               </tr>
+            </tbody>
+         </table>
+
+         <table class="table table-bordered table-striped" style="font-size:smaller">
+            <thead>
+               <tr>
+                  <th scope="col" colspan="10" style="text-align:center;"><b>Ducts</b></th>
+               </tr>
+               <tr>
+                  <th style="width: 60px;text-align: center;">No.</th>
+                  <th>Description</th>
+                  <th style="width: 120px;text-align: center;">Unit</th>
+                  <th style="width: 120px;text-align: center;">Quantity</th>
+                  <th style="width: 120px;text-align: center;">Currency</th>
+                  <th style="width: 120px;text-align: center;">Material <br />Cost/Unit</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Material Cost</th>
+                  <th style="width: 120px;text-align: center;">Service <br />Cost/Unit</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Service Cost</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Cost</th>
+               </tr>
+            </thead>
+            <tbody>
+               <ng-container *ngIf='ductGroups && ductGroups.length > 0'>
+                  <ng-container *ngFor='let items of ductGroups; let rowIndex = index'>
+                     <tr>
+                        <td colspan="10"><b>{{items[0].levelName}}</b></td>
+                     </tr>
+                     <tr *ngFor='let item of items; let rowIndex = index'>
+                        <td style="text-align:center">{{rowIndex}}</td>
+                        <td>{{item.description}}</td>
+                        <td style="text-align:center">{{item.units}}</td>
+                        <td style="text-align:right">{{item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:center; width:80px">{{item.currency}}</td>
+                        <td style="text-align:right">{{item.materialCost | number : '1.2-2'}}</td>
+                        <td style="text-align:right">{{item.materialCost * item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:right">{{item.serviceCost}}</td>
+                        <td style="text-align:right">{{item.serviceCost * item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:right"><b>{{(item.materialCost * item.quantity) + (item.serviceCost * item.quantity) | number : '1.2-2'}}</b></td>
+                     </tr>
+                  </ng-container>
+               </ng-container>
+               <tr *ngIf='ductGroups == null || ductGroups.length == 0'>
+                  <td colspan="10" style="text-align: center;">&nbsp;</td>
+               </tr>
+            </tbody>
+         </table>
+
+         <table class="table table-bordered table-striped" style="font-size:smaller">
+            <thead>
+               <tr>
+                  <th scope="col" colspan="10" style="text-align:center;"><b>ODFs</b></th>
+               </tr>
+               <tr>
+                  <th style="width: 60px;text-align: center;">No.</th>
+                  <th>Description</th>
+                  <th style="width: 120px;text-align: center;">Unit</th>
+                  <th style="width: 120px;text-align: center;">Quantity</th>
+                  <th style="width: 120px;text-align: center;">Currency</th>
+                  <th style="width: 120px;text-align: center;">Material <br />Cost/Unit</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Material Cost</th>
+                  <th style="width: 120px;text-align: center;">Service <br />Cost/Unit</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Service Cost</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Cost</th>
+               </tr>
+            </thead>
+            <tbody>
+               <ng-container *ngIf='odfGroups && odfGroups.length > 0'>
+                  <ng-container *ngFor='let items of odfGroups; let rowIndex = index'>
+                     <tr>
+                        <td colspan="10"><b>{{items[0].levelName}}</b></td>
+                     </tr>
+                     <tr *ngFor='let item of items; let rowIndex = index'>
+                        <td style="text-align:center">{{rowIndex}}</td>
+                        <td>{{item.description}}</td>
+                        <td style="text-align:center">{{item.units}}</td>
+                        <td style="text-align:right">{{item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:center; width:80px">{{item.currency}}</td>
+                        <td style="text-align:right">{{item.materialCost | number : '1.2-2'}}</td>
+                        <td style="text-align:right">{{item.materialCost * item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:right">{{item.serviceCost}}</td>
+                        <td style="text-align:right">{{item.serviceCost * item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:right"><b>{{(item.materialCost * item.quantity) + (item.serviceCost * item.quantity) | number : '1.2-2'}}</b></td>
+                     </tr>
+                  </ng-container>
+               </ng-container>
+               <tr *ngIf='odfGroups == null || odfGroups.length == 0'>
+                  <td colspan="10" style="text-align: center;">&nbsp;</td>
+               </tr>
+            </tbody>
+         </table>
+
+         <table class="table table-bordered table-striped" style="font-size:smaller">
+            <thead>
+               <tr>
+                  <th scope="col" colspan="10" style="text-align:center;"><b>Poles</b></th>
+               </tr>
+               <tr>
+                  <th style="width: 60px;text-align: center;">No.</th>
+                  <th>Description</th>
+                  <th style="width: 120px;text-align: center;">Unit</th>
+                  <th style="width: 120px;text-align: center;">Quantity</th>
+                  <th style="width: 120px;text-align: center;">Currency</th>
+                  <th style="width: 120px;text-align: center;">Material <br />Cost/Unit</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Material Cost</th>
+                  <th style="width: 120px;text-align: center;">Service <br />Cost/Unit</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Service Cost</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Cost</th>
+               </tr>
+            </thead>
+            <tbody>
+               <ng-container *ngIf='poleGroups && poleGroups.length > 0'>
+                  <ng-container *ngFor='let items of poleGroups; let rowIndex = index'>
+                     <tr>
+                        <td colspan="10"><b>{{items[0].levelName}}</b></td>
+                     </tr>
+                     <tr *ngFor='let item of items; let rowIndex = index'>
+                        <td style="text-align:center">{{rowIndex}}</td>
+                        <td>{{item.description}}</td>
+                        <td style="text-align:center">{{item.units}}</td>
+                        <td style="text-align:right">{{item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:center; width:80px">{{item.currency}}</td>
+                        <td style="text-align:right">{{item.materialCost | number : '1.2-2'}}</td>
+                        <td style="text-align:right">{{item.materialCost * item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:right">{{item.serviceCost}}</td>
+                        <td style="text-align:right">{{item.serviceCost * item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:right"><b>{{(item.materialCost * item.quantity) + (item.serviceCost * item.quantity) | number : '1.2-2'}}</b></td>
+                     </tr>
+                  </ng-container>
+               </ng-container>
+               <tr *ngIf='poleGroups == null || poleGroups.length == 0'>
+                  <td colspan="10" style="text-align: center;">&nbsp;</td>
+               </tr>
+            </tbody>
+         </table>
+
+         <table class="table table-bordered table-striped" style="font-size:smaller">
+            <thead>
+               <tr>
+                  <th scope="col" colspan="10" style="text-align:center;"><b>Splitters</b></th>
+               </tr>
+               <tr>
+                  <th style="width: 60px;text-align: center;">No.</th>
+                  <th>Description</th>
+                  <th style="width: 120px;text-align: center;">Unit</th>
+                  <th style="width: 120px;text-align: center;">Quantity</th>
+                  <th style="width: 120px;text-align: center;">Currency</th>
+                  <th style="width: 120px;text-align: center;">Material <br />Cost/Unit</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Material Cost</th>
+                  <th style="width: 120px;text-align: center;">Service <br />Cost/Unit</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Service Cost</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Cost</th>
+               </tr>
+            </thead>
+            <tbody>
+               <ng-container *ngIf='splitterGroups && splitterGroups.length > 0'>
+                  <ng-container *ngFor='let items of splitterGroups; let rowIndex = index'>
+                     <tr>
+                        <td colspan="10"><b>{{items[0].levelName}}</b></td>
+                     </tr>
+                     <tr *ngFor='let item of items; let rowIndex = index'>
+                        <td style="text-align:center">{{rowIndex}}</td>
+                        <td>{{item.description}}</td>
+                        <td style="text-align:center">{{item.units}}</td>
+                        <td style="text-align:right">{{item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:center; width:80px">{{item.currency}}</td>
+                        <td style="text-align:right">{{item.materialCost | number : '1.2-2'}}</td>
+                        <td style="text-align:right">{{item.materialCost * item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:right">{{item.serviceCost}}</td>
+                        <td style="text-align:right">{{item.serviceCost * item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:right"><b>{{(item.materialCost * item.quantity) + (item.serviceCost * item.quantity) | number : '1.2-2'}}</b></td>
+                     </tr>
+                  </ng-container>
+               </ng-container>
+               <tr *ngIf='splitterGroups == null || splitterGroups.length == 0'>
+                  <td colspan="10" style="text-align: center;">&nbsp;</td>
+               </tr>
+            </tbody>
+         </table>
+
+         <table class="table table-bordered table-striped" style="font-size:smaller">
+            <thead>
+               <tr>
+                  <th scope="col" colspan="10" style="text-align:center;"><b>Splice Closures</b></th>
+               </tr>
+               <tr>
+                  <th style="width: 60px;text-align: center;">No.</th>
+                  <th>Description</th>
+                  <th style="width: 120px;text-align: center;">Unit</th>
+                  <th style="width: 120px;text-align: center;">Quantity</th>
+                  <th style="width: 120px;text-align: center;">Currency</th>
+                  <th style="width: 120px;text-align: center;">Material <br />Cost/Unit</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Material Cost</th>
+                  <th style="width: 120px;text-align: center;">Service <br />Cost/Unit</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Service Cost</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Cost</th>
+               </tr>
+            </thead>
+            <tbody>
+               <ng-container *ngIf='spliceClosureGroups && spliceClosureGroups.length > 0'>
+                  <ng-container *ngFor='let items of spliceClosureGroups; let rowIndex = index'>
+                     <tr>
+                        <td colspan="10"><b>{{items[0].levelName}}</b></td>
+                     </tr>
+                     <tr *ngFor='let item of items; let rowIndex = index'>
+                        <td style="text-align:center">{{rowIndex}}</td>
+                        <td>{{item.description}}</td>
+                        <td style="text-align:center">{{item.units}}</td>
+                        <td style="text-align:right">{{item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:center; width:80px">{{item.currency}}</td>
+                        <td style="text-align:right">{{item.materialCost | number : '1.2-2'}}</td>
+                        <td style="text-align:right">{{item.materialCost * item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:right">{{item.serviceCost}}</td>
+                        <td style="text-align:right">{{item.serviceCost * item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:right"><b>{{(item.materialCost * item.quantity) + (item.serviceCost * item.quantity) | number : '1.2-2'}}</b></td>
+                     </tr>
+                  </ng-container>
+               </ng-container>
+               <tr *ngIf='spliceClosureGroups == null || spliceClosureGroups.length == 0'>
+                  <td colspan="10" style="text-align: center;">&nbsp;</td>
+               </tr>
+            </tbody>
+         </table>
+
+         <table class="table table-bordered table-striped" style="font-size:smaller">
+            <thead>
+               <tr>
+                  <th scope="col" colspan="10" style="text-align:center;"><b>Accessories</b></th>
+               </tr>
+               <tr>
+                  <th style="width: 60px;text-align: center;">No.</th>
+                  <th>Description</th>
+                  <th style="width: 120px;text-align: center;">Unit</th>
+                  <th style="width: 120px;text-align: center;">Quantity</th>
+                  <th style="width: 120px;text-align: center;">Currency</th>
+                  <th style="width: 120px;text-align: center;">Material <br />Cost/Unit</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Material Cost</th>
+                  <th style="width: 120px;text-align: center;">Service <br />Cost/Unit</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Service Cost</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Cost</th>
+               </tr>
+            </thead>
+            <tbody>
+               <ng-container *ngIf='accessoryGroups && accessoryGroups.length > 0'>
+                  <ng-container *ngFor='let items of accessoryGroups; let rowIndex = index'>
+                     <tr>
+                        <td colspan="10"><b>{{items[0].levelName}}</b></td>
+                     </tr>
+                     <tr *ngFor='let item of items; let rowIndex = index'>
+                        <td style="text-align:center">{{rowIndex}}</td>
+                        <td>{{item.description}}</td>
+                        <td style="text-align:center">{{item.units}}</td>
+                        <td style="text-align:right">{{item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:center; width:80px">{{item.currency}}</td>
+                        <td style="text-align:right">{{item.materialCost | number : '1.2-2'}}</td>
+                        <td style="text-align:right">{{item.materialCost * item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:right">{{item.serviceCost}}</td>
+                        <td style="text-align:right">{{item.serviceCost * item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:right"><b>{{(item.materialCost * item.quantity) + (item.serviceCost * item.quantity) | number : '1.2-2'}}</b></td>
+                     </tr>
+                  </ng-container>
+               </ng-container>
+               <tr *ngIf='accessoryGroups == null || accessoryGroups.length == 0'>
+                  <td colspan="10" style="text-align: center;">&nbsp;</td>
+               </tr>
+            </tbody>
+         </table>
+
+         <table class="table table-bordered table-striped" style="font-size:smaller">
+            <thead>
+               <tr>
+                  <th scope="col" colspan="10" style="text-align:center;"><b>Civilworks</b></th>
+               </tr>
+               <tr>
+                  <th style="width: 60px;text-align: center;">No.</th>
+                  <th>Description</th>
+                  <th style="width: 120px;text-align: center;">Unit</th>
+                  <th style="width: 120px;text-align: center;">Quantity</th>
+                  <th style="width: 120px;text-align: center;">Currency</th>
+                  <th style="width: 120px;text-align: center;">Material <br />Cost/Unit</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Material Cost</th>
+                  <th style="width: 120px;text-align: center;">Service <br />Cost/Unit</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Service Cost</th>
+                  <th style="width: 120px;text-align: center;">Total <br />Cost</th>
+               </tr>
+            </thead>
+            <tbody>
+               <ng-container *ngIf='civilworkGroups && civilworkGroups.length > 0'>
+                  <ng-container *ngFor='let items of civilworkGroups; let rowIndex = index'>
+                     <tr>
+                        <td colspan="10"><b>{{items[0].levelName}}</b></td>
+                     </tr>
+                     <tr *ngFor='let item of items; let rowIndex = index'>
+                        <td style="text-align:center">{{rowIndex}}</td>
+                        <td>{{item.description}}</td>
+                        <td style="text-align:center">{{item.units}}</td>
+                        <td style="text-align:right">{{item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:center; width:80px">{{item.currency}}</td>
+                        <td style="text-align:right">{{item.materialCost | number : '1.2-2'}}</td>
+                        <td style="text-align:right">{{item.materialCost * item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:right">{{item.serviceCost}}</td>
+                        <td style="text-align:right">{{item.serviceCost * item.quantity | number : '1.2-2'}}</td>
+                        <td style="text-align:right"><b>{{(item.materialCost * item.quantity) + (item.serviceCost * item.quantity) | number : '1.2-2'}}</b></td>
+                     </tr>
+                  </ng-container>
+               </ng-container>
+               <tr *ngIf='civilworkGroups == null || civilworkGroups.length == 0'>
+                  <td colspan="10" style="text-align: center;">&nbsp;</td>
+               </tr>
+            </tbody>
+         </table>
+
+      </div>
+   </div>
+</div>

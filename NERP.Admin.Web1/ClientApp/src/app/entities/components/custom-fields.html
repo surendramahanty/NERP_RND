@@ -1,0 +1,55 @@
+<div class="form-group">
+   <table class="table table-bordered table-striped">
+      <thead>
+         <tr>
+            <th style="width:200px">Category</th>
+            <th style="width:200px">Display Name</th>
+            <th style="width: 140px;">Control Type</th>
+            <th style="width: 140px;">Data Type</th>
+            <th>Value(s)</th>
+            <th style="text-align: center;padding: 2px 0px;width: 50px;">
+               <a (click)="addCustomField()" style="cursor:pointer">
+                  <i class="fas fa-plus-circle" title="Add" style="font-size: 20px; color: #3e53a4;margin: 5px;"></i>
+               </a>
+            </th>
+         </tr>
+      </thead>
+      <tbody>
+         <ng-container *ngIf='customFields && customFields.length > 0'>
+            <tr *ngFor='let customField of customFields; let rowIndex = index;'>
+               <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="customField.category"></td>
+               <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="customField.label"></td>
+               <td>
+                  <mat-select [ngModelOptions]="{standalone: true}" [(ngModel)]="customField.controlType">
+                     <mat-option [value]=1>Text</mat-option>
+                     <mat-option [value]=2>Dropdown</mat-option>
+                     <mat-option [value]=3>Date</mat-option>
+                     <mat-option [value]=4>Radio</mat-option>
+                     <mat-option [value]=5>Checkbox</mat-option>
+                     <!--<mat-option *ngFor="let control of keys(controlType)" [value]="controlType[control]">{{control}}</mat-option>-->
+                  </mat-select>
+               </td>
+               <td>
+                  <mat-select [ngModelOptions]="{standalone: true}" [(ngModel)]="customField.dataType">
+                     <mat-option [value]=1>String</mat-option>
+                     <mat-option [value]=2>Number</mat-option>
+                     <mat-option [value]=3>Boolean</mat-option>
+                     <mat-option [value]=4>Date</mat-option>
+                  </mat-select>
+               </td>
+               <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [disabled]="customField.controlType=='Date' || customField.controlType=='Text'" [(ngModel)]="customField.values"></td>
+               <td style="text-align:center;padding-top: 14px;">
+                  <a (click)="deleteCustomField(rowIndex)" style="cursor:pointer">
+                     <i class="fas fa-trash-alt" title="Delete" style="font-size: 15px; color: Red;"></i>
+                  </a>
+               </td>
+            </tr>
+         </ng-container>
+         <tr *ngIf='customFields == null || customFields.length == 0'>
+            <td colspan="6" class="check-mail" style="text-align: center;">
+               Custom fields not defined
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div>

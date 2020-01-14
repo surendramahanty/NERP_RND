@@ -1,0 +1,832 @@
+2019-04-02 04:23:22.189 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:23:22.237 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:23:22.246 +05:30 [Information] MST Service Started
+2019-04-02 04:23:22.249 +05:30 [Information] No. of nodes: 18
+2019-04-02 04:23:22.252 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:23:22.255 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:23:24.259 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:23:24.752 +05:30 [Information] No. of nodes: 6
+2019-04-02 04:23:25.128 +05:30 [Information] No. of nodes: 13
+2019-04-02 04:23:25.490 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:23:25.818 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:23:26.180 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:23:26.509 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:23:26.797 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:23:27.131 +05:30 [Information] No. of nodes: 15
+2019-04-02 04:23:27.484 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:23:27.845 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-02 04:23:27.850 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:23:28.176 +05:30 [Information] No. of nodes: 8
+2019-04-02 04:23:28.502 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:23:28.824 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:23:29.180 +05:30 [Information] No. of nodes: 7
+2019-04-02 04:26:09.665 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:26:09.701 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:26:09.716 +05:30 [Information] MST Service Started
+2019-04-02 04:26:09.720 +05:30 [Information] No. of nodes: 18
+2019-04-02 04:26:09.725 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:26:09.729 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:26:10.089 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:26:10.423 +05:30 [Information] No. of nodes: 6
+2019-04-02 04:26:10.790 +05:30 [Information] No. of nodes: 13
+2019-04-02 04:26:11.145 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:26:11.463 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:26:11.672 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:26:11.922 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:26:12.271 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:26:12.585 +05:30 [Information] No. of nodes: 15
+2019-04-02 04:26:12.943 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:26:13.335 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-02 04:26:13.340 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:26:13.653 +05:30 [Information] No. of nodes: 8
+2019-04-02 04:26:13.987 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:26:14.310 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:26:14.628 +05:30 [Information] No. of nodes: 7
+2019-04-02 04:27:59.331 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:27:59.373 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:27:59.387 +05:30 [Information] MST Service Started
+2019-04-02 04:27:59.392 +05:30 [Information] No. of nodes: 18
+2019-04-02 04:27:59.396 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:27:59.401 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:27:59.738 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:28:00.104 +05:30 [Information] No. of nodes: 6
+2019-04-02 04:28:00.415 +05:30 [Information] No. of nodes: 13
+2019-04-02 04:28:00.759 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:28:01.073 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:28:01.448 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:28:01.761 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:28:02.079 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:28:02.409 +05:30 [Information] No. of nodes: 15
+2019-04-02 04:28:02.784 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:28:03.211 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-02 04:28:03.217 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:28:03.587 +05:30 [Information] No. of nodes: 8
+2019-04-02 04:28:03.906 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:28:04.252 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:28:04.574 +05:30 [Information] No. of nodes: 7
+2019-04-02 04:31:26.401 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:31:26.449 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:31:26.463 +05:30 [Information] MST Service Started
+2019-04-02 04:31:26.467 +05:30 [Information] No. of nodes: 18
+2019-04-02 04:31:26.471 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:31:26.474 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:31:26.818 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:31:27.191 +05:30 [Information] No. of nodes: 6
+2019-04-02 04:31:27.534 +05:30 [Information] No. of nodes: 13
+2019-04-02 04:31:27.914 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:31:28.270 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:31:28.639 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:31:28.993 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:31:29.340 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:31:29.666 +05:30 [Information] No. of nodes: 15
+2019-04-02 04:31:30.051 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:31:30.441 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-02 04:31:30.444 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:31:30.884 +05:30 [Information] No. of nodes: 8
+2019-04-02 04:31:31.224 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:31:31.609 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:31:32.048 +05:30 [Information] No. of nodes: 7
+2019-04-02 04:32:02.395 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:32:02.443 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:32:02.457 +05:30 [Information] MST Service Started
+2019-04-02 04:32:02.460 +05:30 [Information] No. of nodes: 18
+2019-04-02 04:32:02.463 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:32:02.467 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:32:02.793 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:32:03.134 +05:30 [Information] No. of nodes: 6
+2019-04-02 04:32:03.456 +05:30 [Information] No. of nodes: 13
+2019-04-02 04:32:03.838 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:32:04.147 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:32:04.495 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:32:04.822 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:32:05.180 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:32:05.480 +05:30 [Information] No. of nodes: 15
+2019-04-02 04:32:05.817 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:32:06.188 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-02 04:32:06.193 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:32:06.504 +05:30 [Information] No. of nodes: 8
+2019-04-02 04:32:06.871 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:32:07.197 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:32:07.517 +05:30 [Information] No. of nodes: 7
+2019-04-02 04:33:31.714 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:33:31.756 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:33:31.767 +05:30 [Information] MST Service Started
+2019-04-02 04:33:31.769 +05:30 [Information] No. of nodes: 18
+2019-04-02 04:33:31.771 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:33:31.774 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:33:32.160 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:33:32.482 +05:30 [Information] No. of nodes: 6
+2019-04-02 04:33:32.801 +05:30 [Information] No. of nodes: 13
+2019-04-02 04:33:33.155 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:33:33.492 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:33:33.818 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:33:34.151 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:33:34.493 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:33:34.799 +05:30 [Information] No. of nodes: 15
+2019-04-02 04:33:35.140 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:33:35.524 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-02 04:33:35.529 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:33:35.835 +05:30 [Information] No. of nodes: 8
+2019-04-02 04:33:36.211 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:33:36.543 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:33:36.846 +05:30 [Information] No. of nodes: 7
+2019-04-02 04:45:29.717 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:45:29.756 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:45:29.769 +05:30 [Information] MST Service Started
+2019-04-02 04:45:29.774 +05:30 [Information] No. of nodes: 18
+2019-04-02 04:45:29.778 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:45:29.783 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:45:30.127 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:45:30.483 +05:30 [Information] No. of nodes: 6
+2019-04-02 04:45:30.805 +05:30 [Information] No. of nodes: 13
+2019-04-02 04:45:31.138 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:45:31.466 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:45:31.814 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:45:32.144 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:45:32.494 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:45:32.838 +05:30 [Information] No. of nodes: 15
+2019-04-02 04:45:33.176 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:45:33.541 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-02 04:45:33.546 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:45:33.894 +05:30 [Information] No. of nodes: 8
+2019-04-02 04:45:34.229 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:45:34.558 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:45:34.896 +05:30 [Information] No. of nodes: 7
+2019-04-02 04:46:50.483 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:46:50.527 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:46:50.590 +05:30 [Information] MST Service Started
+2019-04-02 04:46:50.594 +05:30 [Information] No. of nodes: 18
+2019-04-02 04:46:50.599 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:46:50.603 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:46:50.979 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:46:51.322 +05:30 [Information] No. of nodes: 6
+2019-04-02 04:46:51.641 +05:30 [Information] No. of nodes: 13
+2019-04-02 04:46:51.986 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:46:52.295 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:46:52.655 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:46:53.016 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:46:53.342 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:46:53.665 +05:30 [Information] No. of nodes: 15
+2019-04-02 04:46:54.023 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:46:54.428 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-02 04:46:54.433 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:46:54.751 +05:30 [Information] No. of nodes: 8
+2019-04-02 04:46:55.084 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:46:55.431 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:46:55.748 +05:30 [Information] No. of nodes: 7
+2019-04-02 04:47:32.477 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:47:32.518 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:47:32.532 +05:30 [Information] MST Service Started
+2019-04-02 04:47:32.537 +05:30 [Information] No. of nodes: 18
+2019-04-02 04:47:32.541 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:47:32.546 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:47:32.896 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:47:33.217 +05:30 [Information] No. of nodes: 6
+2019-04-02 04:47:33.530 +05:30 [Information] No. of nodes: 13
+2019-04-02 04:47:33.888 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:47:34.198 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:47:34.542 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:47:34.890 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:47:35.210 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:47:35.553 +05:30 [Information] No. of nodes: 15
+2019-04-02 04:47:35.924 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:47:36.303 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-02 04:47:36.307 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:47:36.588 +05:30 [Information] No. of nodes: 8
+2019-04-02 04:47:36.982 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:47:37.318 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:47:37.643 +05:30 [Information] No. of nodes: 7
+2019-04-02 04:49:25.087 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:49:25.128 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:49:25.142 +05:30 [Information] MST Service Started
+2019-04-02 04:49:25.146 +05:30 [Information] No. of nodes: 18
+2019-04-02 04:49:25.149 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:49:25.152 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:49:25.501 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:49:25.873 +05:30 [Information] No. of nodes: 6
+2019-04-02 04:49:26.187 +05:30 [Information] No. of nodes: 13
+2019-04-02 04:49:26.541 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:49:26.859 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:49:27.210 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:49:27.544 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:49:27.901 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:49:28.258 +05:30 [Information] No. of nodes: 15
+2019-04-02 04:49:28.596 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:49:28.943 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-02 04:49:28.948 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:49:29.260 +05:30 [Information] No. of nodes: 8
+2019-04-02 04:49:29.589 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:49:29.909 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:49:30.260 +05:30 [Information] No. of nodes: 7
+2019-04-02 04:54:47.799 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:54:47.847 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:54:47.856 +05:30 [Information] MST Service Started
+2019-04-02 04:54:47.861 +05:30 [Information] No. of nodes: 18
+2019-04-02 04:54:47.865 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:54:47.868 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:54:48.235 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:54:48.634 +05:30 [Information] No. of nodes: 6
+2019-04-02 04:54:49.022 +05:30 [Information] No. of nodes: 13
+2019-04-02 04:54:49.372 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:54:49.712 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:54:50.077 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:54:50.464 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:54:50.892 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:54:51.252 +05:30 [Information] No. of nodes: 15
+2019-04-02 04:54:51.669 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:54:52.074 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-02 04:54:52.079 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:54:52.437 +05:30 [Information] No. of nodes: 8
+2019-04-02 04:54:52.790 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:54:53.259 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:54:53.613 +05:30 [Information] No. of nodes: 7
+2019-04-02 04:57:17.439 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:57:17.477 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:57:17.488 +05:30 [Information] MST Service Started
+2019-04-02 04:57:17.492 +05:30 [Information] No. of nodes: 18
+2019-04-02 04:57:17.496 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:57:17.499 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:57:17.831 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:57:18.164 +05:30 [Information] No. of nodes: 6
+2019-04-02 04:57:18.483 +05:30 [Information] No. of nodes: 13
+2019-04-02 04:57:18.815 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:57:19.147 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:57:19.475 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:57:19.869 +05:30 [Information] No. of nodes: 12
+2019-04-02 04:57:20.206 +05:30 [Information] No. of nodes: 5
+2019-04-02 04:57:20.541 +05:30 [Information] No. of nodes: 15
+2019-04-02 04:57:20.876 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:57:21.295 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 278
+2019-04-02 04:57:21.299 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:57:21.615 +05:30 [Information] No. of nodes: 8
+2019-04-02 04:57:21.936 +05:30 [Information] No. of nodes: 11
+2019-04-02 04:57:22.278 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:57:22.591 +05:30 [Information] No. of nodes: 7
+2019-04-02 03:15:48.090 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:15:48.189 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:16:58.756 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:16:58.888 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:19:38.790 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:19:38.920 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:21:08.842 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:21:08.874 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:21:21.960 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:21:21.984 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:21:21.991 +05:30 [Information] MST Service Started
+2019-04-02 03:21:21.993 +05:30 [Information] No. of nodes: 2
+2019-04-02 03:21:21.995 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 03:21:21.997 +05:30 [Information] No. of nodes: 9
+2019-04-02 03:21:22.275 +05:30 [Information] No. of nodes: 9
+2019-04-02 03:23:20.140 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:23:20.173 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:23:40.317 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:23:40.353 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:23:40.361 +05:30 [Information] MST Service Started
+2019-04-02 03:23:40.363 +05:30 [Information] No. of nodes: 2
+2019-04-02 03:23:40.365 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 03:23:40.367 +05:30 [Information] No. of nodes: 9
+2019-04-02 03:23:40.702 +05:30 [Information] No. of nodes: 9
+2019-04-02 03:32:36.138 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:32:36.172 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:32:43.872 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:32:43.903 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:32:43.910 +05:30 [Information] MST Service Started
+2019-04-02 03:32:43.912 +05:30 [Information] No. of nodes: 2
+2019-04-02 03:32:43.914 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 03:32:43.916 +05:30 [Information] No. of nodes: 9
+2019-04-02 03:32:44.201 +05:30 [Information] No. of nodes: 9
+2019-04-02 03:33:22.022 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:33:22.053 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:33:24.011 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:33:24.035 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:33:24.042 +05:30 [Information] MST Service Started
+2019-04-02 03:33:24.044 +05:30 [Information] No. of nodes: 1
+2019-04-02 03:33:24.046 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 03:33:24.048 +05:30 [Information] No. of nodes: 4
+2019-04-02 03:34:28.677 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:34:28.704 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:34:30.945 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:34:30.977 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:34:30.985 +05:30 [Information] MST Service Started
+2019-04-02 03:34:30.987 +05:30 [Information] No. of nodes: 1
+2019-04-02 03:34:30.989 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 03:34:30.992 +05:30 [Information] No. of nodes: 4
+2019-04-02 03:37:45.002 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:37:45.032 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:37:49.151 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:37:49.179 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:37:49.187 +05:30 [Information] MST Service Started
+2019-04-02 03:37:49.189 +05:30 [Information] No. of nodes: 2
+2019-04-02 03:37:49.191 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 03:37:49.194 +05:30 [Information] No. of nodes: 9
+2019-04-02 03:37:49.518 +05:30 [Information] No. of nodes: 9
+2019-04-02 03:42:41.817 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:42:41.846 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:42:50.777 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:42:50.804 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:42:50.812 +05:30 [Information] MST Service Started
+2019-04-02 03:42:50.814 +05:30 [Information] No. of nodes: 2
+2019-04-02 03:42:50.816 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 03:42:50.819 +05:30 [Information] No. of nodes: 9
+2019-04-02 03:42:51.086 +05:30 [Information] No. of nodes: 9
+2019-04-02 03:47:03.674 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:47:03.750 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:48:46.228 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:48:46.254 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:48:46.261 +05:30 [Information] MST Service Started
+2019-04-02 03:48:46.264 +05:30 [Information] No. of nodes: 2
+2019-04-02 03:48:46.266 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 03:48:46.268 +05:30 [Information] No. of nodes: 9
+2019-04-02 03:48:46.530 +05:30 [Information] No. of nodes: 9
+2019-04-02 03:51:50.047 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:51:50.098 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:52:48.139 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:52:48.167 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:52:48.173 +05:30 [Information] MST Service Started
+2019-04-02 03:52:48.175 +05:30 [Information] No. of nodes: 2
+2019-04-02 03:52:48.177 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 03:52:48.178 +05:30 [Information] No. of nodes: 9
+2019-04-02 03:52:48.462 +05:30 [Information] No. of nodes: 9
+2019-04-02 03:56:22.463 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:56:22.495 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:56:29.862 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:56:29.891 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 03:56:29.898 +05:30 [Information] MST Service Started
+2019-04-02 03:56:29.901 +05:30 [Information] No. of nodes: 2
+2019-04-02 03:56:29.903 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 03:56:29.906 +05:30 [Information] No. of nodes: 9
+2019-04-02 03:56:30.227 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:16:43.431 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:16:43.488 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:16:48.836 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:16:48.857 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:16:48.863 +05:30 [Information] MST Service Started
+2019-04-02 04:16:48.865 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:16:48.866 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:16:48.869 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:16:49.101 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:19:48.915 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:19:48.935 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:19:57.380 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:19:57.401 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:19:57.409 +05:30 [Information] MST Service Started
+2019-04-02 04:19:57.412 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:19:57.414 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:19:57.416 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:19:57.599 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:22:21.186 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:22:21.214 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:22:27.211 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:22:27.231 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:22:27.236 +05:30 [Information] MST Service Started
+2019-04-02 04:22:27.237 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:22:27.239 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:22:27.241 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:22:27.415 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:24:02.320 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:24:02.343 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:24:09.382 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:24:09.404 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:24:09.408 +05:30 [Information] MST Service Started
+2019-04-02 04:24:09.410 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:24:09.411 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:24:09.413 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:24:09.715 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:26:07.513 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:26:07.545 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:26:15.369 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:26:15.391 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:26:15.396 +05:30 [Information] MST Service Started
+2019-04-02 04:26:15.398 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:26:15.399 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:26:15.401 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:26:15.584 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:28:58.244 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:28:58.265 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:29:04.618 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:29:04.635 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:29:04.640 +05:30 [Information] MST Service Started
+2019-04-02 04:29:04.642 +05:30 [Information] No. of nodes: 1
+2019-04-02 04:29:04.643 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:29:04.645 +05:30 [Information] No. of nodes: 7
+2019-04-02 04:31:03.175 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:31:03.196 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:31:12.955 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:31:12.980 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:31:12.987 +05:30 [Information] MST Service Started
+2019-04-02 04:31:12.989 +05:30 [Information] No. of nodes: 1
+2019-04-02 04:31:12.992 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:31:12.994 +05:30 [Information] No. of nodes: 6
+2019-04-02 04:31:33.110 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:31:33.135 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:31:39.785 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:31:39.804 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:31:39.812 +05:30 [Information] MST Service Started
+2019-04-02 04:31:39.813 +05:30 [Information] No. of nodes: 1
+2019-04-02 04:31:39.815 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:31:39.817 +05:30 [Information] No. of nodes: 7
+2019-04-02 04:33:58.175 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:33:58.203 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:34:06.083 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:34:06.104 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:34:06.110 +05:30 [Information] MST Service Started
+2019-04-02 04:34:06.111 +05:30 [Information] No. of nodes: 1
+2019-04-02 04:34:06.113 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:34:06.116 +05:30 [Information] No. of nodes: 8
+2019-04-02 04:35:20.512 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:35:20.537 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:35:29.616 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:35:29.633 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:35:29.640 +05:30 [Information] MST Service Started
+2019-04-02 04:35:29.641 +05:30 [Information] No. of nodes: 1
+2019-04-02 04:35:29.643 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:35:29.644 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:36:39.033 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:36:39.060 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:36:55.938 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:36:55.959 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:36:55.964 +05:30 [Information] MST Service Started
+2019-04-02 04:36:55.966 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:36:55.967 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:36:55.968 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:36:56.161 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:36:56.365 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 295
+2019-04-02 04:38:04.853 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:38:04.895 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:38:10.471 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:38:10.498 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:38:10.504 +05:30 [Information] MST Service Started
+2019-04-02 04:38:10.506 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:38:10.507 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:38:10.509 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:38:10.703 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:42:31.234 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:42:31.265 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:42:39.756 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:42:39.780 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:42:39.784 +05:30 [Information] MST Service Started
+2019-04-02 04:42:39.786 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:42:39.787 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:42:39.789 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:42:39.967 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:42:40.171 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:42:40.194 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:42:41.072 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:42:41.079 +05:30 [Information] MST Service Started
+2019-04-02 04:42:41.081 +05:30 [Information] No. of nodes: 1
+2019-04-02 04:42:41.083 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:42:41.084 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:42:41.285 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 295
+2019-04-02 04:43:51.726 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:43:51.748 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:43:52.609 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:43:52.625 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:43:52.629 +05:30 [Information] MST Service Started
+2019-04-02 04:43:52.630 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:43:52.632 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:43:52.633 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:43:52.788 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:43:52.973 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:43:52.989 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:43:53.786 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:43:53.805 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:43:53.811 +05:30 [Information] MST Service Started
+2019-04-02 04:43:53.812 +05:30 [Information] No. of nodes: 1
+2019-04-02 04:43:53.814 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:43:53.816 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:43:54.042 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 295
+2019-04-02 04:45:49.490 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:45:49.521 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:45:50.365 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:45:50.383 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:45:50.388 +05:30 [Information] MST Service Started
+2019-04-02 04:45:50.389 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:45:50.391 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:45:50.393 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:45:50.529 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:47:25.064 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:47:25.084 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:47:25.871 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:47:25.888 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:47:25.893 +05:30 [Information] MST Service Started
+2019-04-02 04:47:25.894 +05:30 [Information] No. of nodes: 1
+2019-04-02 04:47:25.896 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:47:25.897 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:47:26.071 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 295
+2019-04-02 04:47:34.176 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:47:34.199 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:48:48.060 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:48:48.087 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:48:48.093 +05:30 [Information] MST Service Started
+2019-04-02 04:48:48.095 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:48:48.097 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:48:48.099 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:48:48.267 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:48:49.221 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:48:49.241 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:48:50.518 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:48:50.536 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:48:50.540 +05:30 [Information] MST Service Started
+2019-04-02 04:48:50.542 +05:30 [Information] No. of nodes: 1
+2019-04-02 04:48:50.544 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:48:50.546 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:48:50.714 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 295
+2019-04-02 04:49:08.947 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:49:08.967 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:50:32.400 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:50:32.424 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:50:32.432 +05:30 [Information] MST Service Started
+2019-04-02 04:50:32.433 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:50:32.435 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:50:32.436 +05:30 [Information] No. of nodes: 9
+2019-04-02 04:50:32.651 +05:30 [Information] No. of nodes: 3
+2019-04-02 04:50:34.617 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:50:34.686 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:50:36.163 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:50:36.181 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:50:36.187 +05:30 [Information] MST Service Started
+2019-04-02 04:50:36.189 +05:30 [Information] No. of nodes: 1
+2019-04-02 04:50:36.191 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 04:50:36.193 +05:30 [Information] No. of nodes: 2
+2019-04-02 04:50:36.406 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 295
+2019-04-02 04:50:53.755 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 04:50:53.779 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:02:44.665 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:02:50.372 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:04:00.318 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:04:00.341 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:04:00.350 +05:30 [Information] MST Service Started
+2019-04-02 05:04:00.352 +05:30 [Information] No. of nodes: 2
+2019-04-02 05:04:00.353 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 05:04:00.356 +05:30 [Information] No. of nodes: 8
+2019-04-02 05:04:00.558 +05:30 [Information] No. of nodes: 3
+2019-04-02 05:04:52.034 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:04:52.057 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:05:26.662 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:05:26.682 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:05:26.687 +05:30 [Information] MST Service Started
+2019-04-02 05:05:26.688 +05:30 [Information] No. of nodes: 1
+2019-04-02 05:05:26.690 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 05:05:26.691 +05:30 [Information] No. of nodes: 2
+2019-04-02 05:05:26.907 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 295
+2019-04-02 05:07:01.728 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:07:01.788 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:07:07.697 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:07:07.714 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:07:07.727 +05:30 [Information] MST Service Started
+2019-04-02 05:07:07.729 +05:30 [Information] No. of nodes: 2
+2019-04-02 05:07:07.730 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 05:07:07.733 +05:30 [Information] No. of nodes: 8
+2019-04-02 05:07:07.943 +05:30 [Information] No. of nodes: 2
+2019-04-02 05:07:53.933 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:07:53.954 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:08:38.133 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:08:38.156 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:08:38.163 +05:30 [Information] MST Service Started
+2019-04-02 05:08:38.165 +05:30 [Information] No. of nodes: 2
+2019-04-02 05:08:38.167 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 05:08:38.168 +05:30 [Information] No. of nodes: 8
+2019-04-02 05:08:38.317 +05:30 [Information] No. of nodes: 2
+2019-04-02 05:26:13.361 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:26:13.413 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:29:28.054 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:29:28.071 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:29:28.075 +05:30 [Information] MST Service Started
+2019-04-02 05:29:28.077 +05:30 [Information] No. of nodes: 1
+2019-04-02 05:29:28.079 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 05:29:31.553 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:29:31.572 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:29:43.848 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:29:43.866 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:29:43.871 +05:30 [Information] MST Service Started
+2019-04-02 05:29:43.873 +05:30 [Information] No. of nodes: 2
+2019-04-02 05:29:43.875 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 05:29:43.878 +05:30 [Information] No. of nodes: 8
+2019-04-02 05:29:44.030 +05:30 [Information] No. of nodes: 2
+2019-04-02 05:29:49.438 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:29:49.456 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:42:44.123 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:42:44.148 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:42:44.153 +05:30 [Information] MST Service Started
+2019-04-02 05:42:44.154 +05:30 [Information] No. of nodes: 1
+2019-04-02 05:42:44.156 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 05:48:44.860 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:48:44.922 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:48:49.886 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:48:49.915 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:48:49.925 +05:30 [Information] MST Service Started
+2019-04-02 05:48:49.928 +05:30 [Information] No. of nodes: 2
+2019-04-02 05:48:49.929 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 05:48:49.932 +05:30 [Information] No. of nodes: 8
+2019-04-02 05:48:50.149 +05:30 [Information] No. of nodes: 2
+2019-04-02 05:48:50.341 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:48:50.357 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:50:05.233 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:50:05.304 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:50:23.000 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:50:23.024 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:50:23.033 +05:30 [Information] MST Service Started
+2019-04-02 05:50:23.034 +05:30 [Information] No. of nodes: 2
+2019-04-02 05:50:23.036 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 05:50:23.038 +05:30 [Information] No. of nodes: 8
+2019-04-02 05:50:23.242 +05:30 [Information] No. of nodes: 2
+2019-04-02 05:50:23.438 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:50:23.454 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:57:04.203 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:57:04.225 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:57:28.044 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:57:28.069 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:57:28.078 +05:30 [Information] MST Service Started
+2019-04-02 05:57:28.079 +05:30 [Information] No. of nodes: 2
+2019-04-02 05:57:28.081 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 05:57:28.083 +05:30 [Information] No. of nodes: 8
+2019-04-02 05:57:28.247 +05:30 [Information] No. of nodes: 2
+2019-04-02 05:58:26.246 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:58:26.316 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:58:33.690 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:58:33.715 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:58:33.723 +05:30 [Information] MST Service Started
+2019-04-02 05:58:33.724 +05:30 [Information] No. of nodes: 2
+2019-04-02 05:58:33.726 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 05:58:33.729 +05:30 [Information] No. of nodes: 8
+2019-04-02 05:58:33.973 +05:30 [Information] No. of nodes: 2
+2019-04-02 05:58:34.159 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 05:58:34.177 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:10:28.090 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:10:28.115 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:10:28.121 +05:30 [Information] MST Service Started
+2019-04-02 06:10:28.124 +05:30 [Information] No. of nodes: 1
+2019-04-02 06:10:28.125 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 06:19:27.539 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:19:27.561 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:20:14.147 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:20:14.167 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:20:14.172 +05:30 [Information] MST Service Started
+2019-04-02 06:20:14.174 +05:30 [Information] No. of nodes: 2
+2019-04-02 06:20:14.176 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 06:20:14.178 +05:30 [Information] No. of nodes: 8
+2019-04-02 06:20:14.398 +05:30 [Information] No. of nodes: 2
+2019-04-02 06:22:25.381 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:22:25.416 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:33:35.419 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:33:35.476 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:33:36.744 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:33:36.768 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:33:36.777 +05:30 [Information] MST Service Started
+2019-04-02 06:33:36.779 +05:30 [Information] No. of nodes: 2
+2019-04-02 06:33:36.780 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 06:33:36.783 +05:30 [Information] No. of nodes: 8
+2019-04-02 06:33:37.072 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 295
+2019-04-02 06:33:37.074 +05:30 [Information] No. of nodes: 2
+2019-04-02 06:33:37.269 +05:30 [Error] Error processing nodes.
+System.Exception: Element 0 is not connected
+   at RouteWare.Network.TCalc.SteinerTree(TIntegerList nodes, TBitArray links)
+   at NERP.GeoServices.API.Controllers.RoutewareController.GetMST(String region, List`1 geoNodes) in D:\Projects\NERP\Solution\Src\NERP.GeoServices.API\Controllers\RoutewareController.cs:line 295
+2019-04-02 06:34:37.410 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:34:37.437 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:35:12.812 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:35:12.831 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:36:46.699 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:36:46.718 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:39:02.736 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:39:02.794 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:39:28.947 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:39:28.972 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:39:28.982 +05:30 [Information] MST Service Started
+2019-04-02 06:39:28.984 +05:30 [Information] No. of nodes: 2
+2019-04-02 06:39:28.986 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 06:39:28.988 +05:30 [Information] No. of nodes: 8
+2019-04-02 06:39:29.195 +05:30 [Information] No. of nodes: 2
+2019-04-02 06:39:58.313 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:39:58.343 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:40:40.050 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:40:40.076 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:40:40.083 +05:30 [Information] MST Service Started
+2019-04-02 06:40:40.086 +05:30 [Information] No. of nodes: 1
+2019-04-02 06:40:40.089 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 06:42:15.095 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:42:15.127 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:42:28.785 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:42:28.809 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:42:28.815 +05:30 [Information] MST Service Started
+2019-04-02 06:42:28.817 +05:30 [Information] No. of nodes: 2
+2019-04-02 06:42:28.819 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 06:42:28.821 +05:30 [Information] No. of nodes: 8
+2019-04-02 06:42:28.988 +05:30 [Information] No. of nodes: 2
+2019-04-02 06:42:51.829 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:42:51.854 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:43:39.396 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:43:39.419 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 06:43:39.424 +05:30 [Information] MST Service Started
+2019-04-02 06:43:39.426 +05:30 [Information] No. of nodes: 1
+2019-04-02 06:43:39.428 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 07:03:27.836 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:03:27.893 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:03:37.006 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:03:37.030 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:03:37.047 +05:30 [Information] MST Service Started
+2019-04-02 07:03:37.049 +05:30 [Information] No. of nodes: 2
+2019-04-02 07:03:37.050 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 07:03:37.053 +05:30 [Information] No. of nodes: 8
+2019-04-02 07:03:37.255 +05:30 [Information] No. of nodes: 2
+2019-04-02 07:03:46.931 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:03:46.959 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:03:47.705 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:03:47.720 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:03:47.724 +05:30 [Information] MST Service Started
+2019-04-02 07:03:47.726 +05:30 [Information] No. of nodes: 1
+2019-04-02 07:03:47.727 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 07:04:15.757 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:04:15.777 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:04:17.006 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:04:17.022 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:04:17.027 +05:30 [Information] MST Service Started
+2019-04-02 07:04:17.028 +05:30 [Information] No. of nodes: 2
+2019-04-02 07:04:17.029 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 07:04:17.030 +05:30 [Information] No. of nodes: 8
+2019-04-02 07:04:17.166 +05:30 [Information] No. of nodes: 2
+2019-04-02 07:04:47.570 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:04:47.590 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:04:48.339 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:04:48.359 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:04:48.363 +05:30 [Information] MST Service Started
+2019-04-02 07:04:48.365 +05:30 [Information] No. of nodes: 1
+2019-04-02 07:04:48.366 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 07:05:03.602 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:05:03.618 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:05:04.476 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:05:04.494 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:05:04.499 +05:30 [Information] MST Service Started
+2019-04-02 07:05:04.500 +05:30 [Information] No. of nodes: 2
+2019-04-02 07:05:04.501 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 07:05:04.502 +05:30 [Information] No. of nodes: 8
+2019-04-02 07:05:04.639 +05:30 [Information] No. of nodes: 2
+2019-04-02 07:08:41.617 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:08:41.643 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:08:42.487 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:08:42.507 +05:30 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-02 07:08:42.512 +05:30 [Information] MST Service Started
+2019-04-02 07:08:42.514 +05:30 [Information] No. of nodes: 2
+2019-04-02 07:08:42.516 +05:30 [Information] Accessing Region path: D:\Projects\NERP\Routeware\Indonesia\Jakarta\bin_data
+2019-04-02 07:08:42.517 +05:30 [Information] No. of nodes: 8
+2019-04-02 07:08:42.663 +05:30 [Information] No. of nodes: 2

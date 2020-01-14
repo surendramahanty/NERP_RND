@@ -1,0 +1,33 @@
+<div class="form-group col-md-12">
+   <table class="table table-bordered table-striped">
+      <thead>
+         <tr>
+            <th style="width:125px">Entity Type</th>
+            <th>Format</th>
+            <th style="width:150px">Sequence Starting</th>
+            <th style="width:150px">Sequence Ending</th>
+            <th style="width:50px" class='text-center'></th>
+         </tr>
+      </thead>
+      <tbody>
+         <ng-container *ngIf='design.bookingIds && design.bookingIds.length > 0'>
+            <ng-container *ngFor='let bookingId of design.bookingIds;let bookingIdIndex = index;'>
+               <tr>
+                  <td>{{bookingId.entityType}}</td>
+                  <td><input type="text" class="form-control input-sm" [ngModelOptions]="{standalone: true}" [(ngModel)]="bookingId.format"></td>
+                  <td><input type="number" style="width: 125px;" class="form-control input-sm" [ngModelOptions]="{standalone: true}" [(ngModel)]="bookingId.sequenceStart"></td>
+                  <td><input type="number" style="width: 125px;" class="form-control input-sm" [ngModelOptions]="{standalone: true}" [(ngModel)]="bookingId.sequenceEnd"></td>
+                  <td style="vertical-align: middle;" class="text-center">
+                     <a (click)="clearBookingId(bookingIdIndex)" style="cursor:pointer"><i class="fas fa-eraser" style="font-size: 15px; color: Red;" title="Clear"></i></a>
+                  </td>
+               </tr>
+            </ng-container>
+         </ng-container>
+         <tr *ngIf='design.bookingIds == null || design.bookingIds.length == 0'>
+            <td colspan="5" style="text-align: center;">
+               There are no phases defined.
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div>

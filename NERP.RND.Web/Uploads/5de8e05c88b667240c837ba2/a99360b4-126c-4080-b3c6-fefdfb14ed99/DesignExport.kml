@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>Pole</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Pole_1</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.844553,-6.2091440000000002</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Pole</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Pole_2</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.84436244404615,-6.2095518081826304</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Pole</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Pole_3</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.84399489210465,-6.2093709056429898</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Pole</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Pole_4</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.84368433434788,-6.2093633725819428</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Pole</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Pole_5</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.843684,-6.2093639999999999</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Splitter</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Splitter_1</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.84399489210465,-6.2093709056429898</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SpliceClosure</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>SpliceClosure_1</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.843684,-6.2093639999999999</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cable</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Cable_1</value>
+        </Data>
+        <Data name="ALocation">
+          <value>106.844553,-6.209144</value>
+        </Data>
+        <Data name="BLocation">
+          <value>106.843684,-6.209364</value>
+        </Data>
+        <Data name="IsUnderground">
+          <value>False</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <LineString>
+        <coordinates>106.844553,-6.2091440000000002
+106.844346,-6.209587
+106.844346,-6.209587
+106.84411799999999,-6.2094560000000003
+106.843765,-6.209212
+106.843684,-6.2093639999999999</coordinates>
+      </LineString>
+    </Placemark>
+  </Document>
+</kml>

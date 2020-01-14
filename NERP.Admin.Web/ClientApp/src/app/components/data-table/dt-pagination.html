@@ -1,0 +1,22 @@
+<div class="pull-left">
+   <span style="padding-right: 10px;font-size: small;">Pages</span>
+   <div class="btn-group" style="padding-right: 10px;">
+      <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
+         <span style="padding-right: 5px;"> {{pageSize}} </span>
+         <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+         <li><a [routerLink]="" (click)="pageSize = 10; pageSizeChange()">10</a></li>
+         <li><a [routerLink]="" (click)="pageSize = 20; pageSizeChange()">20</a></li>
+         <li><a [routerLink]="" (click)="pageSize = 50; pageSizeChange()">50</a></li>
+         <li><a [routerLink]="" (click)="pageSize = 100; pageSizeChange()">100</a></li>
+      </ul>
+   </div>
+</div>
+<div class="pull-right">
+   <span style="padding-right: 10px;font-size: small;">Showing page {{currentPage}} of {{totalPages}}</span>
+   <div class="btn-group" style="padding-bottom:5px">
+      <button class="btn btn-default btn-sm" type="button" (click)="setPage(currentPage - 1)" [ngClass]="{disabled:currentPage === 1}"><i class="fa fa-chevron-left fa-fw"></i></button>
+      <button class="btn btn-default btn-sm" type="button" (click)="setPage(currentPage + 1)" [ngClass]="{disabled:currentPage === totalPages}"><i class="fa fa-chevron-right fa-fw"></i></button>
+   </div>
+</div>

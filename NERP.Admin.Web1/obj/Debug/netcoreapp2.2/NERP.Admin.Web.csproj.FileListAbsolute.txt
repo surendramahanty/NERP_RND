@@ -1,0 +1,88 @@
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.Admin.Web.deps.json
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.Admin.Web.runtimeconfig.json
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.Admin.Web.runtimeconfig.dev.json
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.Admin.Web.dll
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.Admin.Web.pdb
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.ActiveDirectory.dll
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.ActivityLogs.dll
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Authentication.dll
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Config.dll
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.DataAccess.dll
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.DataAccess.Mongo.dll
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Groups.dll
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Modules.dll
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Roles.dll
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Users.dll
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Web.dll
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.Common.dll
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.GeneralSettings.dll
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.NetworkEntities.dll
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.ActivityLogs.pdb
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Authentication.pdb
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Config.pdb
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Groups.pdb
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Modules.pdb
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Roles.pdb
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Users.pdb
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Web.pdb
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.Common.pdb
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.GeneralSettings.pdb
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.NetworkEntities.pdb
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.ActiveDirectory.pdb
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.DataAccess.pdb
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.DataAccess.Mongo.pdb
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\obj\Debug\netcoreapp2.2\NERP.Admin.Web.csprojAssemblyReference.cache
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\obj\Debug\netcoreapp2.2\NERP.Admin.Web.csproj.CoreCompileInputs.cache
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\obj\Debug\netcoreapp2.2\NERP.Admin.Web.AssemblyInfoInputs.cache
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\obj\Debug\netcoreapp2.2\NERP.Admin.Web.AssemblyInfo.cs
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\obj\Debug\netcoreapp2.2\NERP.Admin.Web.csproj.CopyComplete
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\obj\Debug\netcoreapp2.2\NERP.Admin.Web.dll
+D:\SK\NERP_RND\Solution2\NERP.Admin.Web\obj\Debug\netcoreapp2.2\NERP.Admin.Web.pdb
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\appsettings.json
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\ClientApp\angular.json
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\ClientApp\package-lock.json
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\ClientApp\package.json
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\ClientApp\tsconfig.app.json
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\ClientApp\tsconfig.json
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\ClientApp\tsconfig.spec.json
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\ClientApp\tslint.json
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.Admin.Web.deps.json
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.Admin.Web.runtimeconfig.json
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.Admin.Web.runtimeconfig.dev.json
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.Admin.Web.dll
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.Admin.Web.pdb
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.ActiveDirectory.dll
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.ActivityLogs.dll
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Authentication.dll
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Config.dll
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.DataAccess.dll
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.DataAccess.Mongo.dll
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Groups.dll
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Modules.dll
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Roles.dll
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Users.dll
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Web.dll
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.Common.dll
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.GeneralSettings.dll
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.NetworkEntities.dll
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.ActivityLogs.pdb
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Authentication.pdb
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Config.pdb
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Groups.pdb
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Modules.pdb
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Roles.pdb
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Users.pdb
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.Web.pdb
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.Common.pdb
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.GeneralSettings.pdb
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\NERP.NetworkEntities.pdb
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.ActiveDirectory.pdb
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.DataAccess.pdb
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\bin\Debug\netcoreapp2.2\Common.DataAccess.Mongo.pdb
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\obj\Debug\netcoreapp2.2\NERP.Admin.Web.csprojAssemblyReference.cache
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\obj\Debug\netcoreapp2.2\NERP.Admin.Web.AssemblyInfoInputs.cache
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\obj\Debug\netcoreapp2.2\NERP.Admin.Web.AssemblyInfo.cs
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\obj\Debug\netcoreapp2.2\NERP.Admin.Web.csproj.CopyComplete
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\obj\Debug\netcoreapp2.2\NERP.Admin.Web.dll
+E:\rnd_module\previous_RND CODE\Solution2\NERP.Admin.Web\obj\Debug\netcoreapp2.2\NERP.Admin.Web.pdb

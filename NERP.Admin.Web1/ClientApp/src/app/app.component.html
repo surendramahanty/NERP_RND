@@ -1,0 +1,50 @@
+<div class="wrapper">
+   <header class="main-header">
+      <a href="/" class="logo">
+         <img src="images/logo.svg" style="height: 35px;">
+      </a>
+      <nav class="navbar" role="navigation">
+         <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+            <i class="fas fa-bars"></i>
+         </a>
+         <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+               <li>
+                  <a href="#">
+                     <span class="hidden-xs">{{loginUser.name}}</span>
+                  </a>
+               </li>
+               <li>
+                  <a [routerLink]="" title="Logout" class="nav-link" (click)="onLogout()"><i class="fas fa-sign-out-alt"></i></a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+   </header>
+   <aside class="main-sidebar">
+      <section class="sidebar">
+         <ul class="sidebar-menu" data-widget="tree">
+            <li class="header">MAIN NAVIGATION</li>
+            <li [routerLinkActive]="['active']"><a [routerLink]="['/home']"><span>Home</span></a></li>
+            <li [routerLinkActive]="['active']"><a [routerLink]="['/groups']"><span>Groups</span></a></li>
+            <li [routerLinkActive]="['active']"><a [routerLink]="['/roles']"><span>Roles</span></a></li>
+            <li [routerLinkActive]="['active']"><a [routerLink]="['/users']"><span>Users</span></a></li>
+            <li [routerLinkActive]="['active']"><a [routerLink]="['/entities']"><span>Entities</span></a></li>
+            <li [routerLinkActive]="['active']"><a [routerLink]="['/accessories']"><span>Accessories</span></a></li>
+            <li [routerLinkActive]="['active']"><a [routerLink]="['/civilworks']"><span>Civil Works</span></a></li>
+            <!--<li [routerLinkActive]="['active']"><a [routerLink]="['/layers']"><span>Layers</span></a></li>-->
+            <li [routerLinkActive]="['active']"><a [routerLink]="['/generalSettings']"><span>General Settings</span></a></li>
+            <li [routerLinkActive]="['active']"><a [routerLink]="['/activityLogs']"><span>Activity Logs</span></a></li>
+         </ul>
+      </section>
+   </aside>
+   <div class="content-wrapper">
+      <router-outlet></router-outlet>
+   </div>
+   <footer class="main-footer">
+      <span>&copy; Pitney Bowes 2019</span>
+      <!--<div class="pull-right hidden-xs">
+         <span>Best view with IE 11, Mozilla 51, Chrome 55 and Safari 10 and above</span>
+      </div>-->
+   </footer>
+</div>

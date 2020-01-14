@@ -1,0 +1,443 @@
+<div>
+   <div class="col-md-4">
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <h4 class="panel-title">Hierarchy Settings</h4>
+         </div>
+         <div class="panel-collapse collapse in">
+            <div class="panel-body">
+               <div class="col-sm-12">
+                  <div class="form-group">
+                     <label for="hierarchyName" class="control-label">Hierarchy Name <span style="color:red;">*</span></label>
+                     <div class="input-group input-group-sm">
+                        <input type="text" name="hierarchyName" [(ngModel)]="hierarchyName" class="form-control">
+                        <span class="input-group-btn">
+                           <button type="button" class="btn btn-info btn-flat" (click)="addHierarchy()"><i class="fas fa-plus"></i></button>
+                        </span>
+                     </div>
+                  </div>
+                  <ng-container *ngIf='design.networkSettings && design.networkSettings.length > 0'>
+                     <ng-container *ngFor='let networkSetting of design.networkSettings; let rowIndex = index;'>
+                        <div class="box box-solid hierarchy" [class.hactive]="selectedSetting == networkSetting" (click)="selectedSetting = networkSetting" style="cursor: pointer;">
+                           <div class="box-header">
+                              <div class="pull-right box-tools" style="top: 0px;right: 0px;">
+                                 <button type="button" class="btn btn-sm pull-right" style="padding: 5px;background: transparent;" (click)="deleteHierarchy(rowIndex)">
+                                    <i class="fas fa-trash-alt" style="color:red"></i>
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="box-body">
+                              <p>{{rowIndex + 1}}. {{networkSetting.name}}</p>
+                           </div>
+                        </div>
+                     </ng-container>
+                  </ng-container>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-md-8">
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <h4 class="panel-title">{{selectedSetting?.name || 'Settings'}}</h4>
+         </div>
+         <div class="panel-collapse collapse in">
+            <div class="panel-body" style="padding: 7px;" *ngIf="design.designType == 'FTTx'">
+               <ul class="nav nav-tabs form-menu" style="padding-bottom: 2px;border-bottom: 1px solid #ddd;">
+                  <li class="active"><a href="#tab_startNode" data-toggle="tab">Start Node</a></li>
+                  <li><a href="#tab_destinationNode" data-toggle="tab">Destination Node</a></li>
+                  <li><a href="#tab_cabling" data-toggle="tab">Cabling</a></li>
+               </ul>
+               <div class="tab-content">
+                  <div id="tab_startNode" class="tab-pane active" style="padding: 10px;">
+                     <div class="panel-group" id="sn_accordion">
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#sn_accordion" href="#sn_entitySettings">Entity Settings</a>
+                              </span>
+                           </div>
+                           <div id="sn_entitySettings" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-entities [entitySettings]="selectedSetting.startNode.entitySettings" [allDesigns]="allDesigns"></dzn-entities>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#sn_accordion" href="#sn_accessories">Accessories</a>
+                              </span>
+                           </div>
+                           <div id="sn_accessories" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-accessories [accessorySettings]="selectedSetting.startNode.accessorySettings" [parentEntityType]="selectedSetting.startNode.entitySettings.entityName" [allDesigns]="allDesigns"></dzn-accessories>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#sn_accordion" href="#sn_civilWorks">Civil works</a>
+                              </span>
+                           </div>
+                           <div id="sn_civilWorks" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-civilworks [civilworkSettings]="selectedSetting.startNode.civilworkSettings" [parentEntityType]="selectedSetting.startNode.entitySettings.entityName"></dzn-civilworks>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#sn_accordion" href="#sn_fiber">Fiber</a>
+                              </span>
+                           </div>
+                           <div id="sn_fiber" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <div class="form-group col-md-12">
+                                    <label class="control-label" for="fiberDrop">Fiber Drop</label>
+                                    <input class="form-control" name="fiberDrop" [(ngModel)]="selectedSetting.startNode.fiberDrop" type="number">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#sn_accordion" href="#sn_ductSettings">Duct Settings</a>
+                              </span>
+                           </div>
+                           <div id="sn_ductSettings" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-duct [ductSettings]="selectedSetting.startNode.ductSettings"></dzn-duct>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div id="tab_destinationNode" class="tab-pane" style="padding: 10px;">
+                     <div class="panel-group" id="dn_accordion">
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#dn_accordion" href="#dn_entitySettings">Entity Settings</a>
+                              </span>
+                           </div>
+                           <div id="dn_entitySettings" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-entities [entitySettings]="selectedSetting.destinationNode.entitySettings" [allDesigns]="allDesigns"></dzn-entities>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#dn_accordion" href="#dn_accessories">Accessories</a>
+                              </span>
+                           </div>
+                           <div id="dn_accessories" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-accessories [accessorySettings]="selectedSetting.destinationNode.accessorySettings" [parentEntityType]="selectedSetting.destinationNode.entitySettings.entityName" [allDesigns]="allDesigns"></dzn-accessories>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#dn_accordion" href="#dn_civilWorks">Civil works</a>
+                              </span>
+                           </div>
+                           <div id="dn_civilWorks" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-civilworks [civilworkSettings]="selectedSetting.destinationNode.civilworkSettings" [parentEntityType]="selectedSetting.destinationNode.entitySettings.entityName"></dzn-civilworks>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#dn_accordion" href="#dn_fiber">Fiber</a>
+                              </span>
+                           </div>
+                           <div id="dn_fiber" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <div class="form-group col-md-12">
+                                    <label class="control-label" for="dn_fiberDrop">Fiber Drop</label>
+                                    <input class="form-control" name="dn_fiberDrop" [(ngModel)]="selectedSetting.destinationNode.fiberDrop" type="number">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#dn_accordion" href="#dn_ductSettings">Duct Settings</a>
+                              </span>
+                           </div>
+                           <div id="dn_ductSettings" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-duct [ductSettings]="selectedSetting.destinationNode.ductSettings"></dzn-duct>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div id="tab_cabling" class="tab-pane" style="padding: 10px;">
+                     <div class="panel-group" id="cbl_accordion">
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#cbl_accordion" href="#cbl_cableSettings">Cable Settings</a>
+                              </span>
+                           </div>
+                           <div id="cbl_cableSettings" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-cable [cableSettings]="selectedSetting.cabling.cableSettings"></dzn-cable>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#cbl_accordion" href="#cbl_loopSettings">Loop Management</a>
+                              </span>
+                           </div>
+                           <div id="cbl_loopSettings" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <div class="col-sm-6">
+                                    <div class="form-group">
+                                       <label for="cableLoop" class="control-label">Cable loop (Meters)</label>
+                                       <input class="form-control" name="cableLoop" [(ngModel)]="selectedSetting.cabling.cableSettings.cableLoop" type="number">
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-6">
+                                    <div class="form-group">
+                                       <label for="forEvery" class="control-label">For Every (Meters)</label>
+                                       <input class="form-control" name="forEvery" [(ngModel)]="selectedSetting.cabling.cableSettings.loopInterval" type="number">
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-6">
+                                    <div class="form-group">
+                                       <label for="loopAtClosure" class="control-label">Loop at Closure (Meters)</label>
+                                       <input class="form-control" name="loopAtClosure" [(ngModel)]="selectedSetting.cabling.cableSettings.loopAtClosure" type="number">
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-6">
+                                    <div class="form-group">
+                                       <label for="loopAtClosure" class="control-label">Connect %</label>
+                                       <input class="form-control" name="loopAtClosure" [(ngModel)]="selectedSetting.cabling.cableSettings.connectionPercent" type="number">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#cbl_accordion" href="#cbl_spliceClosuresSettings">Splice Closures</a>
+                              </span>
+                           </div>
+                           <div id="cbl_spliceClosuresSettings" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-spliceClosure [spliceClosureSettings]="selectedSetting.cabling.spliceClosureSettings"></dzn-spliceClosure>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#cbl_accordion" href="#cbl_accessories">Accessories</a>
+                              </span>
+                           </div>
+                           <div id="cbl_accessories" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-accessories [accessorySettings]="selectedSetting.cabling.accessorySettings" parentEntityType="Cable" [allDesigns]="allDesigns"></dzn-accessories>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#cbl_accordion" href="#cbl_duct">Duct</a>
+                              </span>
+                           </div>
+                           <div id="cbl_duct" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-duct [ductSettings]="selectedSetting.cabling.ductSettings"></dzn-duct>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="panel-body" style="padding: 7px;" *ngIf="design.designType == 'Backbone'">
+               <ul class="nav nav-tabs form-menu" style="padding-bottom: 2px;border-bottom: 1px solid #ddd;">
+                  <li class="active"><a href="#tab_fdp" data-toggle="tab">FDP Node</a></li>
+                  <li><a href="#tab_bb_cabling" data-toggle="tab">Cabling</a></li>
+               </ul>
+               <div class="tab-content">
+                  <div id="tab_fdp" class="tab-pane active" style="padding: 10px;">
+                     <div class="panel-group" id="fdp_accordion">
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#fdp_accordion" href="#fdp_nodeSettings">FDP Nodes</a>
+                              </span>
+                           </div>
+                           <div id="fdp_nodeSettings" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-fdp [fdpSettings]="selectedSetting.fdpNode.fdpSettings" [allDesigns]="allDesigns"></dzn-fdp>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#fdp_accordion" href="#fdp_accessories">Accessories</a>
+                              </span>
+                           </div>
+                           <div id="fdp_accessories" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-accessories [accessorySettings]="selectedSetting.fdpNode.accessorySettings" [parentEntityType]="selectedSetting.fdpNode.entitySettings.entityName" [allDesigns]="allDesigns"></dzn-accessories>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#fdp_accordion" href="#fdp_civilWorks">Civil works</a>
+                              </span>
+                           </div>
+                           <div id="fdp_civilWorks" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-civilworks [civilworkSettings]="selectedSetting.fdpNode.civilworkSettings" [parentEntityType]="selectedSetting.fdpNode.entitySettings.entityName"></dzn-civilworks>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#fdp_accordion" href="#fdp_fiber">Fiber</a>
+                              </span>
+                           </div>
+                           <div id="fdp_fiber" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <div class="form-group col-md-12">
+                                    <label class="control-label" for="fdpFiberDrop">Fiber Drop</label>
+                                    <input class="form-control" name="fdpFiberDrop" [(ngModel)]="selectedSetting.fdpNode.fiberDrop" type="number">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#fdp_accordion" href="#fdp_ductSettings">Duct Settings</a>
+                              </span>
+                           </div>
+                           <div id="fdp_ductSettings" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-duct [ductSettings]="selectedSetting.fdpNode.ductSettings"></dzn-duct>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div id="tab_bb_cabling" class="tab-pane" style="padding: 10px;">
+                     <div class="panel-group" id="cbl_accordion">
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#cbl_accordion" href="#cbl_cableSettings">Cable Settings</a>
+                              </span>
+                           </div>
+                           <div id="cbl_cableSettings" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-cable [cableSettings]="selectedSetting.cabling.cableSettings"></dzn-cable>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#cbl_accordion" href="#cbl_loopSettings">Loop Management</a>
+                              </span>
+                           </div>
+                           <div id="cbl_loopSettings" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <div class="col-sm-6">
+                                    <div class="form-group">
+                                       <label for="cableLoop" class="control-label">Cable loop (Meters)</label>
+                                       <input class="form-control" name="cableLoop" [(ngModel)]="selectedSetting.cabling.cableSettings.cableLoop" type="number">
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-6">
+                                    <div class="form-group">
+                                       <label for="forEvery" class="control-label">For Every (Meters)</label>
+                                       <input class="form-control" name="forEvery" [(ngModel)]="selectedSetting.cabling.cableSettings.loopInterval" type="number">
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-6">
+                                    <div class="form-group">
+                                       <label for="loopAtClosure" class="control-label">Loop at Closure (Meters)</label>
+                                       <input class="form-control" name="loopAtClosure" [(ngModel)]="selectedSetting.cabling.cableSettings.loopAtClosure" type="number">
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-6">
+                                    <div class="form-group">
+                                       <label for="loopAtClosure" class="control-label">Connect %</label>
+                                       <input class="form-control" name="loopAtClosure" [(ngModel)]="selectedSetting.cabling.cableSettings.connectionPercent" type="number">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#cbl_accordion" href="#cbl_spliceClosuresSettings">Splice Closures</a>
+                              </span>
+                           </div>
+                           <div id="cbl_spliceClosuresSettings" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-spliceClosure [spliceClosureSettings]="selectedSetting.cabling.spliceClosureSettings"></dzn-spliceClosure>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#cbl_accordion" href="#cbl_accessories">Accessories</a>
+                              </span>
+                           </div>
+                           <div id="cbl_accessories" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-accessories [accessorySettings]="selectedSetting.cabling.accessorySettings" parentEntityType="Cable" [allDesigns]="allDesigns"></dzn-accessories>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="panel panel-default">
+                           <div style="padding:5px">
+                              <span>
+                                 <a data-toggle="collapse" data-parent="#cbl_accordion" href="#cbl_duct">Duct</a>
+                              </span>
+                           </div>
+                           <div id="cbl_duct" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                 <dzn-duct [ductSettings]="selectedSetting.cabling.ductSettings"></dzn-duct>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

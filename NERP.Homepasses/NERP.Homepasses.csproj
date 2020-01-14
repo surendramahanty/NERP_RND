@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Common.DataAccess.Mongo\Common.DataAccess.Mongo.csproj" />
+    <ProjectReference Include="..\NERP.Common\NERP.Common.csproj" />
+    <ProjectReference Include="..\NERP.GeoServices\NERP.GeoServices.csproj" />
+  </ItemGroup>
+
+</Project>

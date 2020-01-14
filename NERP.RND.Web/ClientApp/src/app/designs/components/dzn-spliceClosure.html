@@ -1,0 +1,101 @@
+<!--<div class="col-sm-12">
+   <div class="form-group">
+      <label for="equipment" class="control-label">SpliceClosure Option</label>
+      <mat-select name="spliceClosureOption" [(ngModel)]="spliceClosureSettings.dataSource" (ngModelChange)="getExistingSpliceClosures()">
+         <mat-option>SpliceClosure Option</mat-option>
+         <mat-option value="import">Import SpliceClosure</mat-option>
+         <mat-option value="existing">Use from existing</mat-option>
+         <mat-option value="automatic">Place Automatically</mat-option>
+      </mat-select>
+   </div>
+</div>-->
+<div class="col-sm-12">
+   <div class="form-group">
+      <label for="equipment" class="control-label">Select SpliceClosure</label>
+      <div class="input-group input-group-sm">
+         <mat-select name="spliceClosure" [(ngModel)]="selectedSpliceClosure">
+            <mat-option>Select SpliceClosure</mat-option>
+            <mat-option *ngFor="let spliceClosure of spliceClosuresMaster" [value]="spliceClosure">
+               {{spliceClosure.name}}
+            </mat-option>
+         </mat-select>
+         <span class="input-group-btn"><button class="btn btn-info btn-flat" type="button" (click)="addSpliceClosure()"><i class="fas fa-plus"></i></button></span>
+      </div>
+   </div>
+</div>
+<div class="col-sm-12">
+   <div class="form-group">
+      <table class="table table-bordered table-striped">
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th style="width:40px"></th>
+            </tr>
+         </thead>
+         <tbody>
+            <ng-container *ngIf='spliceClosureSettings.spliceClosures && spliceClosureSettings.spliceClosures.length > 0'>
+               <tr *ngFor='let spliceClosure of spliceClosureSettings.spliceClosures;let rowIndex = index;'>
+                  <td>{{spliceClosure.name}}</td>
+                  <td>
+                     <a>
+                        <i class="fas fa-trash-alt" style="font-size: 15px; color: Red; cursor:pointer" (click)="removeSpliceClosure(rowIndex)" title="Remove"></i>
+                     </a>
+                  </td>
+               </tr>
+            </ng-container>
+            <tr *ngIf='spliceClosureSettings.spliceClosures == null || spliceClosureSettings.spliceClosures.length == 0'>
+               <td colspan="2" style="text-align: center;">
+                  {{statusMessage}}
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>
+
+<div class="col-sm-12">
+   <div class="form-group">
+      <mat-checkbox name="scJoin" [checked]="spliceClosureSettings.straightJoin" [(ngModel)]="spliceClosureSettings.straightJoin">Straight Joints as per cable drum length </mat-checkbox>
+   </div>
+   <div class="form-group" *ngIf="spliceClosureSettings.straightJoin">
+      <label for="drumLength" class="control-label">Drum Length</label>
+      <input class="form-control" name="drumLength" type="number" [(ngModel)]="spliceClosureSettings.drumLength">
+   </div>
+   <div class="form-group" *ngIf="spliceClosureSettings.straightJoin">
+      <mat-checkbox name="intersectionJoints" [checked]="spliceClosureSettings.intersectionJoints" [(ngModel)]="spliceClosureSettings.intersectionJoints">Intersection Joints</mat-checkbox>
+   </div>
+</div>
+
+
+   <!--<div class="form-group" *ngIf="spliceClosureOption == 'import'">
+      <label for="equipment" class="control-label">Select SpliceClosure Shape File</label>
+      <div class="input-group">
+         <input type="text" class="form-control" readonly id="uploadFile" placeholder="Choose file">
+         <span class="input-group-btn">
+            <span class="btn btn-primary btn-file">
+               Browse&hellip; <input type="file" multiple (change)="fileChangeEvent($event)">
+            </span>
+         </span>
+      </div>
+   </div>
+   <div *ngIf="spliceClosureOption == 'existing'">
+      <div class="form-group">
+         <label for="design" class="control-label">Select Design</label>
+         <mat-select name="design" [(ngModel)]="selectedDesign">
+            <mat-option>Select Design</mat-option>
+            <mat-option *ngFor="let item of allDesigns" [value]="item.id">(ver {{item.version}}) {{item.name}}</mat-option>
+         </mat-select>
+      </div>
+      <div class="form-group">
+         <label for="equipment" class="control-label">Select SpliceClosure</label>
+         <div class="input-group input-group-sm">
+            <mat-select name="spliceClosure" [(ngModel)]="selectedSpliceClosure">
+               <mat-option>Select SpliceClosure</mat-option>
+               <mat-option *ngFor="let spliceClosure of spliceClosuresMaster" [value]="spliceClosure">
+                  {{spliceClosure.name}}
+               </mat-option>
+            </mat-select>
+            <span class="input-group-btn"><button class="btn btn-info btn-flat" type="button" (click)="addSpliceClosure()"><i class="fas fa-plus"></i></button></span>
+         </div>
+      </div>
+   </div>-->

@@ -1,0 +1,44 @@
+<div class="form-group">
+   <table class="table table-bordered table-striped">
+      <thead>
+         <tr>
+            <th>Template Code</th>
+            <th>Template Name</th>
+            <th *ngIf="Flag=='Fat'">Pigtail Count</th>
+            <th *ngIf="Flag=='Fdt'">Odf Count</th>
+            <th>Splitter Count</th>
+            <!--<th>Created Date</th>-->
+            <th style="text-align: center;padding: 2px 0px;width: 50px;">
+               <a (click)="addNewTemplate()" style="cursor:pointer">
+                  <i class="fas fa-plus-circle" title="Add" style="font-size: 20px; color: #3e53a4;margin: 5px;"></i>
+               </a>
+            </th>
+         </tr>
+      </thead>
+      <tbody>
+         <ng-container *ngIf='template && template.length > 0'>
+            <tr *ngFor='let templat of template; let rowIndex = index;'>
+               <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="templat.templateCode"></td>
+               <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="templat.templateName"></td>
+               <td *ngIf="Flag=='Fat'"><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="templat.pigtailCount"></td>
+               <td *ngIf="Flag=='Fdt'"><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="templat.odfCount"></td>
+               <td><input type="number" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="templat.splitterCount"></td>
+               <!--<td><input type="date" class="form-control input-sm" autocomplete="off"
+                          [ngModelOptions]="{standalone: true}"
+                          [ngModel]="templat.updatedDate"></td>-->
+               <td style="text-align:center;padding-top: 14px;">
+                  <!--| date:'yyyy-MM-dd'-->
+                  <a (click)="deletetemplate(rowIndex)" style="cursor:pointer">
+                     <i class="fas fa-trash-alt" title="Delete" style="font-size: 15px; color: Red;"></i>
+                  </a>
+               </td>
+            </tr>
+         </ng-container>
+         <tr *ngIf='template == null || template.length == 0'>
+            <td colspan="8" class="check-mail" style="text-align: center;">
+               template not defined
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div>

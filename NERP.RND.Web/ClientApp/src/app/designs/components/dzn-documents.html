@@ -1,0 +1,51 @@
+<div class="col-md-12">
+   <div class="form-group">
+      <label for="category" class="control-label">Category </label>
+      <input type="text" class="form-control" name="category" [(ngModel)]="documentCategory">
+   </div>
+   <div class="form-group">
+      <label for="uploadFile">Upload file</label>
+      <div class="input-group">
+         <input type="text" class="form-control" readonly id="uploadFile" placeholder="Choose file">
+         <span class="input-group-btn">
+            <span class="btn btn-primary btn-file">
+               Browse&hellip; <input type="file" multiple #fileInput (click)="fileInput.value = null" value="" (change)="fileChangeEvent($event)">
+            </span>
+         </span>
+      </div>
+   </div>
+   <div class="form-group">
+      <table class="table table-bordered table-striped">
+         <thead>
+            <tr>
+               <th>Category</th>
+               <th>File Name</th>
+               <th style="width:120px">File Size</th>
+               <th style="width:70px" class='text-center'></th>
+            </tr>
+         </thead>
+         <tbody>
+            <ng-container *ngIf='design.documents && design.documents.length > 0'>
+               <tr *ngFor='let document of design.documents;let rowIndex = index;'>
+                  <td>{{document.category}}</td>
+                  <td>{{document.fileName}}</td>
+                  <td style="text-align: right;">{{helper.formatBytes(document.fileSize, 2)}}</td>
+                  <td>
+                     <a href="Designs/GetDocument?designId={{design.id}}&documentId={{document.id}}" download *ngIf="document.id != null">
+                        <i class='fa fa-download' style='font-size: 15px; cursor:pointer' title='Download File'></i>
+                     </a>&nbsp;
+                     <a (click)="removeDocument(rowIndex, document)" style="cursor:pointer">
+                        <i class="fas fa-trash-alt" style="font-size: 15px; color: Red;" title="Delete"></i>
+                     </a>
+                  </td>
+               </tr>
+            </ng-container>
+            <tr *ngIf='design.documents == null || design.documents.length == 0'>
+               <td colspan="4" style="text-align: center;">
+                  There are no documents attached to design.
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>

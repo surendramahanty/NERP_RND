@@ -1,0 +1,110 @@
+<div class="col-sm-6">
+   <div class="form-group">
+      <label for="entityName" class="control-label">Entity Name</label>
+      <mat-select name="entityType" [(ngModel)]="entitySettings.entityName" (ngModelChange)="onEntityTypeChange($event)">
+         <mat-option>Select Entity Type</mat-option>
+         <mat-option value="Chamber">Chamber</mat-option>
+         <mat-option value="ODF">ODF</mat-option>
+         <mat-option value="Pole">Pole</mat-option>
+         <mat-option value="SpliceClosure">Splice Closure</mat-option>
+         <mat-option value="Splitter">Splitter</mat-option>
+         <mat-option value="Homepass">Homepass</mat-option>
+      </mat-select>
+   </div>
+</div>
+<div class="col-sm-6">
+   <div class="form-group">
+      <label class="control-label" for="nodeOptions">Node Options <span style="color:red;">*</span></label>
+      <mat-select name="nodeOptions" [(ngModel)]="entitySettings.dataSource" [disabled]="entitySettings.entityName=='Homepass'?'disabled': null">
+         <mat-option>Select Option</mat-option>
+         <mat-option value="import">Import</mat-option>
+         <mat-option value="existing">Use from existing design</mat-option>
+         <mat-option value="automatic">Place Automatically</mat-option>
+      </mat-select>
+   </div>
+</div>
+
+<div class="form-group col-sm-12" *ngIf="entitySettings.dataSource == 'import'">
+   <label for="equipment" class="control-label">Select Entities File</label>
+   <div class="input-group">
+      <input type="text" class="form-control" readonly id="uploadFile" placeholder="Choose file">
+      <span class="input-group-btn">
+         <span class="btn btn-primary btn-file">
+            Browse&hellip; <input type="file" #fileInput (click)="fileInput.value = null" value="" (change)="fileChangeEvent($event)">
+         </span>
+      </span>
+   </div>
+</div>
+
+<ng-container *ngIf="entitySettings.dataSource == 'existing'">
+   <div class="col-sm-6">
+      <div class="form-group">
+         <label for="design" class="control-label">Select Design</label>
+         <mat-select name="design" [(ngModel)]="entitySettings.existingDesignId" (ngModelChange)="onDesignChange($event)">
+            <mat-option>Select Design</mat-option>
+            <mat-option *ngFor="let item of allDesigns" [value]="item.id">(ver {{item.version}}) {{item.name}}</mat-option>
+         </mat-select>
+      </div>
+   </div>
+   <div class="col-sm-6">
+      <div class="form-group">
+         <label for="designEntities" class="control-label">Select {{entitySettings.entityName}}</label>
+         <mat-select name="designEntities" (ngModelChange)="onDesignEntityChange($event)">
+            <mat-option>Select {{entitySettings.entityName}}</mat-option>
+            <ng-container *ngIf="designEntities && designEntities.length > 0">
+               <mat-option *ngFor="let designEntity of designEntities" [value]="designEntity">
+                  {{designEntity.name}}
+               </mat-option>
+            </ng-container>
+         </mat-select>
+      </div>
+   </div>
+</ng-container>
+
+<div class="form-group col-md-12" *ngIf="entitySettings.dataSource == 'automatic' && entitySettings.entityName != 'Homepass'">
+   <label for="masterEntities" class="control-label">Select {{entitySettings.entityName}}</label>
+   <div class="input-group input-group-sm">
+      <mat-select name="masterEntities" [(ngModel)]="selectedEntity">
+         <mat-option>Select {{entitySettings.entityName}}</mat-option>
+         <ng-container *ngIf="masterEntities && masterEntities.length > 0">
+            <mat-option *ngFor="let selectedEntity of masterEntities" [value]="selectedEntity">
+               {{selectedEntity.name}}
+            </mat-option>
+         </ng-container>
+      </mat-select>
+      <span class="input-group-btn"><button class="btn btn-info btn-flat" type="button" (click)="addEntity()"><i class="fas fa-plus"></i></button></span>
+   </div>
+</div>
+
+<div class="col-sm-12" *ngIf="entitySettings.entityName != 'Homepass'">
+   <div class="form-group">
+      <div style="overflow-y:auto; max-height:250px">
+         <table class="table table-bordered table-striped">
+            <thead>
+               <tr>
+                  <th>Name</th>
+                  <th style="width:40px"></th>
+               </tr>
+            </thead>
+            <tbody>
+               <ng-container *ngIf='entities && entities.length > 0'>
+                  <tr *ngFor='let entity of entities;let rowIndex = index;'>
+                     <td>{{entity.name}}</td>
+                     <td>
+                        <a>
+                           <i class="fas fa-trash-alt" style="font-size: 15px; color: Red; cursor:pointer" (click)="removeEntity(rowIndex)" title="Remove"></i>
+                        </a>
+                     </td>
+                  </tr>
+               </ng-container>
+               <tr *ngIf='entities == null || entities.length == 0'>
+                  <td colspan="2" style="text-align: center;">
+                     Entities not added.
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+
+   </div>
+</div>

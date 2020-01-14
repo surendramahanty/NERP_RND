@@ -1,0 +1,1144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_1</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.739604,-6.1316179999999996</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_2</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73960621832431,-6.1322700038769016</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_3</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.74014315249276,-6.1329937228036968</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_4</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.740245,-6.1331309999999997</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_1</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73931399999992,-6.1318780000000004</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_2</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.7385432412336,-6.1323462985419077</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_3</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73775771838335,-6.1327921382035528</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_4</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73697219421956,-6.133237976721241</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_5</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73618666874212,-6.1336838140948871</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_6</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73540114195097,-6.1341296503244074</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_7</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73461561384597,-6.134575485409715</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_8</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73407807620005,-6.1350835222500963</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_9</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73455690465447,-6.1358464898175367</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_10</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73503573447982,-6.1366094569597083</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_11</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73551456567625,-6.1373724236765526</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_12</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73599339824393,-6.1381353899680189</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_13</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73664277270179,-6.1387118573737798</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_14</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73745212300862,-6.1391133799039439</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_15</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73826147453555,-6.1395149012184698</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_16</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73907082728269,-6.1399164213172712</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_17</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73972944906251,-6.1400173067308339</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_18</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73989412167326,-6.1391330159268263</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_19</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.7400587937373,-6.1382487250724953</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_20</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.74022346525467,-6.137364434167849</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_21</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.74038813622549,-6.1364801432128919</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_22</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.74055280664983,-6.1355958522076364</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_23</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.74071747652773,-6.1347115611520842</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_24</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.74109570795643,-6.134361031691645</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_25</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.74170667599032,-6.1350163967312712</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_26</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.74227041856518,-6.1357196759646939</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_27</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.74283416262777,-6.1364229546086522</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_28</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.74339790817824,-6.1371262326630776</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_29</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.74419467445379,-6.1374765053986504</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_30</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.74507263984495,-6.1376927581301208</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_31</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.74586396076508,-6.1373731453095361</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_32</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.74665238199786,-6.13775990657685</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_33</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.74732199999994,-6.1382120000000002</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_19</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.734863,-6.1315</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_20</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73429618642425,-6.1309964250852262</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_21</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73463623980491,-6.130385631335586</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_22</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73533832263217,-6.1298186412454498</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_23</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73593708444855,-6.1301673523520028</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_24</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73649535615338,-6.1308749287472404</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_25</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73713628159044,-6.1310378906621734</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_26</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73801425101263,-6.1309445363835255</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_27</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73870021312683,-6.1311416471169933</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_28</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73927738579393,-6.1318340699055538</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_29</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.739299,-6.1318599999999996</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_30</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.735265,-6.132066</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_31</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73473372783586,-6.1313384852775332</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_32</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.734587,-6.1308439999999997</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_33</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.737838,-6.1281650000000001</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_34</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73728139347521,-6.1282265807300629</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_35</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73788274028936,-6.1278249335872292</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_36</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73849475850139,-6.1271760361339807</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chamber</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Chamber_37</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.738653,-6.1270369999999996</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Splitter</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Splitter_1</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.74063702199946,-6.1339838511175007</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Splitter</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Splitter_2</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.73788274028936,-6.1278249335872292</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SpliceClosure</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>SpliceClosure_1</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.740245,-6.1331309999999997</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SpliceClosure</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>SpliceClosure_2</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.747322,-6.1382120000000002</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SpliceClosure</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>SpliceClosure_3</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.739299,-6.1318599999999996</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SpliceClosure</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>SpliceClosure_4</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.734587,-6.1308439999999997</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SpliceClosure</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>SpliceClosure_5</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <Point>
+        <coordinates>106.738653,-6.1270369999999996</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cable</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Cable_1</value>
+        </Data>
+        <Data name="ALocation">
+          <value>106.739604,-6.131618</value>
+        </Data>
+        <Data name="BLocation">
+          <value>106.740245,-6.133131</value>
+        </Data>
+        <Data name="IsUnderground">
+          <value>True</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <LineString>
+        <coordinates>106.739604,-6.1316179999999996
+106.739299,-6.1318599999999996
+106.739299,-6.1318599999999996
+106.73931399999999,-6.1318780000000004
+106.73931399999999,-6.1318780000000004
+106.739328,-6.1318950000000001
+106.739328,-6.1318950000000001
+106.740245,-6.1331309999999997</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Cable</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Cable_2</value>
+        </Data>
+        <Data name="ALocation">
+          <value>106.739314,-6.131878</value>
+        </Data>
+        <Data name="BLocation">
+          <value>106.747322,-6.138212</value>
+        </Data>
+        <Data name="IsUnderground">
+          <value>True</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <LineString>
+        <coordinates>106.73931399999992,-6.1318780000000004
+106.73913400000004,-6.1320110000000003
+106.73398415869144,-6.134933873333055
+106.73622516134651,-6.1385046776853667
+106.73969094708252,-6.140224061671689
+106.74081999999999,-6.1341609999999998
+106.740993,-6.13429
+106.74120700000003,-6.1344380000000003
+106.74132400000008,-6.1345390000000002
+106.74343699999997,-6.137175
+106.74352899999997,-6.1372900000000001
+106.74360799999999,-6.1373319999999998
+106.74516700000004,-6.1377160000000002
+106.74522100000002,-6.1377119999999996
+106.74535800000001,-6.1376419999999996
+106.74544700000001,-6.1375380000000002
+106.74550499999998,-6.1374750000000002
+106.74556099999995,-6.1374420000000001
+106.74595699999998,-6.1373519999999999
+106.74599799999999,-6.1373639999999998
+106.746442,-6.1376239999999997
+106.74649699999998,-6.1376549999999996
+106.74732199999994,-6.1382120000000002</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Cable</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Cable_3</value>
+        </Data>
+        <Data name="ALocation">
+          <value>106.734863,-6.1315</value>
+        </Data>
+        <Data name="BLocation">
+          <value>106.739299,-6.13186</value>
+        </Data>
+        <Data name="IsUnderground">
+          <value>True</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <LineString>
+        <coordinates>106.734863,-6.1315
+106.734752,-6.1315970000000002
+106.734752,-6.1315970000000002
+106.734138,-6.1307879999999999
+106.734138,-6.1307879999999999
+106.735536,-6.1296590000000002
+106.735536,-6.1296590000000002
+106.736654,-6.1310760000000002
+106.736654,-6.1310760000000002
+106.736823,-6.1312689999999996
+106.736823,-6.1312689999999996
+106.737189,-6.1309990000000001
+106.73730999999999,-6.1309469999999999
+106.737392,-6.1309290000000001
+106.737863,-6.1309290000000001
+106.73819399999999,-6.1309630000000004
+106.73827799999999,-6.1309889999999996
+106.73827799999999,-6.1309889999999996
+106.73831800000001,-6.1308540000000002
+106.738398,-6.130871
+106.738491,-6.1309170000000002
+106.73857599999999,-6.1309940000000003
+106.73867300000001,-6.1311090000000004
+106.739299,-6.1318599999999996</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Cable</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Cable_4</value>
+        </Data>
+        <Data name="ALocation">
+          <value>106.735265,-6.132066</value>
+        </Data>
+        <Data name="BLocation">
+          <value>106.734587,-6.130844</value>
+        </Data>
+        <Data name="IsUnderground">
+          <value>True</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <LineString>
+        <coordinates>106.735265,-6.132066
+106.734863,-6.1315
+106.734863,-6.1315
+106.73443399999999,-6.1309639999999996
+106.734587,-6.1308439999999997</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Cable</name>
+      <ExtendedData>
+        <Data name="Code">
+          <value>Cable_5</value>
+        </Data>
+        <Data name="ALocation">
+          <value>106.737838,-6.128165</value>
+        </Data>
+        <Data name="BLocation">
+          <value>106.738653,-6.127037</value>
+        </Data>
+        <Data name="IsUnderground">
+          <value>True</value>
+        </Data>
+        <Data name="ConstructionStage" />
+        <Data name="ActivationStage" />
+        <Data name="Accessibility" />
+        <Data name="HierarchyType" />
+      </ExtendedData>
+      <LineString>
+        <coordinates>106.737838,-6.1281650000000001
+106.73779,-6.1282209999999999
+106.737561,-6.1285489999999996
+106.737561,-6.1285489999999996
+106.737475,-6.1284650000000003
+106.737351,-6.1283200000000004
+106.73723699999999,-6.1281670000000004
+106.73723699999999,-6.1281670000000004
+106.737342,-6.1280849999999996
+106.737775,-6.1277840000000001
+106.737775,-6.1277840000000001
+106.73782799999999,-6.1278670000000002
+106.73782799999999,-6.1278670000000002
+106.73803100000001,-6.1277109999999997
+106.73803100000001,-6.1277109999999997
+106.73821100000001,-6.1275729999999999
+106.738592,-6.12704
+106.738615,-6.1270300000000004
+106.738653,-6.1270369999999996</coordinates>
+      </LineString>
+    </Placemark>
+  </Document>
+</kml>

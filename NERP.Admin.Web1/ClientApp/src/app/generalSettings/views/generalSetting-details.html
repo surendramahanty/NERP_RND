@@ -1,0 +1,344 @@
+<section class="content-header">
+   <h1>Manage General Settings</h1>
+   <ol class="breadcrumb">
+      <li><a [routerLink]="['/home']"><i class="fa fa-home"></i> Home</a></li>
+   </ol>
+</section>
+
+<section class="content">
+   <div class="row">
+      <div class="col-xs-12">
+         <div class="box">
+            <div class="box-header with-border ui-sortable-handle">
+               <h3 class="box-title">General Settings</h3>
+               <div class="box-tools pull-right">
+                  <button class="btn btn-social-icon btn-xs btn-success" type="submit" style="margin-left: 5px;" (click)="save()" [disabled]="form.invalid">
+                     <i class="far fa-save"></i>
+                  </button>
+               </div>
+            </div>
+            <form name="form" action="javascript:{}" #form="ngForm" novalidate>
+               <div class="box-body">
+                  <div class="panel-group" id="accordion">
+                     <!--<div class="panel panel-default">
+                        <div class="panel-heading">
+                           <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#boundaryHierarchies">Boundary Hierarchies</a>
+                           </h4>
+                        </div>
+                        <div id="boundaryHierarchies" class="panel-collapse collapse in">
+                           <div class="panel-body">
+                              <div class="col-sm-12">
+                                 <div class="form-group">
+                                    <table class="table table-bordered table-striped">
+                                       <thead>
+                                          <tr>
+                                             <th style="width: 50px; text-align:center">Level</th>
+                                             <th>Name</th>
+                                             <th style="text-align: center;padding: 2px 0px;width: 50px;">
+                                                <a (click)="addBoundaryHierarchy()" style="cursor:pointer">
+                                                   <i class="fa fa-plus-circle" title="Add" style="font-size: 20px; color: #3e53a4;margin: 5px;"></i>
+                                                </a>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <ng-container *ngIf='generalSettings.boundaryHierarchies && generalSettings.boundaryHierarchies.length > 0'>
+                                             <tr *ngFor='let boundary of generalSettings.boundaryHierarchies; let rowIndex = index;'>
+                                                <td style="text-align:center">{{rowIndex + 1}}</td>
+                                                <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="boundary.name" (keypress)="restrictAlpha($event)"></td>
+                                                <td style="text-align:center;padding-top: 14px;">
+                                                   <a (click)="deleteboundaryHierarchy(rowIndex)" style="cursor:pointer">
+                                                      <i class="fa fa-remove" title="Delete" style="font-size: 15px; color: Red;"></i>
+                                                   </a>
+                                                </td>
+                                             </tr>
+                                          </ng-container>
+                                          <tr *ngIf='generalSettings.boundaryHierarchies == null || generalSettings.boundaryHierarchies.length == 0'>
+                                             <td colspan="5" class="check-mail" style="text-align: center;">
+                                                Boundry Hierarchies not defined
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#constructionStages">Construction Stages</a>
+                           </h4>
+                        </div>
+                        <div id="constructionStages" class="panel-collapse collapse">
+                           <div class="panel-body">
+                              <div class="col-sm-12">
+                                 <div class="form-group">
+                                    <table class="table table-bordered table-striped">
+                                       <thead>
+                                          <tr>
+                                             <th>Name</th>
+                                             <th style="width: 202px;">Color Code</th>
+                                             <th style="text-align: center;padding: 2px 0px;width: 50px;">
+                                                <a (click)="addConstructionStage()" style="cursor:pointer">
+                                                   <i class="fa fa-plus-circle" title="Add" style="font-size: 20px; color: #3e53a4;margin: 5px;"></i>
+                                                </a>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <ng-container *ngIf='generalSettings.constructionStages && generalSettings.constructionStages.length > 0'>
+                                             <tr *ngFor='let constStage of generalSettings.constructionStages; let rowIndex = index;'>
+                                                <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="constStage.name" (keypress)="restrictAlpha($event)"></td>
+                                                <td>
+                                                   <input type="text" class="form-control input-sm text-color-picker" [ngModelOptions]="{standalone: true}" [(ngModel)]="constStage.colorCode" readonly>
+                                                </td>
+                                                <td style="text-align:center;padding-top: 14px;">
+                                                   <a (click)="deleteConstructionStage(rowIndex)" style="cursor:pointer">
+                                                      <i class="fa fa-remove" title="Delete" style="font-size: 15px; color: Red;"></i>
+                                                   </a>
+                                                </td>
+                                             </tr>
+                                          </ng-container>
+                                          <tr *ngIf='generalSettings.constructionStages == null || generalSettings.constructionStages.length == 0'>
+                                             <td colspan="5" class="check-mail" style="text-align: center;">
+                                                Construction Stages not defined
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#activationStages">Activation Stage</a>
+                           </h4>
+                        </div>
+                        <div id="activationStages" class="panel-collapse collapse">
+                           <div class="panel-body">
+                              <div class="col-sm-12">
+                                 <div class="form-group">
+                                    <table class="table table-bordered table-striped">
+                                       <thead>
+                                          <tr>
+                                             <th>Name</th>
+                                             <th style="width: 202px;">Color Code</th>
+                                             <th style="text-align: center;padding: 2px 0px;width: 50px;">
+                                                <a (click)="addActivationStage()" style="cursor:pointer">
+                                                   <i class="fa fa-plus-circle" title="Add" style="font-size: 20px; color: #3e53a4;margin: 5px;"></i>
+                                                </a>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <ng-container *ngIf='generalSettings.activationStages && generalSettings.activationStages.length > 0'>
+                                             <tr *ngFor='let activationStage of generalSettings.activationStages; let rowIndex = index;'>
+                                                <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="activationStage.name" (keypress)="restrictAlpha($event)"></td>
+                                                <td>
+                                                   <input type="text" class="form-control input-sm text-color-picker" [ngModelOptions]="{standalone: true}" [(ngModel)]="activationStage.colorCode" readonly>
+                                                </td>
+                                                <td style="text-align:center;padding-top: 14px;">
+                                                   <a (click)="deleteActivationStage(rowIndex)" style="cursor:pointer">
+                                                      <i class="fa fa-remove" title="Delete" style="font-size: 15px; color: Red;"></i>
+                                                   </a>
+                                                </td>
+                                             </tr>
+                                          </ng-container>
+                                          <tr *ngIf='generalSettings.activationStages == null || generalSettings.activationStages.length == 0'>
+                                             <td colspan="5" class="check-mail" style="text-align: center;">
+                                                Activation Stages not defined
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#accessibilities">Accessibilities</a>
+                           </h4>
+                        </div>
+                        <div id="accessibilities" class="panel-collapse collapse">
+                           <div class="panel-body">
+                              <div class="col-sm-12">
+                                 <div class="form-group">
+                                    <table class="table table-bordered table-striped">
+                                       <thead>
+                                          <tr>
+                                             <th>Name</th>
+                                             <th style="width: 202px;">Color Code</th>
+                                             <th style="text-align: center;padding: 2px 0px;width: 50px;">
+                                                <a (click)="addAccessibility()" style="cursor:pointer">
+                                                   <i class="fa fa-plus-circle" title="Add" style="font-size: 20px; color: #3e53a4;margin: 5px;"></i>
+                                                </a>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <ng-container *ngIf='generalSettings.accessibilities && generalSettings.accessibilities.length > 0'>
+                                             <tr *ngFor='let accessibility of generalSettings.accessibilities; let rowIndex = index;'>
+                                                <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="accessibility.name" (keypress)="restrictAlpha($event)"></td>
+                                                <td>
+                                                   <input type="text" class="form-control input-sm text-color-picker" [ngModelOptions]="{standalone: true}" [(ngModel)]="accessibility.colorCode" readonly>
+                                                </td>
+                                                <td style="text-align:center;padding-top: 14px;">
+                                                   <a (click)="deleteAccessibility(rowIndex)" style="cursor:pointer">
+                                                      <i class="fa fa-remove" title="Delete" style="font-size: 15px; color: Red;"></i>
+                                                   </a>
+                                                </td>
+                                             </tr>
+                                          </ng-container>
+                                          <tr *ngIf='generalSettings.accessibilities == null || generalSettings.accessibilities.length == 0'>
+                                             <td colspan="5" class="check-mail" style="text-align: center;">
+                                                Accessibilities not defined
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#hierarchyTypes">Hierarchy Types</a>
+                           </h4>
+                        </div>
+                        <div id="hierarchyTypes" class="panel-collapse collapse">
+                           <div class="panel-body">
+                              <div class="col-sm-12">
+                                 <div class="form-group">
+                                    <table class="table table-bordered table-striped">
+                                       <thead>
+                                          <tr>
+                                             <th>Name</th>
+                                             <th style="width: 202px;">Color Code</th>
+                                             <th style="text-align: center;padding: 2px 0px;width: 50px;">
+                                                <a (click)="addHierarchyType()" style="cursor:pointer">
+                                                   <i class="fa fa-plus-circle" title="Add" style="font-size: 20px; color: #3e53a4;margin: 5px;"></i>
+                                                </a>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <ng-container *ngIf='generalSettings.hierarchyTypes && generalSettings.hierarchyTypes.length > 0'>
+                                             <tr *ngFor='let hierarchyType of generalSettings.hierarchyTypes; let rowIndex = index;'>
+                                                <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="hierarchyType.name" (keypress)="restrictAlpha($event)"></td>
+                                                <td>
+                                                   <input type="text" class="form-control input-sm text-color-picker" [ngModelOptions]="{standalone: true}" [(ngModel)]="hierarchyType.colorCode" readonly>
+                                                </td>
+                                                <td style="text-align:center;padding-top: 14px;">
+                                                   <a (click)="deleteHierarchyType(rowIndex)" style="cursor:pointer">
+                                                      <i class="fa fa-remove" title="Delete" style="font-size: 15px; color: Red;"></i>
+                                                   </a>
+                                                </td>
+                                             </tr>
+                                          </ng-container>
+                                          <tr *ngIf='generalSettings.hierarchyTypes == null || generalSettings.hierarchyTypes.length == 0'>
+                                             <td colspan="5" class="check-mail" style="text-align: center;">
+                                                Hierarchy types not defined
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#opticalLinkBudget">Optical Link Budget</a>
+                           </h4>
+                        </div>
+                        <div id="opticalLinkBudget" class="panel-collapse collapse">
+                           <div class="panel-body">
+                              <div class="col-sm-12">
+                                 <div class="form-group">
+                                    <table class="table table-bordered table-striped">
+                                       <thead>
+                                          <tr>
+                                             <th style="width:50px;">WaveLength Name</th>
+                                             <th style="width:150px;">Cable length loss (dB)</th>
+                                             <th style="width: 130px;"> Splice Loss (dB)</th>
+                                             <th style="width: 120px;">Patching Loss (dB)</th>
+                                             <th style="width: 120px;">Patch - connector loss (dB)</th>
+                                             <th style="text-align: center;padding: 2px 0px;width: 50px;">
+                                                <a (click)="addOpticalLinkBudget()" style="cursor:pointer">
+                                                   <i class="fa fa-plus-circle" title="Add" style="font-size: 20px; margin: 5px;"></i>
+                                                </a>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <ng-container *ngIf='generalSettings.opticalLinkBudget && generalSettings.opticalLinkBudget.length > 0'>
+                                             <tr *ngFor='let opticalLink of generalSettings.opticalLinkBudget; let rowIndex = index;'>
+                                                <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="opticalLink.waveLengthName" (keypress)="restrictAlpha($event)"></td>
+                                                <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="opticalLink.cablelengthLoss" (keypress)="restrictAlpha($event)"></td>
+                                                <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="opticalLink.spliceLoss" (keypress)="restrictAlpha($event)"></td>
+                                                <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="opticalLink.patchingLoss" (keypress)="restrictAlpha($event)"></td>
+                                                <td><input type="text" class="form-control input-sm" autocomplete="off" [ngModelOptions]="{standalone: true}" [(ngModel)]="opticalLink.patchConnectorLoss" (keypress)="restrictAlpha($event)"></td>
+
+                                                <td style="text-align:center;padding-top: 14px;">
+                                                   <a (click)="deleteOpticalLinkBudget(rowIndex)" style="cursor:pointer">
+                                                      <i class="fa fa-remove" title="Delete" style="font-size: 15px; color: Red;"></i>
+                                                   </a>
+                                                </td>
+                                             </tr>
+                                          </ng-container>
+                                          <tr *ngIf='generalSettings.opticalLinkBudget == null || generalSettings.opticalLinkBudget.length == 0'>
+                                             <td colspan="5" class="check-mail" style="text-align: center;">
+                                                opticalLinkBudget not defined
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>-->
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#fileAttachments">File Attachments</a>
+                           </h4>
+                        </div>
+                        <div id="fileAttachments" class="panel-collapse collapse">
+                           <div class="panel-body">
+                              <div class="col-sm-12">
+                                 <div class="form-group">
+                                    <label for="createdDate" class="control-label">Size limit (MBs)</label>
+                                    <input type="number" class="form-control input-sm" name="sizeLimit" required value="0" onkeypress="return (event.keyCode != 8 || event.keyCode !=32 ) && !(event.keyCode < 48 || event.keyCode > 57)" [(ngModel)]="generalSettings.fileAttachmentLimit">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="box-footer">
+                  <div class="pull-right">
+                     <div>
+                        <button type="submit" class="btn btn-success" tabindex="12" style="margin-left:10px" (click)="save()" [disabled]="form.invalid">Save</button>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</section>

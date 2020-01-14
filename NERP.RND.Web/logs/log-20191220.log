@@ -1,0 +1,62 @@
+2019-12-20 08:30:09.727 +05:30 [Error] An unhandled exception has occurred while executing the request.
+System.AggregateException: One or more errors occurred. (Unable to authenticate using sasl protocol mechanism SCRAM-SHA-1.) ---> MongoDB.Driver.MongoAuthenticationException: Unable to authenticate using sasl protocol mechanism SCRAM-SHA-1. ---> MongoDB.Driver.MongoCommandException: Command saslStart failed: Authentication failed..
+   at MongoDB.Driver.Core.WireProtocol.CommandUsingQueryMessageWireProtocol`1.ProcessReply(ConnectionId connectionId, ReplyMessage`1 reply)
+   at MongoDB.Driver.Core.WireProtocol.CommandUsingQueryMessageWireProtocol`1.ExecuteAsync(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Authentication.SaslAuthenticator.AuthenticateAsync(IConnection connection, ConnectionDescription description, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelperAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.GetChannelAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.InitializeAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.CreateAsync(IReadBinding binding, Boolean retryRequested, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.FirstOrDefaultAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetOneAsync(Expression`1 filter, List`1 fields) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 77
+   at Common.Users.UserService.GetUserByLoginId(String loginId) in D:\SK\NERP_RND\Common\Common.Users\UserService.cs:line 56
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at NERP.RND.Web.Controllers.BaseController.OnActionExecuting(ActionExecutingContext context) in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Controllers\BaseController.cs:line 36
+   at Microsoft.AspNetCore.Mvc.Controller.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at NERP.RND.Web.Startup.<>c.<<Configure>b__9_0>d.MoveNext() in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Startup.cs:line 211
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+---> (Inner Exception #0) MongoDB.Driver.MongoAuthenticationException: Unable to authenticate using sasl protocol mechanism SCRAM-SHA-1. ---> MongoDB.Driver.MongoCommandException: Command saslStart failed: Authentication failed..
+   at MongoDB.Driver.Core.WireProtocol.CommandUsingQueryMessageWireProtocol`1.ProcessReply(ConnectionId connectionId, ReplyMessage`1 reply)
+   at MongoDB.Driver.Core.WireProtocol.CommandUsingQueryMessageWireProtocol`1.ExecuteAsync(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Authentication.SaslAuthenticator.AuthenticateAsync(IConnection connection, ConnectionDescription description, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelperAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.GetChannelAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.InitializeAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.CreateAsync(IReadBinding binding, Boolean retryRequested, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.FirstOrDefaultAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetOneAsync(Expression`1 filter, List`1 fields) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 77
+   at Common.Users.UserService.GetUserByLoginId(String loginId) in D:\SK\NERP_RND\Common\Common.Users\UserService.cs:line 56<---
+
+2019-12-20 11:46:45.753 +05:30 [Error] Error fetching homepasses.
+System.ArgumentNullException: Value cannot be null.
+Parameter name: values
+   at MongoDB.Driver.Core.Misc.Ensure.IsNotNull[T](T value, String paramName)
+   at MongoDB.Driver.SingleItemAsArrayOperatorFilterDefinition`2..ctor(String operatorName, FieldDefinition`2 field, IEnumerable`1 values, Boolean allowScalarValueForArrayField)
+   at MongoDB.Driver.FilterDefinitionBuilder`1.In[TField](FieldDefinition`2 field, IEnumerable`1 values)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetByIdsAsync(IList`1 ids) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 269
+   at NERP.Homepasses.HomepassService.GetHomepasses(IList`1 ids) in D:\SK\NERP_RND\Solution2\NERP.Homepasses\HomepassService.cs:line 58
+   at NERP.RND.Web.Controllers.HomepassesController.GetHomepassesInCluster(String clusterId) in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Controllers\HomepassesController.cs:line 61

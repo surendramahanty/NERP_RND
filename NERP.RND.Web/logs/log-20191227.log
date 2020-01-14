@@ -1,0 +1,9 @@
+2019-12-27 11:09:53.683 +05:30 [Error] Error fetching homepasses.
+System.ArgumentNullException: Value cannot be null.
+Parameter name: values
+   at MongoDB.Driver.Core.Misc.Ensure.IsNotNull[T](T value, String paramName)
+   at MongoDB.Driver.SingleItemAsArrayOperatorFilterDefinition`2..ctor(String operatorName, FieldDefinition`2 field, IEnumerable`1 values, Boolean allowScalarValueForArrayField)
+   at MongoDB.Driver.FilterDefinitionBuilder`1.In[TField](FieldDefinition`2 field, IEnumerable`1 values)
+   at Common.DataAccess.Mongo.MongoRepository`1.GetByIdsAsync(IList`1 ids) in D:\SK\NERP_RND\Common\Common.DataAccess.Mongo\MongoRepository.cs:line 269
+   at NERP.Homepasses.HomepassService.GetHomepasses(IList`1 ids) in D:\SK\NERP_RND\Solution2\NERP.Homepasses\HomepassService.cs:line 58
+   at NERP.RND.Web.Controllers.HomepassesController.GetHomepassesInCluster(String clusterId) in D:\SK\NERP_RND\Solution2\NERP.RND.Web\Controllers\HomepassesController.cs:line 61

@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Common.Config\Common.Config.csproj" />
+    <ProjectReference Include="..\..\..\Common\Common.DataAccess.Mongo\Common.DataAccess.Mongo.csproj" />
+  </ItemGroup>
+
+</Project>

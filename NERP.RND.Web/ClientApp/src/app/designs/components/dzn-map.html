@@ -1,0 +1,1178 @@
+<div class="box-tools" style="background-color: #ddd;padding: 5px;">
+   <button data-toggle="collapse" data-target="#layers" class="btn btn-social-icon btn-xs" style="color:#605ca8" type="submit">
+      <i class="fas fa-layer-group"></i>
+   </button>
+   <span *ngIf="selectedLayers.length >0" style="color: #605ca8;padding-top: 3px;"><b>+</b></span>
+   <div class="pull-right">
+      <i class="fas fa-sync-alt" style="font-size: 15px; color: #605ca8; cursor: pointer; padding: 5px;" (click)="refreshBlueprint()"></i>
+   </div>
+   <ul class="nav navbar-nav toolbar-Controls pull-right">
+      <li>
+         <a href="#" class="dropdown-toggle btn btn-social-icon btn-xs pull-right" data-toggle="dropdown" title="Network Element Library">
+            <span style="color: #605ca8;padding-top: 3px;"><b>+</b></span>
+         </a>
+
+         <div id="newNetwork" class="dropdown-menu" style="">
+            <ul class="nav navbar-nav toolbar-Controls pull-right entityMenu" style="padding: 5px;width: 333px;">
+               <li>
+                  <a title="Chamber" style="padding-top: 8px;border: 1px solid #ddd;padding: 3px; height: auto;"><img src="\images\map-entities\chamber.png" name="Chamber" class="iconImageStyle" style="cursor:move;height:20px" /></a>
+               </li>
+               <li>
+                  <a title="Pole" style="padding-top: 8px;border: 1px solid #ddd; padding: 3px; height: auto;"><img src="\images\map-entities\pole.png" name="Pole" class="iconImageStyle" style="cursor: move; height: 20px" /></a>
+               </li>
+               <li>
+                  <a title="Pop" style="padding-top: 8px;border: 1px solid #ddd;padding: 3px; height: auto;"><img src="\images\map-entities\pop.png" name="Pop" class="iconImageStyle" style="cursor:move;height:20px" /></a>
+               </li>
+               <li>
+                  <a title="Underground cable" style="padding-top: 8px;border: 1px solid #ddd; padding: 3px; height: auto;"><img src="\images\map-entities\Cable.png" name="UndergroundCable" class="iconImageStyle" style="cursor:move;height:20px" /></a>
+               </li>
+               <li>
+                  <a title="Overhead cable" style="padding-top: 8px;border: 1px solid #ddd;padding: 3px; height: auto;"><img src="\images\map-entities\OverheadCable.png" name="Overhead Cable" class="iconImageStyle" style="cursor:move;height:20px" /></a>
+               </li>
+               <li>
+                  <a title="Duct" style="padding-top: 8px;border: 1px solid #ddd;padding: 3px; height: auto;"><img src="\images\map-entities\duct.png" name="Duct" class="iconImageStyle" style="cursor:move;height:20px" /></a>
+               </li>
+               <li>
+                  <a title="Micro Duct" style="padding-top: 8px;border: 1px solid #ddd;padding: 3px; height: auto;"><img src="\images\map-entities\microduc.png" name="Micro Duct" class="iconImageStyle" style="cursor:move;height:20px" /></a>
+               </li>
+               <li>
+                  <a title="FAT" style="padding-top: 8px;border: 1px solid #ddd;padding: 3px; height: auto;"><img src="\images\map-entities\FAT.png" name="FAT" class="iconImageStyle" style="cursor:move;height:20px" /></a>
+               </li>
+               <li>
+                  <a title="FDT" style="padding-top: 8px;border: 1px solid #ddd;padding: 3px; height: auto;"><img src="\images\map-entities\FDT.png" name="FDT" class="iconImageStyle" style="cursor:move;height:20px" /></a>
+               </li>
+            </ul>
+         </div>
+      </li>
+      <li>
+         <a title="" style="height: 0px;"><img src="images/file-ext/kml.svg" (click)="ExportTOPdf()" style="width: 16px;margin-top: -15px;margin-left: 0px;"></a>
+      </li>
+   </ul>
+</div>
+<div id="layers" class="layers collapse">
+   <div style="height: 84.5vh;">
+      <div class="box-header with-border">
+         <h3 class="box-title">Layers</h3>
+         <div class="pull-right">
+            <i class="fas fa-sync-alt" style="font-size: 15px; color: #605ca8; cursor: pointer;" (click)="refreshLayers()"></i>
+         </div>
+      </div>
+      <div class="box-body">
+         <table class="table table-bordered table-striped">
+            <thead>
+               <tr>
+                  <th style="width:40px;text-align: center;">
+                     <mat-checkbox (change)="$event ? masterToggle() : null"
+                                   [checked]="selectedLayers?.length > 0 && isAllSelected()"
+                                   [indeterminate]="selectedLayers?.length > 0 && !isAllSelected()">
+                     </mat-checkbox>
+                  </th>
+                  <th>All</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor='let layer of layers'>
+                  <td style="text-align: center;">
+                     <mat-checkbox (click)="$event.stopPropagation()"
+                                   (change)="$event ? toggleSelection(layer) : null"
+                                   [checked]="selectedLayers?.includes(layer.id)">
+                     </mat-checkbox>
+                  </td>
+                  <td>{{layer.id}}</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div>
+
+</div>
+
+<div>
+   <div id="designMap" style="height: 85vh;"></div>
+   <div *ngIf="selectedEntity" class="box pull-right properties" style="border-radius: 0px;height: 85vh;overflow-y: auto; top:89px">
+      <div class="box-header with-border">
+         <h3 class="box-title">Properties</h3>
+         <div class="box-tools pull-right">
+            <p>
+               <span *ngIf="selectedEntity?.entityType == 'Chamber'">
+                  <button title="Splitter" style="padding-top: 8px;border: 1px solid #ddd; padding: 3px;height: auto;" type="submit" (click)="PlotEntity('Splitter')">
+                     <img src="\images\map-entities\splitter.png" name="Splitter" class="iconImageStyle" style="height: 20px" />
+                  </button>
+                  <button title="Splice Closure" style="padding-top: 8px;border: 1px solid #ddd; padding: 3px; height: auto;" type="submit" (click)="PlotEntity('Splice Closure')">
+                     <img src="\images\map-entities\spliceclosure.png" name="SpliceClosure" class="iconImageStyle" style="height: 20px" />
+                  </button>
+               </span>
+               <span *ngIf="selectedEntity?.entityType == 'PoP'">
+                  <a title="Odf" style="padding-top: 8px;border: 1px solid #ddd;padding: 3px; height: auto;" (click)="PlotEntity('odf')"><img src="\images\map-entities\odf.png" name="Odf" class="iconImageStyle" style="height:20px" /></a>
+               </span>
+               <button class="btn btn-social-icon btn-xs btn-default" (click)="selectedEntity = null">
+                  <i class="fas fa-times"></i>
+               </button>
+               <button class="btn btn-social-icon btn-xs btn-default" style="margin-left: 5px;" type="submit" data-toggle="modal" data-target="#deleteEntity">
+                  <i class="fas fa-trash-alt" style="color: Red;"></i>
+               </button>
+            </p>
+                 
+         </div>
+      </div>
+      <div class="box-body">
+
+         <div *ngIf="selectedEntity?.entityType == 'Cable'">
+            <div class="panel-group" id="cableAccordion">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#cableAccordion" href="#cbl_info">General Information</a>
+                     </h4>
+                  </div>
+                  <div id="cbl_info" class="panel-collapse collapse in">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="name" class="control-label">Name <span style="color:red;">*</span></label>
+                           <input type="text" name="name" class="form-control input-sm" [(ngModel)]="selectedEntity.name" />
+                        </div>
+                        <div class="form-group">
+                           <label for="code" class="control-label">Code <span style="color:red;">*</span></label>
+                           <input type="text" name="code" class="form-control input-sm" [(ngModel)]="selectedEntity.code" readonly />
+                        </div>
+                        <div class="form-group">
+                           <label for="coordinates" class="control-label">Coordinates(Lng,Lat) </label>
+                           <textarea type="text" rows="3" class="form-control input-sm" name="coordinates" readonly value="{{selectedEntity.geometry.coordinates}}"></textarea>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#cableAccordion" href="#cbl_make">Make</a>
+                     </h4>
+                  </div>
+                  <div id="cbl_make" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="type" class="control-label">Type</label>
+                           <input type="text" name="type" class="form-control input-sm" [(ngModel)]="selectedEntity.type" />
+                        </div>
+                        <div class="form-group">
+                           <label for="brand" class="control-label">Brand</label>
+                           <input type="text" name="brand" class="form-control input-sm" [(ngModel)]="selectedEntity.brand" />
+                        </div>
+                        <div class="form-group">
+                           <label for="model" class="control-label">Model</label>
+                           <input type="text" name="model" class="form-control input-sm" [(ngModel)]="selectedEntity.model" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#cableAccordion" href="#cblInfo">Cable Information</a>
+                     </h4>
+                  </div>
+                  <div id="cblInfo" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="aLocation" class="control-label">A Location</label>
+                           <input type="text" name="aLocation" class="form-control input-sm" [(ngModel)]="selectedEntity.aLocation" />
+                        </div>
+                        <div class="form-group">
+                           <label for="bLocation" class="control-label">B Location</label>
+                           <input type="text" name="bLocation" class="form-control input-sm" [(ngModel)]="selectedEntity.aLocation" />
+                        </div>
+                        <div class="form-group">
+                           <label for="measuredLength" class="control-label">Measured Length</label>
+                           <input type="text" name="measuredLength" class="form-control input-sm" [(ngModel)]="selectedEntity.measuredLength" />
+                        </div>
+                        <div class="form-group">
+                           <label for="calculatedLength" class="control-label">Calculated Length</label>
+                           <input type="text" name="calculatedLength" class="form-control input-sm" [(ngModel)]="selectedEntity.calculatedLength" />
+                        </div>
+                        <div class="form-group">
+                           <label for="noOfTubes" class="control-label">No Of Tubes</label>
+                           <input type="text" name="noOfTubes" class="form-control input-sm" [(ngModel)]="selectedEntity.noOfTubes" />
+                        </div>
+                        <div class="form-group">
+                           <label for="corePerTube" class="control-label">Core Per Tube</label>
+                           <input type="text" name="corePerTube" class="form-control input-sm" [(ngModel)]="selectedEntity.corePerTube" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div *ngIf="selectedEntity?.entityType == 'Chamber'">
+            <div class="panel-group" id="chamberAccordion">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#chamberAccordion" href="#cbr_info">General Information</a>
+                     </h4>
+                  </div>
+                  <div id="cbr_info" class="panel-collapse collapse in">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="name" class="control-label">Name <span style="color:red;">*</span></label>
+                           <input type="text" name="name" class="form-control input-sm" [(ngModel)]="selectedEntity.name" />
+                        </div>
+                        <div class="form-group">
+                           <label for="code" class="control-label">Code <span style="color:red;">*</span></label>
+                           <input type="text" name="code" class="form-control input-sm" [(ngModel)]="selectedEntity.code" readonly />
+                        </div>
+                        <div class="form-group">
+                           <label for="coordinates" class="control-label">Coordinates(Lng,Lat) </label>
+                           <input type="text" class="form-control input-sm" name="coordinates" readonly value="{{selectedEntity.geometry.coordinates[0]}}, {{selectedEntity.geometry.coordinates[1]}}">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#chamberAccordion" href="#cbr_make">Make</a>
+                     </h4>
+                  </div>
+                  <div id="cbr_make" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="type" class="control-label">Type</label>
+                           <input type="text" name="type" class="form-control input-sm" [(ngModel)]="selectedEntity.type" />
+                        </div>
+                        <div class="form-group">
+                           <label for="brand" class="control-label">Brand</label>
+                           <input type="text" name="brand" class="form-control input-sm" [(ngModel)]="selectedEntity.brand" />
+                        </div>
+                        <div class="form-group">
+                           <label for="model" class="control-label">Model</label>
+                           <input type="text" name="model" class="form-control input-sm" [(ngModel)]="selectedEntity.model" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#chamberAccordion" href="#chamberInfo">Chamber Information</a>
+                     </h4>
+                  </div>
+                  <div id="chamberInfo" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="category" class="control-label">Category</label>
+                           <input type="text" name="category" class="form-control input-sm" [(ngModel)]="selectedEntity.chamberCategory" />
+                        </div>
+                        <div class="form-group">
+                           <label for="closureType" class="control-label">Closure Type</label>
+                           <input type="text" name="closureType" class="form-control input-sm" [(ngModel)]="selectedEntity.chamberClosureType" />
+                        </div>
+                        <div class="form-group">
+                           <label for="spliceTrayCount" class="control-label">Splice Tray Count</label>
+                           <input type="text" name="spliceTrayCount" class="form-control input-sm" [(ngModel)]="selectedEntity.spliceTrayCount" />
+                        </div>
+                        <div class="form-group">
+                           <label for="isBuried" class="control-label" style="width:100%">&nbsp;</label>
+                           <mat-checkbox name="isBuried" [(ngModel)]="selectedEntity.isBuried" [checked]="selectedEntity.isBuried">Is Buried</mat-checkbox>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#chamberAccordion" href="#chamberLoopInfo">Loop Information</a>
+                     </h4>
+                  </div>
+                  <div id="chamberLoopInfo" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="category" class="control-label">Loop Length</label>
+                           <input type="text" name="category" class="form-control input-sm" [(ngModel)]="selectedEntity.loopLength" />
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div *ngIf="selectedEntity?.entityType == 'Pole'">
+            <div class="panel-group" id="poleAccordion">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#poleAccordion" href="#pole_info">General Information</a>
+                     </h4>
+                  </div>
+                  <div id="pole_info" class="panel-collapse collapse in">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="name" class="control-label">Name <span style="color:red;">*</span></label>
+                           <input type="text" name="name" class="form-control input-sm" [(ngModel)]="selectedEntity.name" />
+                        </div>
+                        <div class="form-group">
+                           <label for="code" class="control-label">Code <span style="color:red;">*</span></label>
+                           <input type="text" name="code" class="form-control input-sm" [(ngModel)]="selectedEntity.code" readonly />
+                        </div>
+                        <div class="form-group">
+                           <label for="coordinates" class="control-label">Coordinates(Lng,Lat) </label>
+                           <input type="text" class="form-control input-sm" name="coordinates" readonly value="{{selectedEntity.geometry.coordinates[0]}}, {{selectedEntity.geometry.coordinates[1]}}">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#poleAccordion" href="#pole_make">Make</a>
+                     </h4>
+                  </div>
+                  <div id="pole_make" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="type" class="control-label">Type</label>
+                           <input type="text" name="type" class="form-control input-sm" [(ngModel)]="selectedEntity.type" />
+                        </div>
+                        <div class="form-group">
+                           <label for="brand" class="control-label">Brand</label>
+                           <input type="text" name="brand" class="form-control input-sm" [(ngModel)]="selectedEntity.brand" />
+                        </div>
+                        <div class="form-group">
+                           <label for="model" class="control-label">Model</label>
+                           <input type="text" name="model" class="form-control input-sm" [(ngModel)]="selectedEntity.model" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#poleAccordion" href="#poleInfo">Pole Information</a>
+                     </h4>
+                  </div>
+                  <div id="poleInfo" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="height" class="control-label">Height</label>
+                           <input type="number" name="height" class="form-control input-sm" [(ngModel)]="selectedEntity.poleHeight" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#chamberAccordion" href="#poleLoopInfo">Loop Information</a>
+                     </h4>
+                  </div>
+                  <div id="poleLoopInfo" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="category" class="control-label">Loop Length</label>
+                           <input type="text" name="category" class="form-control input-sm" [(ngModel)]="selectedEntity.loopLength" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div *ngIf="selectedEntity?.entityType == 'Splitter'">
+            <div class="panel-group" id="splitterAccordion">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#splitterAccordion" href="#spt_info">General Information</a>
+                     </h4>
+                  </div>
+                  <div id="spt_info" class="panel-collapse collapse in">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="name" class="control-label">Name <span style="color:red;">*</span></label>
+                           <input type="text" name="name" class="form-control input-sm" [(ngModel)]="selectedEntity.name" />
+                        </div>
+                        <div class="form-group">
+                           <label for="code" class="control-label">Code <span style="color:red;">*</span></label>
+                           <input type="text" name="code" class="form-control input-sm" [(ngModel)]="selectedEntity.code" readonly />
+                        </div>
+                        <div class="form-group">
+                           <label for="coordinates" class="control-label">Coordinates(Lng,Lat) </label>
+                           <input type="text" class="form-control input-sm" name="coordinates" readonly value="{{selectedEntity.geometry.coordinates[0]}}, {{selectedEntity.geometry.coordinates[1]}}">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#splitterAccordion" href="#spt_make">Make</a>
+                     </h4>
+                  </div>
+                  <div id="spt_make" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="type" class="control-label">Type</label>
+                           <input type="text" name="type" class="form-control input-sm" [(ngModel)]="selectedEntity.type" />
+                        </div>
+                        <div class="form-group">
+                           <label for="brand" class="control-label">Brand</label>
+                           <input type="text" name="brand" class="form-control input-sm" [(ngModel)]="selectedEntity.brand" />
+                        </div>
+                        <div class="form-group">
+                           <label for="model" class="control-label">Model</label>
+                           <input type="text" name="model" class="form-control input-sm" [(ngModel)]="selectedEntity.model" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#splitterAccordion" href="#sptInfo">Splitter Information</a>
+                     </h4>
+                  </div>
+                  <div id="sptInfo" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="splitterRatio" class="control-label">Splitter Ratio</label>
+                           <input type="text" name="splitterRatio" class="form-control input-sm" [(ngModel)]="selectedEntity.splitterRatio" />
+                        </div>
+                        <div class="form-group">
+                           <label for="lossValue" class="control-label">Loss Value</label>
+                           <input type="number" name="lossValue" class="form-control input-sm" [(ngModel)]="selectedEntity.lossValue" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#splitterAccordion" href="#sptInfo1">Splitter Information</a>
+                     </h4>
+                  </div>
+                  <div id="sptInfo1" class="panel-collapse collapse">
+                     <div class="panel-body" style="height:200px; overflow:scroll;">
+                        <table class="table table-bordered table-striped">
+                           <thead>
+                              <tr>
+                                 <th>A-End</th>
+                                 <th style="width: 202px;">B-End</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <ng-container *ngIf='this.filterResult && this.filterResult.length > 0'>
+                                 <tr *ngFor='let type of this.filterResult; let rowIndex = index;'>
+                                    <td (mouseover)="onspliterHover(entityType)" (mouseleave)="onLeave()">{{entityType}}</td>
+                                    <td (mouseover)="onHover(this.filterResult[rowIndex].coordinates)" (mouseleave)="onLeave()">
+                                       <ul style="list-style-type: none;"><li>{{type.levelName}}<span>{{rowIndex}}</span></li></ul>
+                                    </td>
+                                 </tr>
+
+                              </ng-container>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div *ngIf="selectedEntity?.entityType == 'Homepass'">
+            <div class="panel-group" id="homepassAccordion">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#homepassAccordion" href="#hp_info">General Information</a>
+                     </h4>
+                  </div>
+                  <div id="hp_info" class="panel-collapse collapse in">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="name" class="control-label">Name <span style="color:red;">*</span></label>
+                           <input type="text" class="form-control input-sm" name="name" [(ngModel)]="selectedEntity.name">
+                        </div>
+                        <div class="form-group">
+                           <label for="code" class="control-label">Code <span style="color:red;">*</span></label>
+                           <input type="text" class="form-control input-sm" name="code" [(ngModel)]="selectedEntity.code" readonly>
+                        </div>
+                        <div class="form-group">
+                           <label for="coordinates" class="control-label">Coordinates(Lng,Lat) </label>
+                           <input type="text" class="form-control input-sm" name="coordinates" value="{{selectedEntity.geometry.coordinates[0]}}, {{selectedEntity.geometry.coordinates[1]}}">
+                        </div>
+                        <div class="form-group" *ngIf="selectedEntity.area">
+                           <label for="area" class="control-label">Coordinates (Polygon) </label>
+                           <textarea type="text" class="form-control input-sm" name="area" rows="5" readonly value="{{stringify(selectedEntity.area.coordinates)}}"></textarea>
+                        </div>
+                        <div class="form-group">
+                           <label for="type" class="control-label">Type </label>
+                           <input type="text" class="form-control input-sm" name="description" [(ngModel)]="selectedEntity.type">
+                        </div>
+                        <div class="form-group">
+                           <label for="description" class="control-label">Description </label>
+                           <input type="text" class="form-control input-sm" name="description" [(ngModel)]="selectedEntity.description">
+                        </div>
+                        <div class="form-group">
+                           <label for="connections" class="control-label">Connections </label>
+                           <input type="number" class="form-control input-sm" name="connections" [(ngModel)]="selectedEntity.connections">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#splitterAccordion" href="#spt_make">Make</a>
+                     </h4>
+                  </div>
+                  <div id="spt_make" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="type" class="control-label">Type</label>
+                           <input type="text" name="type" class="form-control input-sm" [(ngModel)]="selectedEntity.type" />
+                        </div>
+                        <div class="form-group">
+                           <label for="brand" class="control-label">Brand</label>
+                           <input type="text" name="brand" class="form-control input-sm" [(ngModel)]="selectedEntity.brand" />
+                        </div>
+                        <div class="form-group">
+                           <label for="model" class="control-label">Model</label>
+                           <input type="text" name="model" class="form-control input-sm" [(ngModel)]="selectedEntity.model" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#splitterAccordion" href="#sptInfo">Splitter Information</a>
+                     </h4>
+                  </div>
+                  <div id="sptInfo" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="splitterRatio" class="control-label">Splitter Ratio</label>
+                           <input type="text" name="splitterRatio" class="form-control input-sm" [(ngModel)]="selectedEntity.splitterRatio" />
+                        </div>
+                        <div class="form-group">
+                           <label for="lossValue" class="control-label">Loss Value</label>
+                           <input type="text" name="lossValue" class="form-control input-sm" [(ngModel)]="selectedEntity.lossValue" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div *ngIf="selectedEntity?.entityType == 'SpliceClosure'">
+            <div class="panel-group" id="spliceclosureAccordion">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#spliceclosureAccordion" href="#spc_info">General Information</a>
+                     </h4>
+                  </div>
+                  <div id="spc_info" class="panel-collapse collapse in">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="name" class="control-label">Name <span style="color:red;">*</span></label>
+                           <input type="text" name="name" class="form-control input-sm" [(ngModel)]="selectedEntity.name" />
+                        </div>
+                        <div class="form-group">
+                           <label for="code" class="control-label">Code <span style="color:red;">*</span></label>
+                           <input type="text" name="code" class="form-control input-sm" [(ngModel)]="selectedEntity.code" readonly />
+                        </div>
+                        <div class="form-group">
+                           <label for="coordinates" class="control-label">Coordinates(Lng,Lat) </label>
+                           <input type="text" class="form-control input-sm" name="coordinates" readonly value="{{selectedEntity.geometry.coordinates[0]}}, {{selectedEntity.geometry.coordinates[1]}}">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#spliceclosureAccordion" href="#spc_make">Make</a>
+                     </h4>
+                  </div>
+                  <div id="spc_make" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="type" class="control-label">Type</label>
+                           <input type="text" name="type" class="form-control input-sm" [(ngModel)]="selectedEntity.type" />
+                        </div>
+                        <div class="form-group">
+                           <label for="brand" class="control-label">Brand</label>
+                           <input type="text" name="brand" class="form-control input-sm" [(ngModel)]="selectedEntity.brand" />
+                        </div>
+                        <div class="form-group">
+                           <label for="model" class="control-label">Model</label>
+                           <input type="text" name="model" class="form-control input-sm" [(ngModel)]="selectedEntity.model" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#spliceclosureAccordion" href="#spcInfo">SpliceClosure Information</a>
+                     </h4>
+                  </div>
+                  <div id="spcInfo" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="splitterRatio" class="control-label">Port No</label>
+                           <input type="number" name="splitterRatio" class="form-control input-sm" [(ngModel)]="selectedEntity.noOfPorts" />
+                        </div>
+                        <!--<div class="form-group">
+                     <div class="panel-body">
+                        <div class="col-sm-11">
+                           <mat-slider name="zoomLevel" thumbLabel step="1" min="0" max="21" style="width:100%" [(ngModel)]="selectedEntity.zoomLevel"></mat-slider>
+                        </div>
+                        <div class="col-sm-1" style="padding-top: 7px;">
+                           <input type="number" min="0" max="21" class="form-control input-sm" name="zoom" [(ngModel)]="selectedEntity.zoomLevel">
+                        </div>
+                     </div>
+                  </div>-->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div *ngIf="selectedEntity?.entityType  == 'PoP'">
+            <div class="panel-group" id="PopAccordion">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#PopAccordion" href="#pop_info">General Information</a>
+                     </h4>
+                  </div>
+                  <div id="pop_info" class="panel-collapse collapse in">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="name" class="control-label">Name <span style="color:red;">*</span></label>
+                           <input type="text" name="name" class="form-control input-sm" [(ngModel)]="selectedEntity.name" />
+                        </div>
+                        <div class="form-group">
+                           <label for="code" class="control-label">Code <span style="color:red;">*</span></label>
+                           <input type="text" name="code" class="form-control input-sm" [(ngModel)]="selectedEntity.code" readonly />
+                        </div>
+                        <div class="form-group">
+                           <label for="coordinates" class="control-label">Coordinates(Lng,Lat) </label>
+                           <input type="text" class="form-control input-sm" name="coordinates" readonly value="{{selectedEntity.geometry.coordinates[0]}}, {{selectedEntity.geometry.coordinates[1]}}">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#spliceclosureAccordion" href="#pop_make">Make</a>
+                     </h4>
+                  </div>
+                  <div id="pop_make" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="type" class="control-label">Pop Type</label>
+                           <input type="text" name="type" class="form-control input-sm" [(ngModel)]="selectedEntity.type" />
+                        </div>
+                        <div class="form-group">
+                           <label for="brand" class="control-label">Pop Brand</label>
+                           <input type="text" name="brand" class="form-control input-sm" [(ngModel)]="selectedEntity.brand" />
+                        </div>
+                        <div class="form-group">
+                           <label for="model" class="control-label">Pop Model</label>
+                           <input type="text" name="model" class="form-control input-sm" [(ngModel)]="selectedEntity.model" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!--<div class="panel panel-default">
+            <div class="panel-heading">
+               <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#spliceclosureAccordion" href="#popInfo">Pop Information</a>
+               </h4>
+            </div>
+            <div id="popInfo" class="panel-collapse collapse">
+               <div class="panel-body">
+                  <div class="form-group">
+                     <label for="splitterRatio" class="control-label">Port No</label>
+                     <input type="number" name="splitterRatio" class="form-control input-sm" [(ngModel)]="selectedEntity.noOfPorts" />
+                  </div>
+                  <div class="form-group">
+            </div>
+               </div>
+            </div>
+         </div>-->
+            </div>
+         </div>
+         <div *ngIf="selectedEntity?.entityType == 'Duct'">
+            <div class="panel-group" id="DuctAccordion">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#DuctAccordion" href="#duct_info">General Information</a>
+                     </h4>
+                  </div>
+                  <div id="DuctAccordion" class="panel-collapse collapse in">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="name" class="control-label">Name <span style="color:red;">*</span></label>
+                           <input type="text" name="name" class="form-control input-sm" [(ngModel)]="selectedEntity.name" />
+                        </div>
+                        <div class="form-group">
+                           <label for="code" class="control-label">Code <span style="color:red;">*</span></label>
+                           <input type="text" name="code" class="form-control input-sm" [(ngModel)]="selectedEntity.code" readonly />
+                        </div>
+                        <div class="form-group">
+                           <label for="coordinates" class="control-label">Coordinates(Lng,Lat) </label>
+                           <textarea type="text" rows="3" class="form-control input-sm" name="coordinates" readonly value="{{selectedEntity.geometry.coordinates}}"></textarea>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#cableAccordion" href="#duct_make">Make</a>
+                     </h4>
+                  </div>
+                  <div id="duct_make" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="type" class="control-label">Type</label>
+                           <input type="text" name="type" class="form-control input-sm" [(ngModel)]="selectedEntity.type" />
+                        </div>
+                        <div class="form-group">
+                           <label for="brand" class="control-label">Brand</label>
+                           <input type="text" name="brand" class="form-control input-sm" [(ngModel)]="selectedEntity.brand" />
+                        </div>
+                        <div class="form-group">
+                           <label for="model" class="control-label">Model</label>
+                           <input type="text" name="model" class="form-control input-sm" [(ngModel)]="selectedEntity.model" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#cableAccordion" href="#ductInfo">Duct Information</a>
+                     </h4>
+                  </div>
+                  <div id="ductInfo" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="aLocation" class="control-label">A Location</label>
+                           <input type="text" name="aLocation" class="form-control input-sm" [(ngModel)]="selectedEntity.aLocation" />
+                        </div>
+                        <div class="form-group">
+                           <label for="bLocation" class="control-label">B Location</label>
+                           <input type="text" name="bLocation" class="form-control input-sm" [(ngModel)]="selectedEntity.aLocation" />
+                        </div>
+                        <div class="form-group">
+                           <label for="measuredLength" class="control-label">Measured Length</label>
+                           <input type="text" name="measuredLength" class="form-control input-sm" [(ngModel)]="selectedEntity.measuredLength" />
+                        </div>
+                        <div class="form-group">
+                           <label for="calculatedLength" class="control-label">Calculated Length</label>
+                           <input type="text" name="calculatedLength" class="form-control input-sm" [(ngModel)]="selectedEntity.calculatedLength" />
+                        </div>
+                        <div class="form-group">
+                           <label for="noOfTubes" class="control-label">No Of Tubes</label>
+                           <input type="text" name="noOfTubes" class="form-control input-sm" [(ngModel)]="selectedEntity.noOfTubes" />
+                        </div>
+                        <div class="form-group">
+                           <label for="corePerTube" class="control-label">Core Per Tube</label>
+                           <input type="text" name="corePerTube" class="form-control input-sm" [(ngModel)]="selectedEntity.corePerTube" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div *ngIf="selectedEntity?.entityType == 'MicroDuct'">
+            <div class="panel-group" id="DuctAccordion">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#MicroDuctAccordion" href="#microduct_info">General Information</a>
+                     </h4>
+                  </div>
+                  <div id="MicroDuctAccordion" class="panel-collapse collapse in">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="name" class="control-label">Name <span style="color:red;">*</span></label>
+                           <input type="text" name="name" class="form-control input-sm" [(ngModel)]="selectedEntity.name" />
+                        </div>
+                        <div class="form-group">
+                           <label for="code" class="control-label">Code <span style="color:red;">*</span></label>
+                           <input type="text" name="code" class="form-control input-sm" [(ngModel)]="selectedEntity.code" readonly />
+                        </div>
+                        <div class="form-group">
+                           <label for="coordinates" class="control-label">Coordinates(Lng,Lat) </label>
+                           <textarea type="text" rows="3" class="form-control input-sm" name="coordinates" readonly value="{{selectedEntity.geometry.coordinates}}"></textarea>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#cableAccordion" href="#microduct_make">Make</a>
+                     </h4>
+                  </div>
+                  <div id="microduct_make" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="type" class="control-label">Type</label>
+                           <input type="text" name="type" class="form-control input-sm" [(ngModel)]="selectedEntity.type" />
+                        </div>
+                        <div class="form-group">
+                           <label for="brand" class="control-label">Brand</label>
+                           <input type="text" name="brand" class="form-control input-sm" [(ngModel)]="selectedEntity.brand" />
+                        </div>
+                        <div class="form-group">
+                           <label for="model" class="control-label">Model</label>
+                           <input type="text" name="model" class="form-control input-sm" [(ngModel)]="selectedEntity.model" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#cableAccordion" href="#microductInfo">Micro Duct Information</a>
+                     </h4>
+                  </div>
+                  <div id="microductInfo" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="aLocation" class="control-label">A Location</label>
+                           <input type="text" name="aLocation" class="form-control input-sm" [(ngModel)]="selectedEntity.aLocation" />
+                        </div>
+                        <div class="form-group">
+                           <label for="bLocation" class="control-label">B Location</label>
+                           <input type="text" name="bLocation" class="form-control input-sm" [(ngModel)]="selectedEntity.aLocation" />
+                        </div>
+                        <div class="form-group">
+                           <label for="measuredLength" class="control-label">Measured Length</label>
+                           <input type="text" name="measuredLength" class="form-control input-sm" [(ngModel)]="selectedEntity.measuredLength" />
+                        </div>
+                        <div class="form-group">
+                           <label for="calculatedLength" class="control-label">Calculated Length</label>
+                           <input type="text" name="calculatedLength" class="form-control input-sm" [(ngModel)]="selectedEntity.calculatedLength" />
+                        </div>
+                        <div class="form-group">
+                           <label for="noOfTubes" class="control-label">No Of Tubes</label>
+                           <input type="text" name="noOfTubes" class="form-control input-sm" [(ngModel)]="selectedEntity.noOfTubes" />
+                        </div>
+                        <div class="form-group">
+                           <label for="corePerTube" class="control-label">Core Per Tube</label>
+                           <input type="text" name="corePerTube" class="form-control input-sm" [(ngModel)]="selectedEntity.corePerTube" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div *ngIf="selectedEntity?.entityType == 'ODF'">
+            <div class="panel-group" id="ODFAccordion">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#ODFAccordion" href="#odf_info">General Information</a>
+                     </h4>
+                  </div>
+                  <div id="odf_info" class="panel-collapse collapse in">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="name" class="control-label">Name <span style="color:red;">*</span></label>
+                           <input type="text" name="name" class="form-control input-sm" [(ngModel)]="selectedEntity.name" />
+                        </div>
+                        <div class="form-group">
+                           <label for="code" class="control-label">Code <span style="color:red;">*</span></label>
+                           <input type="text" name="code" class="form-control input-sm" [(ngModel)]="selectedEntity.code" readonly />
+                        </div>
+                        <div class="form-group">
+                           <label for="coordinates" class="control-label">Coordinates(Lng,Lat) </label>
+                           <input type="text" class="form-control input-sm" name="coordinates" readonly value="{{selectedEntity.geometry.coordinates[0]}}, {{selectedEntity.geometry.coordinates[1]}}">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#ODFAccordion" href="#odf_make">Make</a>
+                     </h4>
+                  </div>
+                  <div id="odf_make" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="type" class="control-label">Type</label>
+                           <input type="text" name="type" class="form-control input-sm" [(ngModel)]="selectedEntity.type" />
+                        </div>
+                        <div class="form-group">
+                           <label for="brand" class="control-label">Brand</label>
+                           <input type="text" name="brand" class="form-control input-sm" [(ngModel)]="selectedEntity.brand" />
+                        </div>
+                        <div class="form-group">
+                           <label for="model" class="control-label">Model</label>
+                           <input type="text" name="model" class="form-control input-sm" [(ngModel)]="selectedEntity.model" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#ODFAccordion" href="#odfInfo">ODF Information</a>
+                     </h4>
+                  </div>
+                  <div id="odfInfo" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="category" class="control-label">Category</label>
+                           <input type="text" name="category" class="form-control input-sm" [(ngModel)]="selectedEntity.chamberCategory" />
+                        </div>
+                        <div class="form-group">
+                           <label for="closureType" class="control-label">Closure Type</label>
+                           <input type="text" name="closureType" class="form-control input-sm" [(ngModel)]="selectedEntity.chamberClosureType" />
+                        </div>
+                        <div class="form-group">
+                           <label for="spliceTrayCount" class="control-label">Splice Tray Count</label>
+                           <input type="text" name="spliceTrayCount" class="form-control input-sm" [(ngModel)]="selectedEntity.spliceTrayCount" />
+                        </div>
+                        <div class="form-group">
+                           <label for="isBuried" class="control-label" style="width:100%">&nbsp;</label>
+                           <mat-checkbox name="isBuried" [(ngModel)]="selectedEntity.isBuried" [checked]="selectedEntity.isBuried">Is Buried</mat-checkbox>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div *ngIf="selectedEntity?.entityType == 'FAT'">
+            <div class="panel-group" id="FATAccordion">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#FATAccordion" href="#fat_info">General Information</a>
+                     </h4>
+                  </div>
+                  <div id="fat_info" class="panel-collapse collapse in">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="name" class="control-label">Name <span style="color:red;">*</span></label>
+                           <input type="text" name="name" class="form-control input-sm" [(ngModel)]="selectedEntity.name" />
+                        </div>
+                        <div class="form-group">
+                           <label for="code" class="control-label">Code <span style="color:red;">*</span></label>
+                           <input type="text" name="code" class="form-control input-sm" [(ngModel)]="selectedEntity.code" readonly />
+                        </div>
+                        <div class="form-group">
+                           <label for="coordinates" class="control-label">Coordinates(Lng,Lat) </label>
+                           <input type="text" class="form-control input-sm" name="coordinates" readonly value="{{selectedEntity.geometry.coordinates[0]}}, {{selectedEntity.geometry.coordinates[1]}}">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#FATAccordion" href="#fat_make">Make</a>
+                     </h4>
+                  </div>
+                  <div id="fat_make" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="type" class="control-label">Type</label>
+                           <input type="text" name="type" class="form-control input-sm" [(ngModel)]="selectedEntity.type" />
+                        </div>
+                        <div class="form-group">
+                           <label for="brand" class="control-label">Brand</label>
+                           <input type="text" name="brand" class="form-control input-sm" [(ngModel)]="selectedEntity.brand" />
+                        </div>
+                        <div class="form-group">
+                           <label for="model" class="control-label">Model</label>
+                           <input type="text" name="model" class="form-control input-sm" [(ngModel)]="selectedEntity.model" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#FATAccordion" href="#fatInfo">FAT Information</a>
+                     </h4>
+                  </div>
+                  <div id="fatInfo" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="category" class="control-label">Category</label>
+                           <input type="text" name="category" class="form-control input-sm" [(ngModel)]="selectedEntity.chamberCategory" />
+                        </div>
+                        <div class="form-group">
+                           <label for="closureType" class="control-label">Closure Type</label>
+                           <input type="text" name="closureType" class="form-control input-sm" [(ngModel)]="selectedEntity.chamberClosureType" />
+                        </div>
+                        <div class="form-group">
+                           <label for="spliceTrayCount" class="control-label">Splice Tray Count</label>
+                           <input type="text" name="spliceTrayCount" class="form-control input-sm" [(ngModel)]="selectedEntity.spliceTrayCount" />
+                        </div>
+                        <div class="form-group">
+                           <label for="isBuried" class="control-label" style="width:100%">&nbsp;</label>
+                           <mat-checkbox name="isBuried" [(ngModel)]="selectedEntity.isBuried" [checked]="selectedEntity.isBuried">Is Buried</mat-checkbox>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div *ngIf="selectedEntity?.entityType == 'FDT'">
+            <div class="panel-group" id="FDTAccordion">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#FDTAccordion" href="#fdt_info">General Information</a>
+                     </h4>
+                  </div>
+                  <div id="fdt_info" class="panel-collapse collapse in">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="name" class="control-label">Name <span style="color:red;">*</span></label>
+                           <input type="text" name="name" class="form-control input-sm" [(ngModel)]="selectedEntity.name" />
+                        </div>
+                        <div class="form-group">
+                           <label for="code" class="control-label">Code <span style="color:red;">*</span></label>
+                           <input type="text" name="code" class="form-control input-sm" [(ngModel)]="selectedEntity.code" readonly />
+                        </div>
+                        <div class="form-group">
+                           <label for="coordinates" class="control-label">Coordinates(Lng,Lat) </label>
+                           <input type="text" class="form-control input-sm" name="coordinates" readonly value="{{selectedEntity.geometry.coordinates[0]}}, {{selectedEntity.geometry.coordinates[1]}}">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#FDTAccordion" href="#fdt_make">Make</a>
+                     </h4>
+                  </div>
+                  <div id="fdt_make" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="type" class="control-label">Type</label>
+                           <input type="text" name="type" class="form-control input-sm" [(ngModel)]="selectedEntity.type" />
+                        </div>
+                        <div class="form-group">
+                           <label for="brand" class="control-label">Brand</label>
+                           <input type="text" name="brand" class="form-control input-sm" [(ngModel)]="selectedEntity.brand" />
+                        </div>
+                        <div class="form-group">
+                           <label for="model" class="control-label">Model</label>
+                           <input type="text" name="model" class="form-control input-sm" [(ngModel)]="selectedEntity.model" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#FDTAccordion" href="#fdtInfo">FAT Information</a>
+                     </h4>
+                  </div>
+                  <div id="fdtInfo" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="form-group">
+                           <label for="category" class="control-label">Category</label>
+                           <input type="text" name="category" class="form-control input-sm" [(ngModel)]="selectedEntity.chamberCategory" />
+                        </div>
+                        <div class="form-group">
+                           <label for="closureType" class="control-label">Closure Type</label>
+                           <input type="text" name="closureType" class="form-control input-sm" [(ngModel)]="selectedEntity.chamberClosureType" />
+                        </div>
+                        <div class="form-group">
+                           <label for="spliceTrayCount" class="control-label">Splice Tray Count</label>
+                           <input type="text" name="spliceTrayCount" class="form-control input-sm" [(ngModel)]="selectedEntity.spliceTrayCount" />
+                        </div>
+                        <div class="form-group">
+                           <label for="isBuried" class="control-label" style="width:100%">&nbsp;</label>
+                           <mat-checkbox name="isBuried" [(ngModel)]="selectedEntity.isBuried" [checked]="selectedEntity.isBuried">Is Buried</mat-checkbox>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+</div>
+
+<div id="deleteEntity" class="modal fade" role="dialog" *ngIf="selectedEntity">
+   <div class="modal-dialog">
+      <div class="modal-content" style="border-radius:3px">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Delete {{selectedEntity.entityType}}</h4>
+         </div>
+         <div class="modal-body">
+            <p>Do you want to delete {{selectedEntity.entityType}} - {{selectedEntity.name}}?</p>
+
+            <!--<p>Do you want to delete {{selectedEntity.entityType}} - {{selectedEntity.name}}?</p>
+            <table class="table table-bordered">
+               <thead>
+                  <tr>
+                     <th style="width: 200px;">Field</th>
+                     <th>Value</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <ng-container *ngIf='searchFields && searchFields.length > 0'>
+                     <tr *ngFor='let searchField of searchFields'>
+                        <td>{{searchField.label}}</td>
+                        <td><input [type]=searchField.dataType class="form-control input-sm" [ngModelOptions]="{standalone: true}" [(ngModel)]="searchField.value"></td>
+                     </tr>
+                  </ng-container>
+                  <tr *ngIf='searchFields == null || searchFields.length == 0'>
+                     <td colspan="2" style="text-align: center;">
+                        No search fields defined
+                     </td>
+                  </tr>
+               </tbody>
+            </table>-->
+         </div>
+         <div class="modal-footer">
+            <button class="btn btn-info" data-dismiss="modal" type="button" (click)="deleteEntity()">Yes</button>
+            <button class="btn btn-default pull-left" data-dismiss="modal" type="button">No</button>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="padding-top:15%" data-keyboard="false" data-backdrop="static">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <!--<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>-->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            <div class="form-group">
+               <div class="form-group">
+                  <select class="form-control" id="designEntity">
+                     <option [value]="0">Please select</option>
+                     <option *ngFor="let designEntity of masterEntities" [value]="designEntity.id">{{designEntity.name}}</option>
+                  </select>
+               </div>
+            </div>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="ClearEntities()">Close</button>
+            <button type="button" class="btn btn-primary" (click)="PlotPostEntities()">Ok</button>
+         </div>
+      </div>
+   </div>
+</div>

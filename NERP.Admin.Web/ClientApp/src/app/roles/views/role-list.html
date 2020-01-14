@@ -1,0 +1,61 @@
+<section class="content-header">
+   <h1>Manage Roles</h1>
+   <ol class="breadcrumb">
+      <li><a [routerLink]="['/home']"><i class="fas fa-home"></i> Home</a></li>
+   </ol>
+</section>
+
+<section class="content">
+   <div class="row">
+      <div class="col-xs-12">
+         <div class="box">
+            <div class="box-header with-border">
+               <h3 class="box-title">Role List</h3>
+               <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                  <button [routerLink]="['details']" class="btn btn-block btn-xs btn-primary"> New Role</button>
+               </div>
+            </div>
+            <div class="box-body">
+
+               <dt-search [searchFields]="searchFields" (onSearch)="search($event)"></dt-search>
+               <dt-pagination [totalPages]="totalPages" (onPageSizeChange)="onPageSizeChange($event)" (onPageChange)="onPageChange($event)"></dt-pagination>
+
+               <table class="table table-bordered table-striped">
+                  <thead>
+                     <tr (click)="onColumnClick($event.target)">
+                        <th data-column="Name" class="table-sorter" style="width: 200px;">Name</th>
+                        <th data-column="Description" class="table-sorter" style="max-width:300px">Description</th>
+                        <th data-column="UpdatedBy" class="table-sorter" style="width:150px">Updated By</th>
+                        <th data-column="UpdatedDate" class="table-sorter" style="width:125px">Updated On</th>
+                        <th style="width:60px"></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <ng-container *ngIf='roles && roles.length > 0'>
+                        <tr *ngFor='let role of roles'>
+                           <td>{{role.name}}</td>
+                           <td class="text-overflow-ellipsis">{{role.description}}</td>
+                           <td>{{role.updatedBy}}</td>
+                           <td>{{role.updatedDate | date:'dd/MM/yyyy'}}</td>
+                           <td>
+                              <a>
+                                 <i class="fa fa-edit" [routerLink]="['details', role.id]" title="Edit" style="font-size: 14px; cursor:pointer"></i>
+                              </a>&nbsp;
+                              <a>
+                                 <i class="fa fa-trash" (click)="delete(role)" title="Remove" style="font-size: 14px; cursor:pointer; color:red"></i>
+                              </a>
+                           </td>
+                        </tr>
+                     </ng-container>
+                     <tr *ngIf='roles == null || roles.length == 0'>
+                        <td colspan="5" style="text-align: center;">
+                           {{statusMessage}}
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

@@ -1,0 +1,226 @@
+<section class="content-header">
+   <h1>Manage Users <small> {{title}} </small></h1>
+   <ol class="breadcrumb">
+      <li><a [routerLink]="['/']"><i class="fa fa-home"></i> Home</a></li>
+      <li><a [routerLink]="['/users']"> Users</a></li>
+   </ol>
+</section>
+
+<section class="content">
+   <div class="row">
+      <div class="col-xs-12">
+         <div class="box">
+            <div class="box-header with-border ui-sortable-handle">
+               <h3 class="box-title">User Details</h3>
+               <div class="box-tools pull-right" data-original-title="Status" data-toggle="tooltip" title="">
+                  <button class="btn btn-social-icon btn-xs btn-danger" (click)="goBack()">
+                     <i class="fa fa-times" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-social-icon btn-xs btn-success" type="submit" style="margin-left: 5px;" (click)="saveUser()" [disabled]="userForm.invalid">
+                     <i class="far fa-save"></i>
+                  </button>
+               </div>
+            </div>
+            <form name="userForm" action="javascript:{}" #userForm="ngForm" novalidate autocomplete="off">
+               <div class="box-body">
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <h4 class="panel-title">
+                           Personal Information
+                        </h4>
+                     </div>
+                     <div class="panel-collapse collapse in">
+                        <div class="panel-body">
+                           <div class="form-group">
+                              <label for="loginId" class="control-label">Login Id <span style="color:red;">*</span></label>
+                              <input type="text" class="form-control input-sm" name="loginId" required [(ngModel)]="user.loginId" #loginId="ngModel" pattern="[A-Za-z0-9]*" minlength="5" maxlength="20">
+                              <div *ngIf="loginId.errors && (loginId.dirty || loginId.touched)" style="font-size: smaller;">
+                                 <div [hidden]="!loginId.errors.required">
+                                    <span style="color:red ;"> Login Id is required</span>
+                                 </div>
+                                 <div [hidden]="!loginId.errors.minlength">
+                                    <span style="color:red;"> Login Id should be in 5 to 20 characters</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label for="password" class="control-label">Password <span style="color:red;">*</span></label>
+                              <div class="pull-right" style="font-size:smaller">
+                                 <!--<p-checkbox name="changePassword" value="changePassword" label="Change Password" (onChange)="setNewPassword($event)" *ngIf="user.id"></p-checkbox>-->
+                                 <mat-checkbox name="changePassword" [checked]="changePassword" (change)="setNewPassword($event)" *ngIf="user.id">Change Password</mat-checkbox>
+                              </div>
+                              <input type="password" class="form-control input-sm" name="password" required #password="ngModel" [(ngModel)]="user.password" pattern="(?=^.{8,30}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+}{:;?/>.<,])(?!.*\s).*$" [disabled]="changePassword? null: 'disabled'">
+                              <div *ngIf="password.errors && (password.dirty || password.touched)" style="font-size: smaller;">
+                                 <div [hidden]="!password.errors.required">
+                                    <span style="color:red ;"> Password is required</span>
+                                 </div>
+                                 <div [hidden]="!password.errors.minlength">
+                                    <span style="color:red;"> Password should be min 8 characters long</span>
+                                 </div>
+                                 <div [hidden]="!password.errors.pattern">
+                                    <span style="color: red;"> Password needs to have minimum of 8 characters, 1 capital letter, 1 number and 1 symbol. </span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label for="firstName" class="control-label">First Name <span style="color:red;">*</span></label>
+                              <input type="text" class="form-control input-sm" name="firstName" required #firstName="ngModel" [(ngModel)]="user.firstName" pattern="[a-zA-Z][a-zA-Z-' ]+" minlength="3" maxlength="50">
+                              <div *ngIf="firstName.errors && (firstName.dirty || firstName.touched)" style="font-size: smaller;">
+                                 <div [hidden]="!firstName.errors.required">
+                                    <span style="color: red;">First Name is required</span>
+                                 </div>
+                                 <div [hidden]="!firstName.errors.minlength">
+                                    <span style="color:red;"> First Name should be in 3 to 50 characters</span>
+                                 </div>
+                                 <div [hidden]="!firstName.errors.pattern">
+                                    <span style="color: red;"> Invalid characters! </span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label for="lastName" class="control-label">Last Name <span style="color:red;">*</span></label>
+                              <input type="text" class="form-control input-sm" name="lastName" required #lastName="ngModel" [(ngModel)]="user.lastName" pattern="[a-zA-Z][a-zA-Z-' ]+" minlength="3" maxlength="50">
+                              <div *ngIf="lastName.errors && (lastName.dirty || lastName.touched)" style="font-size: smaller;">
+                                 <div [hidden]="!lastName.errors.required">
+                                    <span style="color: red;">Last Name is required</span>
+                                 </div>
+                                 <div [hidden]="!lastName.errors.pattern">
+                                    <span style="color: red;"> Invalid characters! </span>
+                                 </div>
+                                 <div [hidden]="!lastName.errors.minlength">
+                                    <span style="color:red;"> Last Name should be in 3 to 50 characters</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label for="emailId" class="control-label">Email Id <span style="color:red;">*</span></label>
+                              <input type="email" class="form-control input-sm" name="emailId" #emailId="ngModel" required [(ngModel)]="user.emailId" maxlength="50" minlength="8" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$">
+                              <div *ngIf="emailId.errors && (emailId.dirty || emailId.touched)" style="font-size: smaller;">
+                                 <div [hidden]="!emailId.errors.required">
+                                    <span style="color: red;">Email Id is required</span>
+                                 </div>
+                                 <div [hidden]="!emailId.errors.minlength">
+                                    <span style="color:red;"> Email Id should be in 8 to 50 characters</span>
+                                 </div>
+                                 <div [hidden]="!emailId.errors.pattern">
+                                    <span style="color: red;"> Invalid Email Id</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label for="phoneNumber" class="control-label">Phone <span style="color:red;"></span></label>
+                              <input type="text" class="form-control input-sm" name="phoneNumber" minlength="8" maxlength="20" #phoneNumber="ngModel" pattern="[0-9+-.]+" [(ngModel)]="user.phoneNumber">
+                              <div *ngIf="phoneNumber.errors && (phoneNumber.dirty || phoneNumber.touched)" style="font-size: smaller;">
+                                 <div [hidden]="!phoneNumber.errors.minlength">
+                                    <span style="color:red; "> Phone Number  should be in 8 to 20 characters</span>
+                                 </div>
+                                 <div [hidden]="!phoneNumber.errors.pattern">
+                                    <span style="color:red;"> Invalid characters!</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="panel-group" id="accordion">
+
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#accessPermissions">Access Permissions</a>
+                           </h4>
+                        </div>
+                        <div id="accessPermissions" class="panel-collapse collapse in">
+                           <div class="panel-body">
+                              <div class="col-sm-12">
+                                 <div class="form-group">
+                                    <label for="roles" class="control-label">Role <span style="color:red;">*</span></label>
+                                    <mat-select name="roles" [(ngModel)]="user.roleId" #role="ngModel">
+                                       <mat-option *ngFor="let role of roles" [value]="role.id">
+                                          {{role.name}}
+                                       </mat-option>
+                                    </mat-select>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="country" class="control-label">Groups</label>
+                                    <table class="table table-bordered table-striped">
+                                       <thead>
+                                          <tr>
+                                             <th style="width:40px;text-align: center;">
+                                                <mat-checkbox (change)="$event ? masterToggle() : null"
+                                                              [checked]="user.groups?.length > 0 && isAllSelected()"
+                                                              [indeterminate]="user.groups?.length > 0 && !isAllSelected()">
+                                                </mat-checkbox>
+                                             </th>
+                                             <th>Groups</th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <ng-container *ngIf='groups && groups.length > 0'>
+                                             <tr *ngFor='let group of groups'>
+                                                <td style="text-align: center;">
+                                                   <mat-checkbox (click)="$event.stopPropagation()"
+                                                                 (change)="$event ? toggleSelection(group) : null"
+                                                                 [checked]="user.groups?.includes(group.id)">
+                                                   </mat-checkbox>
+                                                </td>
+                                                <td>{{group.name}}</td>
+                                             </tr>
+                                          </ng-container>
+                                          <tr *ngIf='groups == null || groups.length == 0'>
+                                             <td colspan="2" style="text-align: center;">
+                                                Groups not defined
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="country" class="control-label">Activate User <span style="color:red;">*</span></label>
+
+                                    <mat-radio-group name="isActive" [(ngModel)]="user.isActive">
+                                       <div class="form-group" style="padding-bottom:20px;">
+                                          <mat-radio-button [value]="true" style="padding-right:20px">Yes</mat-radio-button>
+                                          <mat-radio-button [value]="false">No</mat-radio-button>
+                                       </div>
+                                    </mat-radio-group>
+
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!--<div class="panel panel-default">
+                        <div class="panel-heading">
+                           <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#remarks">Remarks</a>
+                           </h4>
+                        </div>
+                        <div id="remarks" class="panel-collapse collapse">
+                           <div class="panel-body">
+                              <div class="col-sm-12">
+                                 <div class="form-group">
+                                    <label for="remarks" class="control-label">Comments</label>
+                                    <textarea class="form-control" rows="3" name="remarks" [(ngModel)]="user.remarks"></textarea>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>-->
+
+                  </div>
+
+               </div>
+               <div class="box-footer">
+                  <div class="pull-right">
+                     <button type="button" class="btn btn-danger" (click)="goBack()">Close</button>
+                     <button type="submit" class="btn btn-success" style="margin-left:10px" (click)="saveUser()" [disabled]="userForm.invalid">Save</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</section>

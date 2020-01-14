@@ -1,0 +1,161 @@
+<section class="content-header">
+   <h1>Manage clusters <small> {{title}} </small></h1>
+   <ol class="breadcrumb">
+      <li><a [routerLink]="['/home']"><i class="fa fa-home"></i> Home</a></li>
+      <li><a [routerLink]="['/clusters']"> clusters</a></li>
+   </ol>
+</section>
+
+<section class="content">
+   <div class="row">
+      <div class="col-xs-12">
+         <div class="box">
+            <div class="box-header with-border ui-sortable-handle">
+               <ul class="nav nav-tabs form-menu">
+                  <li [class]="isNew == true?'active': ''" *ngIf="isNew == true"><a href="#tab_import" data-toggle="tab"> <span style="font-size:1.2em">Import</span></a></li>
+                  <li [class]="isNew == false?'active': ''"><a href="#tab_map" data-toggle="tab"><span style="font-size:1.2em">{{tabTitle}}</span></a></li>
+               </ul>
+               <div class="box-tools pull-right">
+                  <button class="btn btn-social-icon btn-xs btn-danger" (click)="goBack()">
+                     <i class="fas fa-times" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-social-icon btn-xs btn-success" type="submit" style="margin-left: 5px;" (click)="save()" [disabled]="form.invalid">
+                     <i class="far fa-save"></i>
+                  </button>
+               </div>
+            </div>
+            <div class="box-body">
+               <form name="form" action="javascript:{}" #form="ngForm" autocomplete="off" novalidate>
+                  <div class="tab-content">
+                     <div id="tab_import" [class]="isNew == true?'tab-pane active': 'tab-pane'">
+                        <div class="col-md-12">
+                           <div class="form-group">
+                              <label for="uploadFile">Upload file</label>
+                              <div class="input-group">
+                                 <input type="text" class="form-control" readonly id="uploadFile" placeholder="Choose file">
+                                 <span class="input-group-btn">
+                                    <span class="btn btn-primary btn-file">
+                                       Browse&hellip; <input type="file" accept=".csv, .kml, .zip" (change)="fileChangeEvent($event)">
+                                    </span>
+                                 </span>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label *ngIf="clusters && clusters.length > 0">Total clusters: {{clusters.length}}</label>
+                              <table class="table table-bordered table-striped">
+                                 <thead>
+                                    <tr>
+                                       <th style="width:150px">Code</th>
+                                       <th>Name</th>
+                                       <th style="width:150px">Type</th>
+                                       <th style="width:50px" class='text-center'></th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <ng-container *ngIf='clusters && clusters.length > 0'>
+                                       <tr *ngFor='let cstr of clusters;let rowIndex = index;'>
+                                          <td>{{cstr.code}}</td>
+                                          <td>{{cstr.name}}</td>
+                                          <td>{{cstr.type}}</td>
+                                          <td style="text-align:center">
+                                             <a (click)="removeUploadedCluster(rowIndex)" style="cursor:pointer"><i class="fas fa-trash-alt" style="font-size: 15px; color: Red;" title="Delete"></i></a>
+                                          </td>
+                                       </tr>
+                                    </ng-container>
+                                    <tr *ngIf='clusters == null || clusters.length == 0'>
+                                       <td colspan="4" style="text-align: center;">
+                                          Upload clusteres.
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="tab_map" [class]="isNew == false?'tab-pane active': 'tab-pane'">
+                        <div class="panel panel-default">
+                           <div style="position: relative;">
+                              <div id="clusterMap" style="min-height: 481px;"></div>
+                              <div class="box pull-right properties" *ngIf="cluster != null">
+                                 <div class="box-header with-border">
+                                    <!--<div class="pull-right">
+                                       <i class="pull-right fas fa-trash-alt" style="font-size: 15px; color: Red; cursor:pointer" (click)="deleteCluster()"></i>
+                                    </div>-->
+                                    <ul class="nav nav-tabs control-sidebar-tabs">
+                                       <li class="active"><a href="#tab_properties" data-toggle="tab" aria-expanded="true">Properties</a></li>
+                                       <li style="border-right: 1px solid; border-left: 1px solid;"><a href="#tab_homepasses" data-toggle="tab" aria-expanded="false">Homepasses</a></li>
+                                       <li style="padding-top: 3px; padding-left: 30px;"><i class="pull-right fas fa-trash-alt" style="color: Red; cursor:pointer" (click)="deleteCluster()"></i></li>
+                                    </ul>
+                                 </div>
+                                 <div class="box-body tab-content">
+                                    <div id="tab_properties" class="tab-pane active" style="height: 420px;">
+                                       <div class="form-group">
+                                          <label for="name" class="control-label">Name <span style="color:red;">*</span></label>
+                                          <input type="text" class="form-control input-sm" name="name" [(ngModel)]="cluster.name">
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="code" class="control-label">Code <span style="color:red;">*</span></label>
+                                          <input type="text" class="form-control input-sm" name="code" [(ngModel)]="cluster.code">
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="description" class="control-label">Description </label>
+                                          <input type="text" class="form-control input-sm" name="description" [(ngModel)]="cluster.description">
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="coordinates" class="control-label">Coordinates(Lng,Lat) </label>
+                                          <textarea type="text" rows="5" class="form-control input-sm" name="coordinates" value="{{stringify(cluster.geometry.coordinates)}}" readonly></textarea>
+                                       </div>
+                                    </div>
+                                    <div id="tab_homepasses" class="tab-pane" style="height: 419px;overflow-y: auto;">
+                                       <table class="table table-bordered table-striped">
+                                          <thead>
+                                             <tr>
+                                                <th style="width:40px;text-align: center;">
+                                                   <mat-checkbox (change)="$event ? masterToggle() : null"
+                                                                 [checked]="cluster.homepasses?.length > 0 && isAllSelected()"
+                                                                 [indeterminate]="cluster.homepasses?.length > 0 && !isAllSelected()">
+                                                   </mat-checkbox>
+                                                </th>
+                                                <th>Code</th>
+                                                <th>Name</th>
+                                             </tr>
+                                          </thead>
+                                          <tbody>
+                                             <ng-container *ngIf='cluster.allHomepasses && cluster.allHomepasses.length > 0'>
+                                                <tr *ngFor='let homepass of cluster.allHomepasses'>
+                                                   <td style="text-align: center;">
+                                                      <mat-checkbox (click)="$event.stopPropagation()"
+                                                                    (change)="$event ? toggleSelection(homepass) : null"
+                                                                    [checked]="cluster.homepasses?.includes(homepass.id)">
+                                                      </mat-checkbox>
+                                                   </td>
+                                                   <td>{{homepass.code}}</td>
+                                                   <td>{{homepass.name}}</td>
+                                                </tr>
+                                             </ng-container>
+                                             <tr *ngIf='cluster.allHomepasses == null || cluster.allHomepasses.length == 0'>
+                                                <td colspan="3" style="text-align: center;">
+                                                   No homepass available.
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <div class="box-footer">
+               <div class="pull-right">
+                  <button type="submit" class="btn btn-danger" (click)="goBack()">Close</button>
+                  <button type="submit" class="btn btn-success" style="margin-left:10px" (click)="save()" [disabled]="form.invalid">Save</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

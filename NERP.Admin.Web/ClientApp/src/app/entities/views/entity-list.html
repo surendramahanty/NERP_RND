@@ -1,0 +1,175 @@
+<section class="content-header">
+   <h1>Manage Entities</h1>
+   <ol class="breadcrumb">
+      <li><a [routerLink]="['/home']"><i class="fas fa-home"></i> Home</a></li>
+   </ol>
+</section>
+
+<section class="content">
+   <div class="row">
+      <div class="col-xs-12">
+         <div class="box">
+            <div class="box-header with-border">
+               <h3 class="box-title">Entity List</h3>
+               <div class="box-tools pull-right">
+                  <div class="btn-group" data-toggle="btn-toggle">
+                     <button aria-expanded="false" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" style="text-align: left;" type="button">
+                        New Entity
+                     <div class="fa fa-caret-down pull-right" style="padding-top: 2px;padding-right: 2px;padding-left: 10px;"></div>
+                     </button>
+                     <ul class="dropdown-menu">
+                        <li><a [routerLink]="['cable','']">Cable</a></li>
+                        <li><a [routerLink]="['chamber','']">Chamber</a></li>
+                        <li><a [routerLink]="['duct','']">Duct</a></li>
+                        <li><a [routerLink]="['odf','']">ODF</a></li>
+                        <li><a [routerLink]="['pole','']">Pole</a></li>
+                        <!--<li><a [routerLink]="['pop','']">POP</a></li>-->
+                        <li><a [routerLink]="['spliceclosure','']">Splice Closure</a></li>
+                        <li><a [routerLink]="['splitter','']">Splitter</a></li>
+                        <!--<li class="divider"></li>-->
+                        <li><a [routerLink]="['homepass','']">Homepass</a></li>
+                        <li><a [routerLink]="['fat','']">Fat</a></li>
+                        <li><a [routerLink]="['fdt','']">Fdt</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="box-body">
+               <div class="input-group input-group-sm" style="padding-bottom:20px">
+                  <div class="input-group-btn">
+                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="width:100px;text-align: left; border-radius: 3px;">
+                        {{selectedEntityType}}
+                        <span class="fa fa-caret-down btn-caret-down"></span>
+                     </button>
+                     <ul class="dropdown-menu">
+                        <li><a [routerLink]="" (click)="onEntityTypeChange('Cable')">Cable</a></li>
+                        <li><a [routerLink]="" (click)="onEntityTypeChange('Chamber')">Chamber</a></li>
+                        <li><a [routerLink]="" (click)="onEntityTypeChange('Duct')">Duct</a></li>
+                        <li><a [routerLink]="" (click)="onEntityTypeChange('ODF')">ODF</a></li>
+                        <li><a [routerLink]="" (click)="onEntityTypeChange('Pole')">Pole</a></li>
+                        <li><a [routerLink]="" (click)="onEntityTypeChange('SpliceClosure')">Splice Closure</a></li>
+                        <li><a [routerLink]="" (click)="onEntityTypeChange('Splitter')">Splitter</a></li>
+                        <li><a [routerLink]="" (click)="onEntityTypeChange('Homepass')">Homepass</a></li>
+                        <li><a [routerLink]="" (click)="onEntityTypeChange('Fat')">Fat</a></li>
+                        <li><a [routerLink]="" (click)="onEntityTypeChange('Fdt')">Fdt</a></li>
+                     </ul>
+                  </div>
+                  <div class="input-group-btn" style="padding-left:10px">
+                     <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="width:100px;border-bottom-right-radius: 0px;border-top-right-radius: 0px;text-align: left;">
+                        {{selectedField.label}}
+                        <span class="fa fa-caret-down btn-caret-down"></span>
+                     </button>
+                     <ul class="dropdown-menu">
+                        <ng-container *ngIf='searchFields && searchFields.length > 0'>
+                           <li *ngFor='let searchField of searchFields'>
+                              <a [routerLink]="" (click)=setSearchField(searchField)>{{searchField.label}}</a>
+                           </li>
+                        </ng-container>
+                        <li class="divider"></li>
+                        <li><a [routerLink]="" data-toggle="modal" data-target="#advancedSearch">Advanced Search</a></li>
+
+                     </ul>
+                  </div>
+                  <input [type]=selectedField.dataType class="form-control" name="dateSearch" [(ngModel)]="searchText" autocomplete="off">
+                  <span class="input-group-btn">
+                     <button type="button" class="btn btn-info btn-flat" (click)="currentPage = 1; search()"><i class="fas fa-search"></i></button>
+                  </span>
+               </div>
+               <div>
+                  <div class="pull-left">
+                     <span style="padding-right: 10px;font-size: small;">Pages</span>
+                     <div class="btn-group" style="padding-right: 10px;">
+                        <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-expanded="false">
+                           <span style="padding-right: 5px;"> {{pageSize}} </span>
+                           <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                           <li><a [routerLink]="" (click)="pageSize = 10; getFormData()">10</a></li>
+                           <li><a [routerLink]="" (click)="pageSize = 20; getFormData()">20</a></li>
+                           <li><a [routerLink]="" (click)="pageSize = 50; getFormData()">50</a></li>
+                           <li><a [routerLink]="" (click)="pageSize = 100; getFormData()">100</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="pull-right">
+                     <span style="padding-right: 10px;font-size: small;">Showing page {{currentPage}} of {{totalPages}}</span>
+                     <div class="btn-group" style="padding-bottom:5px">
+                        <button class="btn btn-default btn-sm" type="button" (click)="setPage(currentPage - 1)" [ngClass]="{disabled:currentPage === 1}"><i class="fa fa-chevron-left fa-fw"></i></button>
+                        <button class="btn btn-default btn-sm" type="button" (click)="setPage(currentPage + 1)" [ngClass]="{disabled:currentPage === totalPages}"><i class="fa fa-chevron-right fa-fw"></i></button>
+                     </div>
+                  </div>
+               </div>
+               <table class="table table-bordered table-striped">
+                  <thead>
+                     <tr (click)="onColumnClick($event.target)">
+                        <th data-column="Name" class="table-sorter">Name</th>
+                        <th data-column="UpdatedBy" class="table-sorter" style="width: 150px;">Updated By</th>
+                        <th data-column="UpdatedDate" class="table-sorter" style="width: 125px;">Updated On</th>
+                        <th style="width:72px"></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <ng-container *ngIf='entities && entities.length > 0'>
+                        <tr *ngFor='let entity of entities'>
+                           <td>{{entity.name}}</td>
+                           <td>{{entity.updatedBy}}</td>
+                           <td>{{entity.updatedDate | date:'dd/MM/yyyy'}}</td>
+                           <td>
+                              <a>
+                                 <i class="fa fa-edit" [routerLink]="[selectedEntityType.toLowerCase(), entity.id]" title="Edit" style="font-size: 14px; cursor:pointer"></i>
+                              </a>&nbsp;
+                              <a>
+                                 <i class="fa fa-trash" (click)="delete(entity)" title="Remove" style="font-size: 14px; cursor:pointer; color:red"></i>
+                              </a>
+                           </td>
+                        </tr>
+                     </ng-container>
+                     <tr *ngIf='entities == null || entities.length == 0'>
+                        <td colspan="4" style="text-align: center;">
+                           {{statusMessage}}
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<div id="advancedSearch" class="modal fade" role="dialog">
+   <div class="modal-dialog">
+      <div class="modal-content" style="border-radius:3px">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Advanced Search</h4>
+         </div>
+         <div class="modal-body">
+            <table class="table table-bordered">
+               <thead>
+                  <tr>
+                     <th style="width: 200px;">Field</th>
+                     <th>Value</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <ng-container *ngIf='searchFields && searchFields.length > 0'>
+                     <tr *ngFor='let searchField of searchFields'>
+                        <td>{{searchField.label}}</td>
+                        <td><input [type]=searchField.dataType class="form-control input-sm" [ngModelOptions]="{standalone: true}" [(ngModel)]="searchField.value"></td>
+                     </tr>
+                  </ng-container>
+                  <tr *ngIf='searchFields == null || searchFields.length == 0'>
+                     <td colspan="2" style="text-align: center;">
+                        No search fields defined
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div class="modal-footer">
+            <button class="btn btn-info" data-dismiss="modal" type="button" (click)="advancedSearch()">Search</button>
+            <button class="btn btn-default pull-left" data-dismiss="modal" type="button" (click)="clearSearch()">Close</button>
+         </div>
+      </div>
+   </div>
+</div>

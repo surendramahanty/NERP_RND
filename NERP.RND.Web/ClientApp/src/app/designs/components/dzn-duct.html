@@ -1,0 +1,43 @@
+<div class="form-group col-md-12">
+   <div class="form-group">
+      <label for="equipment" class="control-label">Select Duct</label>
+      <div class="input-group input-group-sm">
+         <mat-select name="duct" [(ngModel)]="selectedDuct">
+            <mat-option>Select Duct</mat-option>
+            <ng-container *ngIf="ductsMaster && ductsMaster.length > 0">
+               <mat-option *ngFor="let duct of ductsMaster" [value]="duct">
+                  {{duct.name}}
+               </mat-option>
+            </ng-container>
+         </mat-select>
+         <span class="input-group-btn"><button class="btn btn-info btn-flat" type="button" (click)="addDuct()"><i class="fas fa-plus"></i></button></span>
+      </div>
+   </div>
+</div>
+<div class="form-group col-md-12">
+   <table class="table table-bordered table-striped">
+      <thead>
+         <tr>
+            <th>Name</th>
+            <th style="width:40px"></th>
+         </tr>
+      </thead>
+      <tbody>
+         <ng-container *ngIf='ductSettings.ducts && ductSettings.ducts.length > 0'>
+            <tr *ngFor='let duct of ductSettings.ducts;let rowIndex = index;'>
+               <td>{{duct.name}}</td>
+               <td>
+                  <a>
+                     <i class="fas fa-trash-alt" style="font-size: 15px; color: Red; cursor:pointer" (click)="removeDuct(rowIndex)" title="Remove"></i>
+                  </a>
+               </td>
+            </tr>
+         </ng-container>
+         <tr *ngIf='ductSettings.ducts == null || ductSettings.ducts.length == 0'>
+            <td colspan="2" style="text-align: center;">
+               {{statusMessage}}
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div>
